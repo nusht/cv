@@ -25,12 +25,9 @@ body {
 }
 
 footer {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
+  /* Height of the footer */
     /*background: linear-gradient(to right, #00093c, #3d0b00);*/
     color: #fff;
-    padding: 100px 0 30px;
     border-top-left-radius: 125px;
     font-size: 13px;
     line-height: 20px;
