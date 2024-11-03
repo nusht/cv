@@ -26,7 +26,8 @@ body {
 
 footer {
     width: 100%;
-    position: absolute;
+    position: fixed;
+    left: 0;
     bottom: 0;
     /*background: linear-gradient(to right, #00093c, #3d0b00);*/
     color: #fff;
