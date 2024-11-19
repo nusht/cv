@@ -180,15 +180,6 @@ hr {
         flex-basis: 100%
     }
 }
-
-.rounded-image {
-    width : 100px;
-    height: 100px;
-    border-radius: 50%; 
-    overflow: hidden; 
-    object-position: center; 
-}
-
 .profile {
     width: 20vw; /* Responsive width */
     height: 20vw; /* Responsive height */
@@ -211,10 +202,10 @@ hr {
     right: -10px; /* Slightly outside the image */
     bottom: -10px; /* Slightly outside the image */
     border-radius: 50%;
-    border: 5px solid rgba(255, 215, 0, 0.7); /* Gold color for outline */
+    border: 5px solid rgba(255, 255, 255, 0.7); /* Gold color for outline */
     opacity: 0; /* Start invisible */
     animation: glow 1.5s infinite alternate; /* Apply glowing animation */
-    box-shadow: 0 0 15px rgba(255, 215, 0, 1); /* Initial glow effect */
+    box-shadow: 0 0 15px rgb(243, 243, 242); /* Initial glow effect */
 }
 
 /* Keyframes for glowing outline effect */
