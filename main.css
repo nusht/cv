@@ -188,3 +188,42 @@ hr {
     overflow: hidden; 
     object-position: center; 
 }
+
+.profile {
+    width: 20vw; /* Responsive width */
+    height: 20vw; /* Responsive height */
+    max-width: 200px; /* Max width */
+    max-height: 200px; /* Max height */
+    border-radius: 50%; /* Circular appearance */
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHNf4okfvu9N0IlXUY9PVXFDQtT9uV7vuuO8XtAyKoMuwZC8oh'); /* Image source */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    margin: 100px auto; /* Centered with top and bottom margin */
+    position: relative; /* For positioning the pseudo-element */
+}
+
+/* Glowing circular outline using before pseudo-element */
+.profile::before {
+    content: '';
+    position: absolute;
+    top: -10px; /* Slightly outside the image */
+    left: -10px; /* Slightly outside the image */
+    right: -10px; /* Slightly outside the image */
+    bottom: -10px; /* Slightly outside the image */
+    border-radius: 50%;
+    border: 5px solid rgba(255, 215, 0, 0.7); /* Gold color for outline */
+    opacity: 0; /* Start invisible */
+    animation: glow 1.5s infinite alternate; /* Apply glowing animation */
+    box-shadow: 0 0 15px rgba(255, 215, 0, 1); /* Initial glow effect */
+}
+
+/* Keyframes for glowing outline effect */
+@keyframes glow {
+    0% {
+        transform: scale(1);
+        opacity: 0.7; /* Semi-transparent at starting */
+    }
+    100% {
+        transform: scale(1.1); /* Scale up for pulsating effect */
+        opacity: 1; /* Fully opaque at end */
+    }
