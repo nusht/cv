@@ -49,7 +49,8 @@
         <video
     id="my-video"
     class="video-js"
-    controls
+    controls 
+    controlslist="nofullscreen nodownload noremoteplayback noplaybackrate foobar"
     preload="auto"
     width="200"
     height="264"
@@ -57,9 +58,6 @@
     data-setup='{ }'> 
     <source src="https://ik.imagekit.io/snu/video_20221125_100537_DAf9s5Dl8.mp4?updatedAt=1736020574477" type='video/mp4'>
    </video>
-   </li>
-   <br>
-   <li>
    <video
     id="my-video"
     class="video-js"
@@ -68,7 +66,8 @@
     width="200"
     height="264"
     poster="https://lh3.googleusercontent.com/pw/AP1GczO_1p07c6je7XKsap7tpEgDd8fJWXW1HRgImj3pegGXgRgugMl-iQzqDUceLfdaz58knbrYFqIdieYFPr5SsxDuJb1g7We7Udm9Lcz8AywdCGZM70MTsY5BXZCK94mokaY69d3Q00MiCpPQD4p5cwXOEg=w362-h644-s-k-no-gm?authuser=0"
-    data-setup='{ }'> 
+    data-setup='{ }'
+    controlslist="nofullscreen nodownload noremoteplayback noplaybackrate foobar"> 
     <source src="https://ik.imagekit.io/snu/video_20221126_100009_FP2EQYwaW.mp4?updatedAt=1736020587992" type='video/mp4'>
    </video>
 </li>
@@ -108,5 +107,6 @@
     <p class="copyright">Made with 🌹.</p>
 </footer> 
 <script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>
+<script src="./vid.js"></script>
 </body>
 </html>
