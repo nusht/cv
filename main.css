@@ -81,7 +81,7 @@ form {
     padding-bottom: 15px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     border-bottom: 1px solid #ccc;
     margin-bottom: 50px;
 }
