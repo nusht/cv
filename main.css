@@ -181,12 +181,12 @@ hr {
     }
 }
 .profile {
-    width: 20vw; /* Responsive width */
-    height: 20vw; /* Responsive height */
-    max-width: 200px; /* Max width */
-    max-height: 200px; /* Max height */
+    width: 40vw; /* Responsive width */
+    height: 40vw; /* Responsive height */
+    max-width: 300px; /* Max width */
+    max-height: 300px; /* Max height */
     border-radius: 50%; /* Circular appearance */
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHNf4okfvu9N0IlXUY9PVXFDQtT9uV7vuuO8XtAyKoMuwZC8oh'); /* Image source */
+    background-image: url('https://media.licdn.com/dms/image/v2/D4D03AQGGX944f3WPuA/profile-displayphoto-shrink_400_400/B4DZQ523HhHcAk-/0/1736137471008?e=2147483647&v=beta&t=CsjoI0M8ue8AvSV05eobRV4qiXo0-brmcnFtpzptCZc'); /* Image source */
     background-size: cover; /* Cover the entire area */
     background-position: center; /* Center the image */
     margin: 100px auto; /* Centered with top and bottom margin */
@@ -197,10 +197,10 @@ hr {
 .profile::before {
     content: '';
     position: absolute;
-    top: -10px; /* Slightly outside the image */
-    left: -10px; /* Slightly outside the image */
-    right: -10px; /* Slightly outside the image */
-    bottom: -10px; /* Slightly outside the image */
+    top: -1px; /* Slightly outside the image */
+    left: -1px; /* Slightly outside the image */
+    right: -1px; /* Slightly outside the image */
+    bottom: -1px; /* Slightly outside the image */
     border-radius: 50%;
     border: 5px solid rgba(255, 255, 255, 0.7); /* Gold color for outline */
     opacity: 0; /* Start invisible */
