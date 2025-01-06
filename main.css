@@ -186,7 +186,7 @@ hr {
     max-width: 300px; /* Max width */
     max-height: 300px; /* Max height */
     border-radius: 50%; /* Circular appearance */
-    background-image: url('https://media.licdn.com/dms/image/v2/D4D03AQGGX944f3WPuA/profile-displayphoto-shrink_400_400/B4DZQ523HhHcAk-/0/1736137471008?e=2147483647&v=beta&t=CsjoI0M8ue8AvSV05eobRV4qiXo0-brmcnFtpzptCZc'); /* Image source */
+    background-image: url('/assets/images/profie.png'); /* Image source */
     background-size: cover; /* Cover the entire area */
     background-position: center; /* Center the image */
     margin: 100px auto; /* Centered with top and bottom margin */
