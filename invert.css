@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=Tiny5&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+body {
+    background-color: white;
+    color: black;
+    
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    width: 80%;
+    margin: 100px auto;
+    font-family: "Tiny5", sans-serif;
+    /*color: #f0dc00;*/ 
+}
+.about {
+    width: 80%;
+    margin: 100px auto;
+}
+.about h1, h2, h3{
+    font-family: "Bebas Neue", sans-serif;
+}
+.about p ul li{
+    font-family: "Fjalla One", sans-serif;
+}
+
+footer {
+color: #fff;
+    border-top-left-radius: 125px;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.row {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.col {
+    flex-basis: 25%;
+    padding: 10px;
+}
+
+.col:nth-child(2),
+.col:nth-child(3) {
+    flex-basis: 15%
+}
+
+.logo {
+    width: 80px;
+    margin-bottom: 30px;
+}
+
+.col h3 {
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.email-id {
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+ul li {
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+form {
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+
+
+form .far {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+form input {
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    border: 0;
+    outline: none;
+}
+
+form button {
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+form button .fas {
+    font-size: 16px;
+    color: black;
+}
+
+.social-icons .fab {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    background: black;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.social .fa-linkedin {
+  color: #000;
+  background: #000000;
+  
+}
+
+hr {
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.underline {
+    width: 100%;
+    height: 5px;
+    background: #767676;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+}
+
+.underline span {
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite
+}
+
+@keyframes moving {
+    0% {
+        left: -20px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@media (max-width: 700px){
+    footer {
+        bottom: unset;
+    }
+
+    .col {
+        flex-basis: 100%;
+    }
+    
+    .col:nth-child(2),
+    .col:nth-child(3) {
+        flex-basis: 100%
+    }
+}
+.profile {
+    width: 40vw; /* Responsive width */
+    height: 40vw; /* Responsive height */
+    max-width: 300px; /* Max width */
+    max-height: 300px; /* Max height */
+    border-radius: 50%; /* Circular appearance */
+    background-image: url('/assets/images/profie.png'); /* Image source */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    margin: 100px auto; /* Centered with top and bottom margin */
+    position: relative; /* For positioning the pseudo-element */
+}
+
+/* Glowing circular outline using before pseudo-element */
+.profile::before {
+    content: '';
+    position: absolute;
+    top: -1px; /* Slightly outside the image */
+    left: -1px; /* Slightly outside the image */
+    right: -1px; /* Slightly outside the image */
+    bottom: -1px; /* Slightly outside the image */
+    border-radius: 50%;
+    border: 5px solid rgba(0, 0, 0, 0.7); /* Gold color for outline */
+    opacity: 0; /* Start invisible */
+    animation: glow 1.5s infinite alternate; /* Apply glowing animation */
+    box-shadow: 0 0 15px rgb(243, 243, 242); /* Initial glow effect */
+}
+
+/* Keyframes for glowing outline effec t */
+@keyframes glow {
+    0% {
+        transform: scale(1);
+        opacity: 0.7; /* Semi-transparent at starting */
+    }
+    100% {
+        transform: scale(1.1); /* Scale up for pulsating effect */
+        opacity: 1; /* Fully opaque at end */
+    }
+}
+.section p, li  {
+  font-family: "Playwrite NZ Guides", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
