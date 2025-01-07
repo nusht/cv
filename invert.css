@@ -232,3 +232,6 @@ hr {
   font-style: normal;
 }
 
+div.frst h4, div.frst p{
+    display: inline !important;
+}
