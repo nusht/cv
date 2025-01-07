@@ -1,1 +1,0 @@
-$(document).ready(function() { $("my-video").on("contextmenu", function(e ){ return false; }); });
