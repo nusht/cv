@@ -11,7 +11,10 @@
            }
          ],
       "destination": "/maintainance",
-      "permanent": true
+      "permanent": true,
+      "cleanUrls": true
        }
      ]
+     
+    
 }
