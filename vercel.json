@@ -3,14 +3,14 @@
 {
   "redirects": [
     {
-      "source": "/maintainance",
+      "source": "/",
       "has": [
         {
           "type": "host",
           "value": "pcktstrm.snushrma.cf"
            }
          ],
-      "destination": "pcktstrm.snushrma.cf/maintainance",
+      "destination": "google.com",
       "permanent": true,
       "cleanUrls": true
        }
