@@ -10,7 +10,7 @@
           "value": "pcktstrm.snushrma.cf"
            }
          ],
-      "destination": "/maintainance",
+      "destination": "pcktstrm.snushrma.cf/maintainance",
       "permanent": true,
       "cleanUrls": true
        }
