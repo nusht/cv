@@ -1,12 +1,22 @@
 {
-  "routes": [
+    "redirects": [
       {
-          "src": "/404",
-          "dest": "/404.html" 
-      },
-      {
-          "src": "/(.*)",
-          "dest": "/404.html" 
+        "source": "/",
+        "has": [
+          {
+            "type": "host",
+            "value": "pcktstrm.snushrma.cf"
+          }
+        ],
+        "destination": "https://google.com",
+        "permanent": true,
+        "cleanUrls": true
       }
-  ]
-}
+    ],
+    "routes": [
+      {
+        "src": "/404",
+        "dest": "/404.html"
+      }
+    ]
+  }
