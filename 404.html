@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,49 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 - Not Found</title>
     <style>
-        body, html {
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
+        }
+        
+        body, html {
             height: 100%;
-            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+            color: white;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: black;
+            overflow: hidden;
         }
-        
+
         .video-background {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            overflow: hidden;
             z-index: -1;
-            filter: brightness(0.7); /* Darken video for better text visibility */
+            overflow: hidden;
+            filter: brightness(0.6); /* Darken video for better text visibility */
         }
 
         #bg-video {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            pointer-events: none; /* Prevent interaction with the video */
         }
 
         .content {
             position: relative;
-            color: white;
             text-align: center;
-            font-family: 'Arial', sans-serif;
+            z-index: 1;
+            padding: 20px;
         }
 
         .glitch {
-            font-size: 50px;
+            font-size: 6vw; /* Responsive font size */
             font-weight: bold;
             position: relative;
             display: inline-block;
             color: #fff;
-            animation: glitch 1s infinite;
+            animation: glitch 1.5s infinite;
         }
 
         .glitch::before,
@@ -58,54 +63,30 @@
             color: #0ff;
             overflow: hidden;
             clip-path: inset(0 0 0 0);
-            animation: glitch-anim 1s infinite;
+            animation: glitch-anim 1.5s infinite;
         }
 
         .glitch::before {
             color: #ff0; /* Change this to adjust glitch color */
-            animation: glitch-anim 1s infinite 0.1s;
+            animation: glitch-anim 1.5s infinite 0.1s;
         }
 
         @keyframes glitch {
-            0% {
-                transform: translate(0);
-            }
-            20% {
-                transform: translate(-2px, 2px);
-            }
-            40% {
-                transform: translate(2px, -2px);
-            }
-            60% {
-                transform: translate(-2px, -2px);
-            }
-            80% {
-                transform: translate(2px, 2px);
-            }
-            100% {
-                transform: translate(0);
-            }
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(2px, -2px); }
+            60% { transform: translate(-2px, -2px); }
+            80% { transform: translate(2px, 2px); }
+            100% { transform: translate(0); }
         }
 
         @keyframes glitch-anim {
-            0% {
-                clip-path: inset(0 0 0 0);
-            }
-            20% {
-                clip-path: inset(0 100% 0 0);
-            }
-            40% {
-                clip-path: inset(100% 0 0 0);
-            }
-            60% {
-                clip-path: inset(0 0 0 100%);
-            }
-            80% {
-                clip-path: inset(100% 0 0 100%);
-            }
-            100% {
-                clip-path: inset(0 0 0 0);
-            }
+            0% { clip-path: inset(0 0 0 0); }
+            20% { clip-path: inset(0 100% 0 0); }
+            40% { clip-path: inset(100% 0 0 0); }
+            60% { clip-path: inset(0 0 0 100%); }
+            80% { clip-path: inset(100% 0 0 100%); }
+            100% { clip-path: inset(0 0 0 0); }
         }
 
         a {
@@ -113,19 +94,29 @@
             margin-top: 20px;
             color: #61dafb;
             text-decoration: none;
-            font-size: 20px;
+            font-size: 2vw; /* Responsive font size */
             transition: color 0.3s;
         }
 
         a:hover {
             color: #fff;
         }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .glitch {
+                font-size: 10vw; /* Increase font size on smaller screens */
+            }
+            a {
+                font-size: 5vw; /* Increase link font size on smaller screens */
+            }
+        }
     </style>
 </head>
 <body>
     <div class="video-background">
         <video autoplay muted loop id="bg-video">
-            <source src="assets\videos\404.mp4" type="video/mp4">
+            <source src="assets/videos/404.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
         </video>
     </div>
