@@ -1,20 +1,16 @@
-
-
 {
-  "redirects": [
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "pcktstrm.snushrma.cf"
-           }
-         ],
-      "destination": "google.com",
-      "permanent": true,
-      "cleanUrls": true
-       }
-     ]
-     
-    
-}
+    "cleanUrls": true,
+    "rewrites": [
+      {
+        "source": "/",
+        "destination": "/index.html"
+      }
+    ],
+    "redirects": [],
+    "headers": [],
+    "trailingSlash": false,
+    "error": {
+      "notFound": "/404.html"
+    }
+  }
+  
