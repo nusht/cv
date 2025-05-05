@@ -56,29 +56,1877 @@
         </li>
 
 
-        <section class="credential-area">
-            <div class="container">
-                <h1 class="section-heading" data-aos="fade-up"><img src="../../assets/images/star-2.png" alt="Star"> Soon Uploaded
-                    <img src="../../assets/images/star-2.png" alt="Star"> </h1>
-                    <br />
+     
 
+
+                <style>
+    
+                    :root {
+                      --default-font: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+                      --font-monospace: 'Source Code Pro', monospace;
+                      --background-primary: #ffffff;
+                      --background-modifier-border: #ddd;
+                      --text-accent: #705dcf;
+                      --text-accent-hover: #7a6ae6;
+                      --text-normal: #2e3338;
+                      --background-secondary: #f2f3f5;
+                      --background-secondary-alt: #fcfcfc;
+                      --text-muted: #888888;
+                      --font-mermaid: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+                      --text-error: #E4374B;
+                      --background-primary-alt: '#fafafa';
+                      --background-accent: '';
+                      --interactive-accent: hsl( 254,  80%, calc( 68% + 2.5%));
+                      --background-modifier-error: #E4374B;
+                      --background-primary-alt: #fafafa;
+                      --background-modifier-border: #e0e0e0;
+                    }
+                    .linux{
+                        margin: 20px 5px;
+                    }
+                    
+                        body,input {
+                      font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+                      margin: 10px 5px;
+                    }
+                    
+                    code, kbd, pre {
+                      font-family: "Roboto Mono", "Courier New", Courier, monospace;
+                      background-color: black;
+                    }
+                    
+                    pre {
+                      padding: 1em 0.5em;
+                    }
+                    
+                    table {
+                      background: white;
+                      border: 1px solid #666;
+                      border-collapse: collapse;
+                      padding: 0.5em;
+                    }
+                    
+                    table thead th,
+                    table tfoot th {
+                      text-align: left;
+                      background-color: #eaeaea;
+                      color: black;
+                    }
+                    
+                    table th, table td {
+                      border: 1px solid #ddd;
+                      padding: 0.5em;
+                    }
+                    
+                    table td {
+                      color: #222222;
+                    }
+                    
+                    .callout[data-callout="abstract"] .callout-title,
+                    .callout[data-callout="summary"] .callout-title,
+                    .callout[data-callout="tldr"]  .callout-title,
+                    .callout[data-callout="faq"] .callout-title,
+                    .callout[data-callout="info"] .callout-title,
+                    .callout[data-callout="help"] .callout-title {
+                      background-color: #828ee7;
+                    }
+                    .callout[data-callout="tip"] .callout-title,
+                    .callout[data-callout="hint"] .callout-title,
+                    .callout[data-callout="important"] .callout-title {
+                      background-color: #34bbe6;
+                    }
+                    .callout[data-callout="success"] .callout-title,
+                    .callout[data-callout="check"] .callout-title,
+                    .callout[data-callout="done"] .callout-title {
+                      background-color: #a3e048;
+                    }
+                    .callout[data-callout="question"] .callout-title,
+                    .callout[data-callout="todo"] .callout-title {
+                      background-color: #49da9a;
+                    }
+                    .callout[data-callout="caution"] .callout-title,
+                    .callout[data-callout="attention"] .callout-title {
+                      background-color: #f7d038;
+                    }
+                    .callout[data-callout="warning"] .callout-title,
+                    .callout[data-callout="missing"] .callout-title,
+                    .callout[data-callout="bug"] .callout-title {
+                      background-color: #eb7532;
+                    }
+                    .callout[data-callout="failure"] .callout-title,
+                    .callout[data-callout="fail"] .callout-title,
+                    .callout[data-callout="danger"] .callout-title,
+                    .callout[data-callout="error"] .callout-title {
+                      background-color: #e6261f;
+                    }
+                    .callout[data-callout="example"] .callout-title {
+                      background-color: #d23be7;
+                    }
+                    .callout[data-callout="quote"] .callout-title,
+                    .callout[data-callout="cite"] .callout-title {
+                      background-color: #aaaaaa;
+                    }
+                    
+                    .callout-icon {
+                      flex: 0 0 auto;
+                      display: flex;
+                      align-self: center;
+                    }
+                    
+                    svg.svg-icon {
+                      height: 18px;
+                      width: 18px;
+                      stroke-width: 1.75px;
+                    }
+                    
+                    .callout {
+                      overflow: hidden;
+                      margin: 1em 0;
+                      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+                      border-radius: 4px;
+                    }
+                    
+                    .callout-title {
+                      padding: .5em;
+                      display: flex;
+                      gap: 8px;
+                      font-size: inherit;
+                      color: black;
+                      line-height: 1.3em;
+                    }
+                    
+                    .callout-title-inner {
+                      font-weight: bold;
+                      color: black;
+                    }
+                    
+                    .callout-content {
+                      overflow-x: auto;
+                      padding: 0.25em .5em;
+                      color: #222222;
+                      background-color: white !important;
+                    }
+                    
+                    ul.contains-task-list {
+                      padding-left: 0;
+                      list-style: none;
+                    }
+                    
+                    ul.contains-task-list ul.contains-task-list {
+                      padding-left: 2em;
+                    }
+                    
+                    ul.contains-task-list li input[type="checkbox"] {
+                      margin-right: .5em;
+                    }
+                    
+                    .callout-table,
+                    .callout-table tr,
+                    .callout-table p {
+                      width: 100%;
+                      padding: 0;
+                    }
+                    
+                    .callout-table td {
+                      width: 100%;
+                      padding: 0 1em;
+                    }
+                    
+                    .callout-table p {
+                      padding-bottom: 0.5em;
+                    }
+                    
+                    .source-table {
+                      width: 100%;
+                      background-color: #f5f5f5;
+                    }
+                    
+                      </style>
+                  
+                    <div class="linux"><h3 data-heading="Definition of Operating System (OS)" dir="auto">Definition of Operating System (OS)</h3>
+                    <h4 data-heading="Explanation :" dir="auto">Explanation :</h4>
+                    <p dir="auto">An <strong>Operating System (OS)</strong> is like the boss of a computer. It tells all the parts of the computer how to work together so that you can run programs and use your computer easily. Without an OS, your computer wouldn’t know how to do anything!</p>
+                    <h4 data-heading="Bookish Language:" dir="auto">Bookish Language:</h4>
+                    <p dir="auto">An Operating System (OS) is a software layer that manages computer hardware and software resources, providing common services for computer programs. It acts as an intermediary between users and the computer hardware.</p>
+                    <hr>
+                    <h3 data-heading="Roles of an Operating System from Different Perspectives" dir="auto">Roles of an Operating System from Different Perspectives</h3>
+                    <ol>
+                    <li dir="auto">
+                    <p><strong>User Perspective</strong>:</p>
+                    <ul>
+                    <li dir="auto"><strong>Interface</strong>: Provides a user-friendly interface (like Windows, macOS, or Linux) that allows users to interact with the computer easily.</li>
+                    <li dir="auto"><strong>Resource Management</strong>: Manages resources such as files, memory, and processing time.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Developer Perspective</strong>:</p>
+                    <ul>
+                    <li dir="auto"><strong>Platform for Development</strong>: Provides libraries and tools that developers use to create applications.</li>
+                    <li dir="auto"><strong>API</strong>: Offers Application Programming Interfaces (APIs) that allow software to communicate with hardware.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>System Perspective</strong>:</p>
+                    <ul>
+                    <li dir="auto"><strong>Resource Allocation</strong>: Allocates CPU time, memory space, and input/output devices to different processes.</li>
+                    <li dir="auto"><strong>Security and Privacy</strong>: Ensures that users and processes cannot interfere with each other, maintaining the integrity of data.</li>
+                    </ul>
+                    </li>
+                    </ol>
+                    <hr>
+                    <h3 data-heading="Distributed Operating System and Its Advantages" dir="auto">Distributed Operating System and Its Advantages</h3>
+                    <p dir="auto">A <strong>Distributed Operating System</strong> is an OS that manages a collection of independent computers and makes them appear to the users as a single coherent system.</p>
+                    <h4 data-heading="Advantages:" dir="auto">Advantages:</h4>
+                    <ol>
+                    <li dir="auto"><strong>Resource Sharing</strong>: Users can access resources (like printers or files) across multiple machines.</li>
+                    <li dir="auto"><strong>Reliability</strong>: If one computer fails, others can take over its tasks, leading to higher system reliability.</li>
+                    <li dir="auto"><strong>Scalability</strong>: Easy to add more computers to the network without major changes to the system.</li>
+                    <li dir="auto"><strong>Performance</strong>: Distributing tasks across multiple systems can lead to better performance.</li>
+                    </ol>
+                    <hr>
+                    <h3 data-heading="Parallel Systems" dir="auto">Parallel Systems</h3>
+                    <p dir="auto"><strong>Parallel Systems</strong> refer to computer systems that can perform multiple operations simultaneously. This is achieved through multiple processors or cores working together.</p>
+                    <h4 data-heading="Key Features:" dir="auto">Key Features:</h4>
+                    <ul>
+                    <li dir="auto"><strong>Concurrency</strong>: Multiple tasks are executed at the same time, speeding up processing.</li>
+                    <li dir="auto"><strong>Efficiency</strong>: Better resource utilization as tasks are divided among processors.</li>
+                    </ul>
+                    <hr>
+                    <h3 data-heading="Multiprocessing" dir="auto">Multiprocessing</h3>
+                    <p dir="auto"><strong>Multiprocessing</strong> is a type of computing where two or more processors are connected to a single operating system, allowing them to work on different tasks simultaneously.</p>
+                    <h4 data-heading="Key Points:" dir="auto">Key Points:</h4>
+                    <ul>
+                    <li dir="auto"><strong>Increased Throughput</strong>: More tasks can be completed in the same amount of time.</li>
+                    <li dir="auto"><strong>Fault Tolerance</strong>: If one processor fails, others can continue working.</li>
+                    </ul>
+                    <hr>
+                    <h3 data-heading="Multitasking System" dir="auto">Multitasking System</h3>
+                    <p dir="auto">A <strong>Multitasking System</strong> allows multiple tasks (or processes) to run at the same time on a single CPU by rapidly switching between them. </p>
+                    <h4 data-heading="Characteristics:" dir="auto">Characteristics:</h4>
+                    <ul>
+                    <li dir="auto"><strong>Time-sharing</strong>: The OS allocates time slices to each process, creating the illusion that they are running simultaneously.</li>
+                    <li dir="auto"><strong>User Experience</strong>: Users can run multiple applications at once, like browsing the internet while downloading files.</li>
+                    </ul>
+                    <hr>
+                    <h3 data-heading="Diagram" dir="auto">Diagram</h3>
+                    <pre><code>                           Operating System
+                                                      |
+                              ------------------------------------------------
+                              |                     |                          |
+                        Definition           Roles of OS              Types of OS
+                              |                     |                          |
+                          Software           - User Perspective            - Distributed OS
+                          Layer              - Developer Perspective      - Advantages
+                                            - System Perspective             |
+                                                                          - Resource Sharing
+                                                                          - Reliability
+                                                                          - Scalability
+                                                                          - Performance
+                              |                     |                          |
+                         Features             Parallel Systems               - Multiprocessing
+                                                |                              |
+                                            - Concurrency                  - Increased Throughput
+                                            - Efficiency                   - Fault Tolerance
+                              |                     |
+                         Multitasking System
+                              |
+                          - Time-sharing
+                          - User Experience
+                    </code></pre>
+                    <hr>
+                    <h3 data-heading="CPU Scheduling" dir="auto">CPU Scheduling</h3>
+                    <h4 data-heading="Explanation :" dir="auto">Explanation :</h4>
+                    <p dir="auto"><strong>CPU Scheduling</strong> is like a traffic cop for your computer's brain (the CPU). It decides which program or task gets to use the CPU and for how long. This helps make sure everything runs smoothly and efficiently.</p>
+                    <h4 data-heading="Bookish Language:" dir="auto">Bookish Language:</h4>
+                    <p dir="auto">CPU scheduling refers to the method by which an operating system decides which process in the ready state should be allocated CPU time. The goal is to maximize CPU utilization and ensure that processes get executed in a fair and efficient manner.</p>
+                    <hr>
+                    <h3 data-heading="Concept of Multi-Level Queue Scheduling" dir="auto">Concept of Multi-Level Queue Scheduling</h3>
+                    <p dir="auto"><strong>Multi-Level Queue Scheduling</strong> is a CPU scheduling method that organizes processes into different queues based on their priority or type.</p>
+                    <h4 data-heading="Key Features:" dir="auto">Key Features:</h4>
+                    <ol>
+                    <li dir="auto"><strong>Multiple Queues</strong>: There are several queues, each with its own scheduling algorithm.</li>
+                    <li dir="auto"><strong>Static Priority</strong>: Each queue has a fixed priority level. For example, a high-priority queue might include system processes, while a low-priority queue might include background tasks.</li>
+                    <li dir="auto"><strong>No Process Movement</strong>: Processes do not move between queues; once assigned, they remain in their designated queue.</li>
+                    </ol>
+                    <h4 data-heading="Advantages:" dir="auto">Advantages:</h4>
+                    <ul>
+                    <li dir="auto">Efficient management of processes with different priorities.</li>
+                    <li dir="auto">Simplifies scheduling by categorizing processes.</li>
+                    </ul>
+                    <hr>
+                    <h3 data-heading="Multi-Level Feedback Queue Scheduling" dir="auto">Multi-Level Feedback Queue Scheduling</h3>
+                    <p dir="auto"><strong>Multi-Level Feedback Queue Scheduling</strong> is an advanced version of multi-level queue scheduling that allows processes to move between different queues based on their behavior and requirements.</p>
+                    <h4 data-heading="Key Features:" dir="auto">Key Features:</h4>
+                    <ol>
+                    <li dir="auto"><strong>Dynamic Priority</strong>: Processes can move between queues based on their execution characteristics (e.g., CPU burst time).</li>
+                    <li dir="auto"><strong>Feedback Mechanism</strong>: If a process uses too much CPU time, it gets moved to a lower-priority queue; if it waits too long, it may be moved to a higher-priority queue.</li>
+                    <li dir="auto"><strong>Flexibility</strong>: Adapts to different workloads effectively.</li>
+                    </ol>
+                    <h4 data-heading="Advantages:" dir="auto">Advantages:</h4>
+                    <ul>
+                    <li dir="auto">Improves response time for interactive processes.</li>
+                    <li dir="auto">Balances CPU and I/O-bound processes efficiently.</li>
+                    </ul>
+                    <hr>
+                    <h3 data-heading="Scheduling Algorithms" dir="auto">Scheduling Algorithms</h3>
+                    <h4 data-heading="1. First-Come, First-Served (FCFS)" dir="auto">1. First-Come, First-Served (FCFS)</h4>
+                    <ul>
+                    <li dir="auto"><strong>Description</strong>: The simplest scheduling algorithm. Processes are scheduled in the order they arrive in the ready queue.</li>
+                    <li dir="auto"><strong>Characteristics</strong>:
+                    <ul>
+                    <li dir="auto">Non-preemptive: Once a process starts executing, it runs to completion.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto"><strong>Advantages</strong>: Simple and easy to understand.</li>
+                    <li dir="auto"><strong>Disadvantages</strong>: Can lead to long wait times, especially if a long process is at the front (known as the "convoy effect").</li>
+                    </ul>
+                    <h4 data-heading="2. Round Robin (RR)" dir="auto">2. Round Robin (RR)</h4>
+                    <ul>
+                    <li dir="auto"><strong>Description</strong>: Each process gets a fixed time slice (quantum) to execute. If it does not finish within that time, it goes back to the end of the queue.</li>
+                    <li dir="auto"><strong>Characteristics</strong>:
+                    <ul>
+                    <li dir="auto">Preemptive: The CPU can be taken away from a process when its time slice expires.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto"><strong>Advantages</strong>: Fair and ensures that all processes get a chance to execute.</li>
+                    <li dir="auto"><strong>Disadvantages</strong>: If the time slice is too short, it can lead to high overhead due to context switching.</li>
+                    </ul>
+                    <h4 data-heading="3. Shortest Job First (SJF)" dir="auto">3. Shortest Job First (SJF)</h4>
+                    <ul>
+                    <li dir="auto"><strong>Description</strong>: Processes with the shortest execution time are scheduled first.</li>
+                    <li dir="auto"><strong>Characteristics</strong>:
+                    <ul>
+                    <li dir="auto">Can be preemptive or non-preemptive.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto"><strong>Advantages</strong>: Minimizes average waiting time and is optimal for throughput.</li>
+                    <li dir="auto"><strong>Disadvantages</strong>: Can lead to starvation for longer processes, as they may never get scheduled.</li>
+                    </ul>
+                    <hr>
+                    <h3 data-heading="Diagram" dir="auto">Diagram</h3>
+                    <pre><code>                            CPU Scheduling
+                                                      |
+                              ------------------------------------------------
+                              |                     |                          |
+                         Definition           Multi-Level Queue        Scheduling Algorithms
+                              |                     |                          |
+                          Method of           - Multiple Queues           - FCFS
+                          allocating CPU      - Static Priority            - Round Robin
+                          time to processes   - No Process Movement        - Shortest Job First
+                              |                     |
+                         Multi-Level         Multi-Level Feedback Queue
+                         Feedback Queue         - Dynamic Priority
+                              |                     - Feedback Mechanism
+                              |                     - Flexibility
+                    </code></pre>
+                    <hr>
+                    <h3 data-heading="Definition of a Process" dir="auto">Definition of a Process</h3>
+                    <h4 data-heading="Explanation :" dir="auto">Explanation :</h4>
+                    <p dir="auto">A <strong>process</strong> is like a recipe that tells the computer what to do. When you open a game or an app on your computer, the computer creates a process to run that game or app. It includes everything needed to make the program work, like its instructions and the information it needs.</p>
+                    <h4 data-heading="Bookish Language:" dir="auto">Bookish Language:</h4>
+                    <p dir="auto">A process is an instance of a program in execution. It consists of the program code (text section), current activity (process counter), and the associated resources such as memory, files, and I/O devices. The operating system manages processes to ensure efficient execution and resource allocation.</p>
+                    <hr>
+                    <h3 data-heading="Various States of a Process" dir="auto">Various States of a Process</h3>
+                    <p dir="auto">A process can exist in several states during its lifetime. Here are the primary states:</p>
+                    <ol>
+                    <li dir="auto">
+                    <p><strong>New</strong>: The process is being created. It is in the initial state and has just been loaded into memory.</p>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Ready</strong>: The process is ready to run but is waiting for CPU time. It is in the ready queue, waiting for the scheduler to allocate CPU resources.</p>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Running</strong>: The process is currently being executed by the CPU. It is actively using the CPU to perform its tasks.</p>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Waiting (Blocked)</strong>: The process cannot continue until some condition is met (like waiting for I/O operations to complete). It is not in the ready queue but is waiting for an event to occur.</p>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Terminated (Exit)</strong>: The process has finished execution and is being removed from the system. It may be waiting for its resources to be released.</p>
+                    </li>
+                    </ol>
+                    <h3 data-heading="Diagram of Process States" dir="auto">Diagram of Process States</h3>
+                    <p dir="auto">Here’s a simple diagram representing the various states of a process:</p>
+                    <pre><code>+------------------+
+                    |       New        |
+                    +------------------+
+                             |
+                             |  (Admitted)
+                             v
+                    +------------------+
+                    |      Ready       | &lt;--------------------+
+                    +------------------+                      |
+                             |                                  |
+                             |  (Scheduler allocates CPU)      |
+                             v                                  |
+                    +------------------+                         |
+                    |     Running      |                         |
+                    +------------------+                         |
+                             |                                  |
+                             |  (I/O request or time slice)    |
+                             |                                  |
+                             v                                  |
+                    +------------------+                         |
+                    |     Waiting      |                         |
+                    +------------------+                         |
+                             |                                  |
+                             |  (Event occurs)                  |
+                             |                                  |
+                             +----------------------------------+
+                             |
+                             v
+                    +------------------+
+                    |    Terminated    |
+                    +------------------+
+                    </code></pre>
+                    <h3 data-heading="Explanation of Transitions" dir="auto">Explanation of Transitions</h3>
+                    <ul>
+                    <li dir="auto"><strong>Admitted</strong>: When a new process is created, it is admitted to the ready state where it waits for CPU time.</li>
+                    <li dir="auto"><strong>Scheduler allocates CPU</strong>: The CPU scheduler selects a process from the ready queue and switches it to the running state.</li>
+                    <li dir="auto"><strong>I/O request or time slice</strong>: If the running process needs to wait for I/O operations, it moves to the waiting state. Alternatively, if it has used its time slice, it may move back to the ready state.</li>
+                    <li dir="auto"><strong>Event occurs</strong>: When the event that a waiting process is waiting for occurs, it transitions back to the ready state.</li>
+                    <li dir="auto"><strong>Terminated</strong>: After a process completes its task, it transitions to the terminated state.</li>
+                    </ul>
+                    <hr>
+                    <h3 data-heading="Definition of Deadlock" dir="auto">Definition of Deadlock</h3>
+                    <h4 data-heading="Explanation :" dir="auto">Explanation :</h4>
+                    <p dir="auto">Imagine you and your friend both want to use the same two toys, but you each have one toy and won't give it up until you get the other. Neither of you can play because you're both waiting forever. That's what a <strong>deadlock</strong> is—when computer programs get stuck waiting for each other, and nothing can happen.</p>
+                    <h4 data-heading="Bookish Language:" dir="auto">Bookish Language:</h4>
+                    <p dir="auto">A deadlock is a situation in operating systems where a set of processes become blocked because each process is holding a resource and waiting for another resource acquired by another process. In this state, none of the processes can proceed.</p>
+                    <hr>
+                    <h3 data-heading="Methods to Handle Deadlocks" dir="auto">Methods to Handle Deadlocks</h3>
+                    <ol>
+                    <li dir="auto">
+                    <p><strong>Deadlock Prevention</strong>:</p>
+                    <ul>
+                    <li dir="auto">Ensure that at least one of the necessary conditions for deadlock cannot hold.</li>
+                    <li dir="auto">Methods include resource ordering, hold and wait prevention, and preemption.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Deadlock Avoidance</strong>:</p>
+                    <ul>
+                    <li dir="auto">Requires information about how resources are to be requested.</li>
+                    <li dir="auto">The system dynamically considers every request and decides whether it is safe to grant it.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Deadlock Detection and Recovery</strong>:</p>
+                    <ul>
+                    <li dir="auto">Allow deadlocks to occur, detect them, and take action to recover.</li>
+                    <li dir="auto">Requires mechanisms to detect deadlocks and a strategy to break them, such as process termination or resource preemption.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Ignoring the Problem</strong>:</p>
+                    <ul>
+                    <li dir="auto">The "Ostrich Algorithm" involves ignoring the problem entirely, assuming deadlocks are rare.</li>
+                    <li dir="auto">Used in systems where deadlocks are infrequent and the cost of prevention is higher.</li>
+                    </ul>
+                    </li>
+                    </ol>
+                    <hr>
+                    <h3 data-heading="Deadlock Avoidance Using Banker's Algorithm" dir="auto">Deadlock Avoidance Using Banker's Algorithm</h3>
+                    <p dir="auto"><strong>Banker's Algorithm</strong> is a deadlock avoidance algorithm that tests each resource allocation request to ensure that there is no deadlock. It is like a bank deciding whether to grant a loan based on whether it can still satisfy all its clients safely.</p>
+                    <h4 data-heading="Key Concepts:" dir="auto">Key Concepts:</h4>
+                    <ul>
+                    <li dir="auto"><strong>Safe State</strong>: A state is safe if the system can allocate resources to each process in some order and still avoid a deadlock.</li>
+                    <li dir="auto"><strong>Unsafe State</strong>: A state that might lead to a deadlock.</li>
+                    </ul>
+                    <h4 data-heading="How It Works:" dir="auto">How It Works:</h4>
+                    <ol>
+                    <li dir="auto">Each process must declare the maximum number of resources of each type it may need.</li>
+                    <li dir="auto">The system calculates if resources can be allocated safely:
+                    <ul>
+                    <li dir="auto">Check if the state is safe by simulating resource allocation and ensuring all processes can finish.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">If the allocation leads to a safe state, resources are allocated. If not, the process must wait.</li>
+                    </ol>
+                    <hr>
+                    <h3 data-heading="Different Types of Deadlocks" dir="auto">Different Types of Deadlocks</h3>
+                    <ol>
+                    <li dir="auto"><strong>Resource Deadlock</strong>: Occurs when processes are waiting for resources held by each other.</li>
+                    <li dir="auto"><strong>Communication Deadlock</strong>: Occurs in distributed systems when messages are waiting for each other indefinitely.</li>
+                    <li dir="auto"><strong>Livelock</strong>: A situation where processes are not blocked (as in deadlock) but are constantly changing states without making progress.</li>
+                    </ol>
+                    <hr>
+                    <h3 data-heading="Diagram" dir="auto">Diagram</h3>
+                    <p dir="auto">Here’s a diagram illustrating a basic deadlock scenario:</p>
+                    <pre><code>Process P1        Process P2
+                        |                  |
+                        v                  v
+                    [Resource A]       [Resource B]
+                        |                  |
+                        v                  v
+                    [Resource B] &lt;------ [Resource A]
+                    </code></pre>
+                    <p dir="auto">In this diagram:</p>
+                    <ul>
+                    <li dir="auto"><strong>Process P1</strong> holds Resource A and waits for Resource B.</li>
+                    <li dir="auto"><strong>Process P2</strong> holds Resource B and waits for Resource A.</li>
+                    <li dir="auto">Both processes are stuck, leading to a deadlock.</li>
+                    </ul>
+                    <h3 data-heading="Diagram :" dir="auto">Diagram :</h3>
+                    <pre><code>                             Deadlock
+                                                      |
+                              ------------------------------------------------
+                              |                     |                          |
+                         Definition           Handling Methods             Banker's Algorithm
+                              |                     |                          |
+                      Situation where         - Prevention                  - Safe State
+                      processes are stuck     - Avoidance                   - Unsafe State
+                      waiting for each other  - Detection and Recovery      - Resource Allocation
+                                              - Ignoring the Problem            Decision
+                              |
+                         Types of Deadlocks
+                              |
+                          - Resource Deadlock
+                          - Communication Deadlock
+                          - Livelock
+                    </code></pre>
+                    <hr>
+                    <h3 data-heading="Virtual Memory" dir="auto">Virtual Memory</h3>
+                    <h4 data-heading="Explanation :" dir="auto">Explanation :</h4>
+                    <p dir="auto">Imagine your computer is like a desk where you do your homework. You have a lot of books (programs) but limited space on the desk (RAM). <strong>Virtual Memory</strong> is like having an extra shelf nearby where you can temporarily store books that you’re not using right now. This helps you keep your desk organized and work with more books than you could fit on your desk at once.</p>
+                    <h4 data-heading="Bookish Language:" dir="auto">Bookish Language:</h4>
+                    <p dir="auto">Virtual memory is a memory management capability of an operating system that allows a computer to compensate for physical memory shortages by temporarily transferring data from random access memory (RAM) to disk storage. It creates an illusion for users that the system has more RAM than it actually does.</p>
+                    <hr>
+                    <h3 data-heading="Demand Paging" dir="auto">Demand Paging</h3>
+                    <h4 data-heading="Explanation :" dir="auto">Explanation :</h4>
+                    <p dir="auto"><strong>Demand Paging</strong> is like only bringing a book from the shelf to your desk when you actually need to read it. You don't clutter your desk with all the books at once, just the ones you need right now.</p>
+                    <h4 data-heading="Bookish Language:" dir="auto">Bookish Language:</h4>
+                    <p dir="auto">Demand paging is a technique used in virtual memory systems where pages of data are loaded into memory only when they are required for execution, rather than being pre-loaded. This minimizes the amount of physical memory used and allows more processes to be run simultaneously.</p>
+                    <h4 data-heading="How Demand Paging Works:" dir="auto">How Demand Paging Works:</h4>
+                    <ol>
+                    <li dir="auto"><strong>Page Table</strong>: Keeps track of where the pages are in physical memory and on disk.</li>
+                    <li dir="auto"><strong>Page Fault</strong>: Occurs when a program tries to access a page that is not currently in memory. The operating system then retrieves the page from disk.</li>
+                    </ol>
+                    <hr>
+                    <h3 data-heading="Page Replacement Algorithms" dir="auto">Page Replacement Algorithms</h3>
+                    <p dir="auto">When a page fault occurs and there is no free space in physical memory, a page replacement algorithm decides which page to remove to make space for the new one.</p>
+                    <h4 data-heading="Common Page Replacement Algorithms:" dir="auto">Common Page Replacement Algorithms:</h4>
+                    <ol>
+                    <li dir="auto">
+                    <p><strong>First-In, First-Out (FIFO)</strong>:</p>
+                    <ul>
+                    <li dir="auto"><strong>Explanation</strong>: Like a queue, the oldest page (the one that was loaded first) is replaced.</li>
+                    <li dir="auto"><strong>Pros</strong>: Simple to implement.</li>
+                    <li dir="auto"><strong>Cons</strong>: Can lead to suboptimal performance.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Least Recently Used (LRU)</strong>:</p>
+                    <ul>
+                    <li dir="auto"><strong>Explanation</strong>: Replaces the page that hasn’t been used for the longest time.</li>
+                    <li dir="auto"><strong>Pros</strong>: More efficient than FIFO as it considers recent usage patterns.</li>
+                    <li dir="auto"><strong>Cons</strong>: Requires additional data structures to track usage.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Optimal Page Replacement</strong>:</p>
+                    <ul>
+                    <li dir="auto"><strong>Explanation</strong>: Replaces the page that will not be used for the longest period in the future. It's the best theoretical approach but impractical because it requires future knowledge.</li>
+                    <li dir="auto"><strong>Pros</strong>: Provides the best possible page fault rate.</li>
+                    <li dir="auto"><strong>Cons</strong>: Not feasible in practice.</li>
+                    </ul>
+                    </li>
+                    </ol>
+                    <hr>
+                    <h3 data-heading="Diagram" dir="auto">Diagram</h3>
+                    <p dir="auto">Here’s a simple diagram representing how virtual memory and demand paging interact:</p>
+                    <pre><code>+-------------------+          +-------------------+
+                    |   Virtual Memory  |&lt;--------&gt;|       Disk        |
+                    +-------------------+          +-------------------+
+                             |                            ^
+                             v                            |
+                    +-------------------+          +-------------------+
+                    |     RAM (Physical |&lt;--------&gt;|   Page Table     |
+                    |     Memory)       |          +-------------------+
+                    +-------------------+
+                    </code></pre>
+                    <p dir="auto">In this diagram:</p>
+                    <ul>
+                    <li dir="auto">Virtual memory is managed by maintaining a page table that maps virtual addresses to physical addresses.</li>
+                    <li dir="auto">Demand paging involves moving pages between the disk and RAM as needed.</li>
+                    </ul>
+                    <h3 data-heading="Summary" dir="auto">Summary</h3>
+                    <ul>
+                    <li dir="auto"><strong>Virtual Memory</strong> allows a system to use disk space to extend the apparent capacity of RAM.</li>
+                    <li dir="auto"><strong>Demand Paging</strong> loads data into memory only when it's needed, reducing unnecessary memory usage.</li>
+                    <li dir="auto"><strong>Page Replacement Algorithms</strong> help manage which pages to swap out when memory is full, with FIFO, LRU, and Optimal being common strategies.</li>
+                    </ul>
+                    <hr>
+                    <h3 data-heading="Definition of a Process" dir="auto">Definition of a Process</h3>
+                    <h4 data-heading="Explanation :" dir="auto">Explanation :</h4>
+                    <p dir="auto">A <strong>process</strong> is like a task or a job that your computer is doing. When you open a game or an app, your computer starts a process for it. This process tells the computer what to do, like showing graphics or playing sound, and it keeps track of all the instructions and data needed to make your app work.</p>
+                    <h4 data-heading="Bookish Language:" dir="auto">Bookish Language:</h4>
+                    <p dir="auto">A process is an instance of a program in execution. It comprises the program code and its current activity. A process includes the program counter, registers, variables, files, and allocated memory. The operating system manages processes to allocate resources efficiently and ensure smooth execution.</p>
+                    <hr>
+                    <h3 data-heading="Process Management Commands" dir="auto">Process Management Commands</h3>
+                    <p dir="auto">Process management involves controlling the processes running on an operating system. Here are some common commands used in Unix/Linux environments to manage processes:</p>
+                    <ol>
+                    <li dir="auto">
+                    <p><strong><code>ps</code> (Process Status)</strong>:</p>
+                    <ul>
+                    <li dir="auto"><strong>Description</strong>: Displays information about currently running processes.</li>
+                    <li dir="auto"><strong>Usage</strong>: <code>ps aux</code> shows detailed information about all running processes.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong><code>top</code></strong>:</p>
+                    <ul>
+                    <li dir="auto"><strong>Description</strong>: Provides a real-time, dynamic view of the system's processes.</li>
+                    <li dir="auto"><strong>Usage</strong>: Type <code>top</code> in the terminal to see real-time data about CPU usage, memory usage, and more.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong><code>kill</code></strong>:</p>
+                    <ul>
+                    <li dir="auto"><strong>Description</strong>: Sends a signal to a process, typically to terminate it.</li>
+                    <li dir="auto"><strong>Usage</strong>: <code>kill &lt;PID&gt;</code> sends a termination signal to the process with the specified Process ID (PID).</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong><code>killall</code></strong>:</p>
+                    <ul>
+                    <li dir="auto"><strong>Description</strong>: Terminates all processes with a given name.</li>
+                    <li dir="auto"><strong>Usage</strong>: <code>killall &lt;process_name&gt;</code> stops all processes with the specified name.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong><code>nice</code></strong> and <strong><code>renice</code></strong>:</p>
+                    <ul>
+                    <li dir="auto"><strong>Description</strong>: Adjusts the priority of a process. <code>nice</code> starts a process with a specified priority, and <code>renice</code> changes the priority of an existing process.</li>
+                    <li dir="auto"><strong>Usage</strong>: <code>nice -n &lt;priority&gt; &lt;command&gt;</code> or <code>renice &lt;priority&gt; -p &lt;PID&gt;</code>.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong><code>bg</code> (Background)</strong>:</p>
+                    <ul>
+                    <li dir="auto"><strong>Description</strong>: Resumes a suspended process in the background.</li>
+                    <li dir="auto"><strong>Usage</strong>: <code>bg %&lt;job_number&gt;</code> resumes the specified job in the background.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong><code>fg</code> (Foreground)</strong>:</p>
+                    <ul>
+                    <li dir="auto"><strong>Description</strong>: Brings a background process to the foreground.</li>
+                    <li dir="auto"><strong>Usage</strong>: <code>fg %&lt;job_number&gt;</code> brings the specified job to the foreground.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong><code>jobs</code></strong>:</p>
+                    <ul>
+                    <li dir="auto"><strong>Description</strong>: Lists all current jobs along with their statuses.</li>
+                    <li dir="auto"><strong>Usage</strong>: Simply type <code>jobs</code> to see a list of all jobs in the current session.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong><code>nohup</code></strong>:</p>
+                    <ul>
+                    <li dir="auto"><strong>Description</strong>: Runs a command immune to hangups; output is sent to <code>nohup.out</code> by default.</li>
+                    <li dir="auto"><strong>Usage</strong>: <code>nohup &lt;command&gt; &amp;</code> runs a command that won't stop even after logging out.</li>
+                    </ul>
+                    </li>
+                    </ol>
+                    <hr>
+                    <h3 data-heading="Summary" dir="auto">Summary</h3>
+                    <ul>
+                    <li dir="auto">A <strong>process</strong> is a running instance of a program, managed by the operating system to perform tasks and handle resources.</li>
+                    <li dir="auto"><strong>Process Management Commands</strong> in Unix/Linux are essential for monitoring, controlling, and managing processes, ensuring efficient system operation.</li>
+                    </ul>
+                    <hr>
+                    <h3 data-heading="Least Recently Used (LRU) Page Replacement" dir="auto">Least Recently Used (LRU) Page Replacement</h3>
+                    <h4 data-heading="Concept:" dir="auto">Concept:</h4>
+                    <ul>
+                    <li dir="auto">
+                    <p><strong>Explanation </strong>: Imagine you have a backpack with limited space and you need to carry your favorite toys. To decide which toy to take out when you need to add another, you remove the toy you haven’t played with in the longest time. That’s what LRU does with pages in memory.</p>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Bookish Language</strong>: LRU is a page replacement algorithm that removes the page that has not been used for the longest period of time. The idea is that pages that have been used recently are more likely to be used again soon, so they are kept in memory.</p>
+                    </li>
+                    </ul>
+                    <h4 data-heading="Mechanism:" dir="auto">Mechanism:</h4>
+                    <ul>
+                    <li dir="auto"><strong>Tracking</strong>: The system maintains a record of the order in which pages are accessed, often using a list or stack.</li>
+                    <li dir="auto"><strong>Eviction</strong>: When a page needs to be replaced, the page that was least recently used is evicted from memory.</li>
+                    </ul>
+                    <h4 data-heading="Advantages:" dir="auto">Advantages:</h4>
+                    <ul>
+                    <li dir="auto">LRU offers good performance by approximating the optimal solution in practice, as it uses historical data to make decisions.</li>
+                    </ul>
+                    <h4 data-heading="Disadvantages:" dir="auto">Disadvantages:</h4>
+                    <ul>
+                    <li dir="auto">It can be costly to implement because it requires keeping track of the order of page accesses, which can involve additional overhead.</li>
+                    </ul>
+                    <hr>
+                    <h3 data-heading="Optimal Page Replacement" dir="auto">Optimal Page Replacement</h3>
+                    <h4 data-heading="Concept:" dir="auto">Concept:</h4>
+                    <ul>
+                    <li dir="auto">
+                    <p><strong>Explanation </strong>: Imagine you know exactly which toys you are going to play with in the future. When you need to make space, you take out the toy you won't play with for the longest time. This is the best way to manage your toys because you’re planning perfectly for the future.</p>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Bookish Language</strong>: The Optimal page replacement algorithm replaces the page that will not be used for the longest period of time in the future. It provides the lowest possible page-fault rate for a fixed number of page frames.</p>
+                    </li>
+                    </ul>
+                    <h4 data-heading="Mechanism:" dir="auto">Mechanism:</h4>
+                    <ul>
+                    <li dir="auto"><strong>Future Knowledge</strong>: The algorithm requires knowledge of future page requests to make the optimal decision about which page to replace.</li>
+                    <li dir="auto"><strong>Eviction</strong>: The page that is not needed for the longest time in the future is replaced.</li>
+                    </ul>
+                    <h4 data-heading="Advantages:" dir="auto">Advantages:</h4>
+                    <ul>
+                    <li dir="auto">It provides the best possible performance in terms of the number of page faults, as it is theoretically optimal.</li>
+                    </ul>
+                    <h4 data-heading="Disadvantages:" dir="auto">Disadvantages:</h4>
+                    <ul>
+                    <li dir="auto">It is impractical for real systems because it requires future knowledge of the reference string, which is impossible to predict accurately.</li>
+                    </ul>
+                    <hr>
+                    <h3 data-heading="Summary" dir="auto">Summary</h3>
+                    <ul>
+                    <li dir="auto"><strong>LRU (Least Recently Used)</strong>: A practical algorithm that uses the history of page accesses to predict future needs. It is easier to implement than Optimal but can still be resource-intensive.</li>
+                    <li dir="auto"><strong>Optimal Page Replacement</strong>: Theoretical best-case algorithm that provides the lowest page fault rate by using future knowledge. It is not feasible for real-world implementation due to its requirement for perfect foresight.</li>
+                    </ul>
+                    <p dir="auto">Both algorithms aim to minimize page faults, thereby optimizing the performance of systems that use virtual memory. They reflect different approaches to making decisions based on either past behavior (LRU) or hypothetical future behavior (Optimal).</p>
+                    <hr>
+                    <h3 data-heading="Simple Explanation s operating system, like Linux, algorithms are like recipes that tell the computer how to do certain tasks. Here are some types of algorithms you might find:" dir="auto">Simple Explanation s operating system, like Linux, algorithms are like recipes that tell the computer how to do certain tasks. Here are some types of algorithms you might find:</h3>
+                    <ol>
+                    <li dir="auto">
+                    <p><strong>Scheduling Algorithms:</strong> These decide the order in which different programs run. Imagine you're at a theme park, and there's a queue for rides. Scheduling algorithms are like the rules that decide who gets on the ride next.</p>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Memory Management Algorithms:</strong> These help the computer keep track of which programs are using which parts of the computer's memory, so nothing gets mixed up. It's like a librarian making sure all the books are in the right place on the shelves.</p>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>File System Algorithms:</strong> These manage how data is stored and retrieved from the computer's hard drive. Think of it like organizing files in a giant filing cabinet, so you can find what you need quickly.</p>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Disk Scheduling Algorithms:</strong> These decide the order in which data is read from or written to the computer's hard drive. It's like a delivery truck planning the best route to drop off packages.</p>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Process Synchronization Algorithms:</strong> These ensure that multiple programs running at the same time don't interfere with each other. It's like traffic lights at an intersection making sure cars don't crash.</p>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Deadlock Prevention Algorithms:</strong> These make sure that programs don't get stuck waiting for each other, like when two people are trying to pass in a narrow hallway and both refuse to move.</p>
+                    </li>
+                    </ol>
+                    <h3 data-heading="Detailed, Bookish Explanation" dir="auto">Detailed, Bookish Explanation</h3>
+                    <p dir="auto">In the Linux operating system, various algorithms are employed to efficiently manage resources and processes. Here's a more formal overview:</p>
+                    <ol>
+                    <li dir="auto">
+                    <p><strong>CPU Scheduling Algorithms:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>First-Come, First-Served (FCFS):</strong> Processes are scheduled in the order they arrive.</li>
+                    <li dir="auto"><strong>Shortest Job Next (SJN):</strong> Prioritizes processes with the shortest execution time.</li>
+                    <li dir="auto"><strong>Round Robin (RR):</strong> Each process gets an equal share of the CPU time in turns.</li>
+                    <li dir="auto"><strong>Priority Scheduling:</strong> Processes are scheduled based on priority levels.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Memory Management Algorithms:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Paging:</strong> Divides memory into fixed-size pages to manage data efficiently.</li>
+                    <li dir="auto"><strong>Segmentation:</strong> Divides the memory into segments based on logical divisions like functions or objects.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>File System Algorithms:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Ext4 (Fourth Extended Filesystem):</strong> A widely used file system in Linux that supports large volumes and files.</li>
+                    <li dir="auto"><strong>Btrfs (B-tree File System):</strong> Provides advanced features like snapshot and dynamic inode allocation.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Disk Scheduling Algorithms:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Elevator (SCAN):</strong> Moves the disk arm in one direction, servicing requests, then reverses direction.</li>
+                    <li dir="auto"><strong>C-SCAN (Circular SCAN):</strong> Similar to SCAN but only services requests in one direction, then returns to the start.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Process Synchronization Algorithms:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Semaphores:</strong> Used to control access to a common resource by multiple processes.</li>
+                    <li dir="auto"><strong>Mutexes (Mutual Exclusion):</strong> Prevents multiple processes from accessing a resource simultaneously.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Deadlock Prevention Algorithms:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Banker’s Algorithm:</strong> Allocates resources safely to avoid deadlocks.</li>
+                    </ul>
+                    </li>
+                    </ol>
+                    <h3 data-heading="Mindmap" dir="auto">Mindmap</h3>
+                    <p dir="auto">Creating a mindmap in text format:</p>
+                    <pre><code>Operating System Algorithms
+                       |
+                       |-- CPU Scheduling
+                       |     |-- FCFS
+                       |     |-- SJN
+                       |     |-- RR
+                       |     |-- Priority
+                       |
+                       |-- Memory Management
+                       |     |-- Paging
+                       |     |-- Segmentation
+                       |
+                       |-- File System
+                       |     |-- Ext4
+                       |     |-- Btrfs
+                       |
+                       |-- Disk Scheduling
+                       |     |-- Elevator (SCAN)
+                       |     |-- C-SCAN
+                       |
+                       |-- Process Synchronization
+                       |     |-- Semaphores
+                       |     |-- Mutexes
+                       |
+                       |-- Deadlock Prevention
+                             |-- Banker’s Algorithm
+                    </code></pre>
+                    <hr>
+                    <h3 data-heading="Simple Explanation" dir="auto">Simple Explanation</h3>
+                    <p dir="auto"><strong>What is Linux?</strong></p>
+                    <p dir="auto">Linux is like the brain of a computer. It's called an "operating system," which is a special program that helps all the other programs on your computer run. Think of it like the manager of a busy restaurant, making sure everything goes smoothly.</p>
+                    <p dir="auto"><strong>History of Linux</strong></p>
+                    <p dir="auto">A long time ago, in the 1990s, a computer science student named Linus Torvalds wanted to create a free operating system. He started working on it as a hobby, and he named it Linux after himself. People around the world loved the idea and started helping him improve it. Today, Linux is used in lots of places like phones, servers, and even supercomputers!</p>
+                    <h3 data-heading="Detailed, Bookish Explanation" dir="auto">Detailed, Bookish Explanation</h3>
+                    <p dir="auto"><strong>What is Linux?</strong></p>
+                    <p dir="auto">Linux is a robust and versatile open-source operating system based on Unix principles. It serves as a platform for running applications and managing hardware resources like memory, storage, and processing power. Linux is known for its stability, security, and flexibility, making it a popular choice for servers, desktops, and embedded systems.</p>
+                    <p dir="auto"><strong>History of Linux</strong></p>
+                    <ul>
+                    <li dir="auto">
+                    <p><strong>Early Beginnings:</strong></p>
+                    <ul>
+                    <li dir="auto">In 1991, Linus Torvalds, a student at the University of Helsinki in Finland, began developing a free, open-source operating system kernel as a personal project. He was inspired by the Unix operating system and wanted to create a similar system that was accessible to more people.</li>
+                    <li dir="auto">Linus released the first version of the Linux kernel, version 0.01, in September 1991. It included basic features but lacked many functionalities of a complete operating system.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Community Involvement:</strong></p>
+                    <ul>
+                    <li dir="auto">Linus shared his project online, inviting programmers from around the world to contribute. This collaborative effort led to rapid development and expansion of the Linux kernel.</li>
+                    <li dir="auto">The open-source nature of Linux allowed developers to modify, improve, and distribute the software freely, fostering a strong community of contributors.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Growth and Adoption:</strong></p>
+                    <ul>
+                    <li dir="auto">Throughout the 1990s, Linux gained popularity among enthusiasts and developers, leading to the creation of various distributions or "distros" like Debian, Red Hat, and Slackware, each with its own set of features and package management systems.</li>
+                    <li dir="auto">Major companies and organizations began adopting Linux for servers and enterprise solutions due to its reliability, scalability, and cost-effectiveness.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Present Day:</strong></p>
+                    <ul>
+                    <li dir="auto">Linux is now the backbone of many technological infrastructures, including web servers, cloud computing, mobile devices (like Android), and more.</li>
+                    <li dir="auto">It remains a symbol of the open-source movement, promoting collaboration and innovation across the tech industry.</li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <h3 data-heading="Mindmap" dir="auto">Mindmap</h3>
+                    <p dir="auto">Here's a text representation of a mindmap for Linux and its history:</p>
+                    <pre><code>Linux
+                       |
+                       |-- What is Linux?
+                       |     |-- Open-source OS
+                       |     |-- Unix-based
+                       |     |-- Stability &amp; Security
+                       |
+                       |-- History
+                             |-- 1991: Linus Torvalds
+                             |-- Early Kernel Release
+                             |-- Community Collaboration
+                             |-- Creation of Distros (Debian, Red Hat)
+                             |-- Widespread Adoption (Servers, Mobile)
+                             |-- Present Day Usage
+                    </code></pre>
+                    <hr>
+                    <h3 data-heading="Simple Explanation" dir="auto">Simple Explanation</h3>
+                    <p dir="auto"><strong>What Are Wildcard Characters?</strong></p>
+                    <p dir="auto">Wildcard characters are special symbols used in computer commands to represent one or more characters. Think of them like a joker card in a deck of cards that can stand in for any other card. In computers, wildcards help you search for files or perform actions on multiple files at once without having to type out each file name.</p>
+                    <p dir="auto">Here are some common wildcards:</p>
+                    <ol>
+                    <li dir="auto">
+                    <p><strong>Asterisk (*)</strong>: This can stand in for any number of characters. For example, if you type <code>*.txt</code>, it means "all files that end with .txt" like "homework.txt" or "notes.txt".</p>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Question Mark (?)</strong>: This stands in for just one character. If you type <code>file?.txt</code>, it could mean "file1.txt" or "fileA.txt", but not "file10.txt".</p>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Brackets ([ ])</strong>: These let you specify a range of characters. If you type <code>file[1-3].txt</code>, it means "file1.txt", "file2.txt", or "file3.txt".</p>
+                    </li>
+                    </ol>
+                    <h3 data-heading="Detailed, Bookish Explanation" dir="auto">Detailed, Bookish Explanation</h3>
+                    <p dir="auto"><strong>Wildcard Characters in Computing</strong></p>
+                    <p dir="auto">Wildcard characters are symbols that replace or represent one or multiple characters in string operations. They are widely used in command-line interfaces and programming for searching, matching, and manipulating files or data. Common wildcards include:</p>
+                    <ol>
+                    <li dir="auto">
+                    <p><strong>Asterisk (*)</strong>:</p>
+                    <ul>
+                    <li dir="auto">Represents zero or more characters in a file name or extension.</li>
+                    <li dir="auto">For instance, <code>*.doc</code> matches all files with a .doc extension, and <code>doc*</code> matches files starting with "doc", like "document.doc" or "docs.txt".</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Question Mark (?)</strong>:</p>
+                    <ul>
+                    <li dir="auto">Represents exactly one character.</li>
+                    <li dir="auto">For example, <code>file?.txt</code> could match "file1.txt", "fileA.txt", but not "file10.txt".</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Square Brackets ([ ])</strong>:</p>
+                    <ul>
+                    <li dir="auto">Used to specify a set or range of characters.</li>
+                    <li dir="auto">For example, <code>file[1-3].txt</code> matches "file1.txt", "file2.txt", or "file3.txt". Using <code>file[a-c].txt</code> would match "filea.txt", "fileb.txt", or "filec.txt".</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Brace Expansion ({ })</strong> (specific to some shells like Bash):</p>
+                    <ul>
+                    <li dir="auto">Allows specifying a comma-separated list of options within braces.</li>
+                    <li dir="auto">For example, <code>file{1,2,3}.txt</code> expands to "file1.txt", "file2.txt", "file3.txt".</li>
+                    </ul>
+                    </li>
+                    </ol>
+                    <p dir="auto"><strong>Usage in Operating Systems:</strong></p>
+                    <ul>
+                    <li dir="auto">
+                    <p><strong>Linux/Unix Shells</strong>: In Unix-like operating systems, wildcards are extensively used in shell commands for matching file names and patterns. For example, <code>ls *.txt</code> lists all text files in a directory.</p>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Programming and Scripting</strong>: Wildcards are integral in regular expressions and scripting for pattern matching and text processing tasks.</p>
+                    </li>
+                    </ul>
+                    <h3 data-heading="Mindmap" dir="auto">Mindmap</h3>
+                    <p dir="auto">Here's a text representation of a mindmap for wildcard characters:</p>
+                    <pre><code>Wildcard Characters
+                       |
+                       |-- Asterisk (*)
+                       |     |-- Matches zero or more characters
+                       |     |-- Example: *.txt, doc*
+                       |
+                       |-- Question Mark (?)
+                       |     |-- Matches exactly one character
+                       |     |-- Example: file?.txt
+                       |
+                       |-- Square Brackets ([ ])
+                       |     |-- Specifies a set or range of characters
+                       |     |-- Example: file[1-3].txt, file[a-c].txt
+                       |
+                       |-- Brace Expansion ({ })
+                             |-- Comma-separated list expansion
+                             |-- Example: file{1,2,3}.txt
+                    </code></pre>
+                    <hr>
+                    <h3 data-heading="Simple Explanation" dir="auto">Simple Explanation</h3>
+                    <p dir="auto"><strong>Redirection:</strong></p>
+                    <p dir="auto">Redirection is like telling your computer to put things somewhere else. Imagine you’re writing a story in your notebook, but you want to write it on a piece of paper instead. Redirection changes where things go:</p>
+                    <ol>
+                    <li dir="auto">
+                    <p><strong>Output Redirection (<code>&gt;</code>):</strong> Instead of showing the result on the screen, the computer writes it to a file. If you type <code>echo "Hello" &gt; hello.txt</code>, it writes "Hello" into a file named hello.txt.</p>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Input Redirection (<code>&lt;</code>):</strong> This is like reading from a file instead of typing. If a program needs to know your name, you can save your name in a file and have the program read it from there.</p>
+                    </li>
+                    </ol>
+                    <p dir="auto"><strong>Pipe (<code>|</code>):</strong></p>
+                    <p dir="auto">Piping is like connecting two toys with a tube so they can pass things to each other. When you use a pipe, you take the output of one command and use it as the input for another. For example, if you want to find the word "apple" in a list and then see how many times it appears, you can use <code>cat list.txt | grep apple | wc -l</code>. This takes what’s in list.txt, finds "apple", and then counts how many times it shows up.</p>
+                    <h3 data-heading="Detailed, Bookish Explanation" dir="auto">Detailed, Bookish Explanation</h3>
+                    <p dir="auto"><strong>Redirection:</strong></p>
+                    <p dir="auto">Redirection in computing is a feature of command-line interfaces in Unix-like operating systems that alters the standard input/output streams of commands.</p>
+                    <ol>
+                    <li dir="auto">
+                    <p><strong>Output Redirection (<code>&gt;</code> and <code>&gt;&gt;</code>):</strong></p>
+                    <ul>
+                    <li dir="auto"><strong><code>&gt;</code></strong>: Redirects the standard output of a command to a file, overwriting the file if it already exists.
+                    <ul>
+                    <li dir="auto">Example: <code>ls &gt; files.txt</code> writes the list of files in the current directory to <code>files.txt</code>.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto"><strong><code>&gt;&gt;</code></strong>: Appends the standard output to the end of a file, preserving existing content.
+                    <ul>
+                    <li dir="auto">Example: <code>echo "New entry" &gt;&gt; log.txt</code> adds "New entry" to the end of <code>log.txt</code>.</li>
+                    </ul>
+                    </li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Input Redirection (<code>&lt;</code>):</strong></p>
+                    <ul>
+                    <li dir="auto">Redirects the standard input of a command to take input from a file.</li>
+                    <li dir="auto">Example: <code>sort &lt; names.txt</code> sorts the contents of <code>names.txt</code>.</li>
+                    </ul>
+                    </li>
+                    </ol>
+                    <p dir="auto"><strong>Pipe (<code>|</code>):</strong></p>
+                    <p dir="auto">A pipe is a method used in Unix and Unix-like systems to connect the output of one command directly to the input of another, allowing for complex command sequences without intermediate files.</p>
+                    <ul>
+                    <li dir="auto">
+                    <p><strong>Syntax and Use:</strong></p>
+                    <ul>
+                    <li dir="auto">The pipe operator <code>|</code> is placed between two commands.</li>
+                    <li dir="auto">Example: <code>cat file.txt | grep "pattern"</code> takes the content of <code>file.txt</code>, searches for "pattern", and displays the matching lines.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Chaining Commands:</strong></p>
+                    <ul>
+                    <li dir="auto">Multiple pipes can be used to create a chain of commands.</li>
+                    <li dir="auto">Example: <code>ps aux | grep "bash" | wc -l</code> counts how many bash processes are running.</li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <h3 data-heading="Mindmap" dir="auto">Mindmap</h3>
+                    <p dir="auto">Here's a text representation of a mindmap for redirection and pipes:</p>
+                    <pre><code>Redirection and Pipes
+                       |
+                       |-- Redirection
+                       |     |-- Output Redirection (`&gt;`, `&gt;&gt;`)
+                       |     |     |-- Overwrite (&gt;)
+                       |     |     |-- Append (&gt;&gt;)
+                       |     |
+                       |     |-- Input Redirection (`&lt;`)
+                       |           |-- Read from file
+                       |
+                       |-- Pipe (`|`)
+                             |-- Connects commands
+                             |-- Passes output to input
+                             |-- Example: cmd1 | cmd2
+                    </code></pre>
+                    <hr>
+                    <h3 data-heading="File Permissions in Linux" dir="auto">File Permissions in Linux</h3>
+                    <p dir="auto">File permissions in Linux are a fundamental aspect of the operating system's security and multi-user environment. They help control who can read, modify, or execute a file or directory. Understanding file permissions is crucial for system administration and ensuring data security.</p>
+                    <h4 data-heading="1. **Basics of File Permissions**" dir="auto">1. <strong>Basics of File Permissions</strong></h4>
+                    <p dir="auto">Linux file permissions are represented by a set of symbols associated with each file and directory. These symbols dictate the actions that different types of users can perform on the file:</p>
+                    <ul>
+                    <li dir="auto"><strong>Read (r):</strong> Allows a user to open and view the contents of a file. For directories, it permits listing the contents.</li>
+                    <li dir="auto"><strong>Write (w):</strong> Enables a user to modify or delete the contents of a file. For directories, it allows creating, deleting, or renaming files within them.</li>
+                    <li dir="auto"><strong>Execute (x):</strong> Grants permission to run a file as a program. For directories, it allows accessing the contents, meaning a user can traverse into the directory.</li>
+                    </ul>
+                    <h4 data-heading="2. **User Categories**" dir="auto">2. <strong>User Categories</strong></h4>
+                    <p dir="auto">Permissions apply to three distinct categories of users:</p>
+                    <ul>
+                    <li dir="auto"><strong>Owner (User):</strong> The creator of the file, who has control over the file and can set permissions for others.</li>
+                    <li dir="auto"><strong>Group:</strong> A collection of users who often need similar access to the file. The owner can assign the file to a specific group.</li>
+                    <li dir="auto"><strong>Others (World):</strong> All other users who have access to the system and are not part of the file's group.</li>
+                    </ul>
+                    <h4 data-heading="3. **Permission Representation**" dir="auto">3. <strong>Permission Representation</strong></h4>
+                    <p dir="auto">Permissions are typically displayed using a symbolic notation, a string of 10 characters, such as <code>-rwxr-xr--</code>.</p>
+                    <ul>
+                    <li dir="auto">The first character indicates the file type (<code>-</code> for regular files, <code>d</code> for directories).</li>
+                    <li dir="auto">The remaining nine characters are divided into three triads for the owner, group, and others.
+                    <ul>
+                    <li dir="auto">Each triad includes three characters: <code>rwx</code>.</li>
+                    <li dir="auto">A dash (<code>-</code>) indicates that a specific permission is not granted.</li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <h4 data-heading="4. **Numeric Representation**" dir="auto">4. <strong>Numeric Representation</strong></h4>
+                    <p dir="auto">Permissions can also be represented numerically, using a three-digit octal number. Each digit ranges from 0 to 7, representing the sum of permissions:</p>
+                    <ul>
+                    <li dir="auto"><strong>4</strong>: Read</li>
+                    <li dir="auto"><strong>2</strong>: Write</li>
+                    <li dir="auto"><strong>1</strong>: Execute</li>
+                    </ul>
+                    <p dir="auto">For example, <code>rwxr-xr--</code> is equivalent to <code>754</code>:</p>
+                    <ul>
+                    <li dir="auto"><strong>Owner (7)</strong>: Read (4) + Write (2) + Execute (1) = 7</li>
+                    <li dir="auto"><strong>Group (5)</strong>: Read (4) + Execute (1) = 5</li>
+                    <li dir="auto"><strong>Others (4)</strong>: Read (4) = 4</li>
+                    </ul>
+                    <h4 data-heading="5. **Changing Permissions**" dir="auto">5. <strong>Changing Permissions</strong></h4>
+                    <p dir="auto">The <code>chmod</code> (change mode) command is used to modify file permissions. It can be applied using either symbolic or numeric notation.</p>
+                    <ul>
+                    <li dir="auto"><strong>Symbolic Mode</strong>: <code>chmod u+x filename</code> adds execute permission for the user.</li>
+                    <li dir="auto"><strong>Numeric Mode</strong>: <code>chmod 755 filename</code> sets permissions to <code>rwxr-xr-x</code>.</li>
+                    </ul>
+                    <h4 data-heading="6. **Practical Examples**" dir="auto">6. <strong>Practical Examples</strong></h4>
+                    <ul>
+                    <li dir="auto"><strong>Secure File</strong>: To ensure a file is secure and only the owner can modify it, use: <code>chmod 700 securefile</code>. This sets the permissions to <code>rwx------</code>.</li>
+                    <li dir="auto"><strong>Shared Directory</strong>: For a directory shared among a group, use: <code>chmod 770 shared_folder</code>. This sets the permissions to <code>rwxrwx---</code>, allowing full access for the owner and group.</li>
+                    </ul>
+                    <h4 data-heading="7. **Advanced Concepts**" dir="auto">7. <strong>Advanced Concepts</strong></h4>
+                    <ul>
+                    <li dir="auto"><strong>Setuid, Setgid, and Sticky Bit</strong>: These are special permission bits that have particular functions:
+                    <ul>
+                    <li dir="auto"><strong>Setuid (Set User ID)</strong>: Allows users to run an executable with the file owner's privileges.</li>
+                    <li dir="auto"><strong>Setgid (Set Group ID)</strong>: Similar to setuid, but applies to group privileges.</li>
+                    <li dir="auto"><strong>Sticky Bit</strong>: Used on directories to restrict file deletion. Only the file owner can delete their own files within the directory, even if others have write permissions.</li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <h3 data-heading="Mindmap" dir="auto">Mindmap</h3>
+                    <pre><code>File Permissions in Linux
+                       |
+                       |-- Basics
+                       |     |-- Read (r)
+                       |     |-- Write (w)
+                       |     |-- Execute (x)
+                       |
+                       |-- User Categories
+                       |     |-- Owner (User)
+                       |     |-- Group
+                       |     |-- Others (World)
+                       |
+                       |-- Representation
+                       |     |-- Symbolic: -rwxr-xr--
+                       |     |-- Numeric: 754
+                       |
+                       |-- Changing Permissions
+                       |     |-- chmod command
+                       |     |-- Symbolic and Numeric Modes
+                       |
+                       |-- Practical Examples
+                       |     |-- Secure File: chmod 700
+                       |     |-- Shared Directory: chmod 770
+                       |
+                       |-- Advanced Concepts
+                             |-- Setuid, Setgid
+                             |-- Sticky Bit
+                    </code></pre>
+                    <hr>
+                    <h3 data-heading="Simple Explanation" dir="auto">Simple Explanation</h3>
+                    <p dir="auto"><strong>Regular Expressions:</strong></p>
+                    <p dir="auto">Regular expressions (regex) are like a secret code that helps you find patterns in text. Imagine you have a magic magnifying glass that can spot specific words or patterns in a book. Regular expressions are the special rules you use to tell the magnifying glass what to look for.</p>
+                    <h3 data-heading="Detailed, Bookish Explanation" dir="auto">Detailed, Bookish Explanation</h3>
+                    <h4 data-heading="Regular Expressions" dir="auto">Regular Expressions</h4>
+                    <p dir="auto">Regular expressions (regex) are sequences of characters that form search patterns. They are used for pattern matching within strings, allowing for complex searching and text processing. Regex can be simple, like searching for a specific word, or complex, involving various rules and conditions.</p>
+                    <ul>
+                    <li dir="auto"><strong>Basic Elements:</strong>
+                    <ul>
+                    <li dir="auto"><strong>Literal Characters:</strong> Match themselves, like "cat" to find the word "cat".</li>
+                    <li dir="auto"><strong>Metacharacters:</strong> Special symbols that have specific meanings, such as:
+                    <ul>
+                    <li dir="auto"><strong><code>.</code></strong>: Matches any single character except a newline.</li>
+                    <li dir="auto"><strong><code>*</code></strong>: Matches zero or more of the preceding element.</li>
+                    <li dir="auto"><strong><code>^</code></strong>: Matches the start of a line.</li>
+                    <li dir="auto"><strong><code>$</code></strong>: Matches the end of a line.</li>
+                    <li dir="auto"><strong><code>[ ]</code></strong>: Matches any one of the enclosed characters.</li>
+                    <li dir="auto"><strong><code>\</code></strong>: Escapes a special character, making it literal.</li>
+                    </ul>
+                    </li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <h4 data-heading="`grep`, `egrep`, and `fgrep`" dir="auto"><code>grep</code>, <code>egrep</code>, and <code>fgrep</code></h4>
+                    <p dir="auto">These are command-line utilities used for searching text using regular expressions or fixed strings.</p>
+                    <ol>
+                    <li dir="auto">
+                    <p><strong><code>grep</code> (Global Regular Expression Print):</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Function:</strong> Searches for patterns in text using basic regular expressions.</li>
+                    <li dir="auto"><strong>Usage:</strong> Commonly used to find lines in a file that match a specified pattern.</li>
+                    <li dir="auto"><strong>Example:</strong> <code>grep "pattern" file.txt</code> searches for "pattern" in <code>file.txt</code> and prints matching lines.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong><code>egrep</code> (Extended <code>grep</code>):</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Function:</strong> Uses extended regular expressions, which are more powerful and flexible than basic ones.</li>
+                    <li dir="auto"><strong>Difference:</strong> Supports additional metacharacters like <code>+</code>, <code>?</code>, <code>|</code> without needing to escape them.</li>
+                    <li dir="auto"><strong>Example:</strong> <code>egrep "cat|dog" file.txt</code> finds lines containing either "cat" or "dog".</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong><code>fgrep</code> (Fixed <code>grep</code>):</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Function:</strong> Searches for fixed strings rather than regular expressions.</li>
+                    <li dir="auto"><strong>Usage:</strong> Faster than <code>grep</code> and <code>egrep</code> when searching for simple strings because it does not interpret metacharacters.</li>
+                    <li dir="auto"><strong>Example:</strong> <code>fgrep "special*characters" file.txt</code> searches for the exact string "special<em>characters" without interpreting `</em>` as a metacharacter.</li>
+                    </ul>
+                    </li>
+                    </ol>
+                    <h3 data-heading="Mindmap" dir="auto">Mindmap</h3>
+                    <p dir="auto">Here's a text representation of a mindmap for regular expressions and the <code>grep</code> family:</p>
+                    <pre><code>Regular Expressions and grep Family
+                       |
+                       |-- Regular Expressions
+                       |     |-- Literal Characters
+                       |     |-- Metacharacters
+                       |           |-- .
+                       |           |-- *
+                       |           |-- ^
+                       |           |-- $
+                       |           |-- [ ]
+                       |           |-- \
+                       |
+                       |-- grep
+                       |     |-- Basic regex
+                       |     |-- Example: grep "pattern" file.txt
+                       |
+                       |-- egrep
+                       |     |-- Extended regex
+                       |     |-- Supports +, ?, |
+                       |     |-- Example: egrep "cat|dog" file.txt
+                       |
+                       |-- fgrep
+                             |-- Fixed strings
+                             |-- Faster for simple strings
+                             |-- Example: fgrep "exact*string" file.txt
+                    </code></pre>
+                    <hr>
+                    <h1 data-heading="vi Editor" dir="auto">vi Editor</h1>
+                    <h2 data-heading="Modes of Operation" dir="auto">Modes of Operation</h2>
+                    <ul>
+                    <li dir="auto"><strong>Command Mode</strong>: Default mode for navigation/editing commands (e.g., <code>dd</code> to delete a line).  </li>
+                    <li dir="auto"><strong>Insert Mode</strong>: Activated by <code>i</code>, <code>a</code>, or <code>o</code> for text input; exited via <code>Esc</code>.  </li>
+                    </ul>
+                    <hr>
+                    <h2 data-heading="Core Commands" dir="auto">Core Commands</h2>
+                    <h3 data-heading="Navigation" dir="auto">Navigation</h3>
+                    <ul>
+                    <li dir="auto">
+                    <p><strong>Line Movement</strong>:  </p>
+                    <ul>
+                    <li dir="auto"><code>:0</code> or <code>1G</code> → Move to the first line  </li>
+                    <li dir="auto"><code>:$</code> or <code>G</code> → Move to the last line  </li>
+                    <li dir="auto"><code>:n</code> → Jump to line <em>n</em>  </li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Screen Movement</strong>:  </p>
+                    <ul>
+                    <li dir="auto"><code>^f</code> → Move forward one screen  </li>
+                    <li dir="auto"><code>^b</code> → Move backward one screen  </li>
+                    <li dir="auto"><code>^d</code> → Move down half a screen  </li>
+                    <li dir="auto"><code>^u</code> → Move up half a screen  </li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Character/Word Movement</strong>:  </p>
+                    <ul>
+                    <li dir="auto"><code>h</code>, <code>j</code>, <code>k</code>, <code>l</code> → Move left, down, up, right  </li>
+                    <li dir="auto"><code>w</code> → Move to the start of the next word  </li>
+                    <li dir="auto"><code>b</code> → Move to the start of the previous word  </li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <h3 data-heading="Editing" dir="auto">Editing</h3>
+                    <ul>
+                    <li dir="auto">
+                    <p><strong>Insertion</strong>:  </p>
+                    <ul>
+                    <li dir="auto"><code>i</code> → Insert at cursor position  </li>
+                    <li dir="auto"><code>A</code> → Append text at the end of the current line  </li>
+                    <li dir="auto"><code>o</code> → Open a new line below and enter insert mode  </li>
+                    <li dir="auto"><code>O</code> → Open a new line above and enter insert mode  </li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Deletion</strong>:  </p>
+                    <ul>
+                    <li dir="auto"><code>x</code> → Delete the character under the cursor  </li>
+                    <li dir="auto"><code>dd</code> → Delete the current line  </li>
+                    <li dir="auto"><code>D</code> → Delete from the cursor to the end of the line  </li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Undo/Redo</strong>:  </p>
+                    <ul>
+                    <li dir="auto"><code>u</code> → Undo the last change  </li>
+                    <li dir="auto"><code>^R</code> → Redo the last undone change  </li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <h3 data-heading="File Operations" dir="auto">File Operations</h3>
+                    <ul>
+                    <li dir="auto">
+                    <p><strong>Save/Exit</strong>:  </p>
+                    <ul>
+                    <li dir="auto"><code>:w</code> → Save changes  </li>
+                    <li dir="auto"><code>:q</code> → Quit without saving  </li>
+                    <li dir="auto"><code>:wq</code> → Save changes and quit  </li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Run External Commands</strong>:  </p>
+                    <ul>
+                    <li dir="auto"><code>:!command</code> → Run an external command (e.g., <code>:!ls</code> to list files)  </li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <hr>
+                    <h2 data-heading="Advanced Features" dir="auto">Advanced Features</h2>
+                    <h3 data-heading="Search/Replace" dir="auto">Search/Replace</h3>
+                    <ul>
+                    <li dir="auto"><code>/pattern</code> → Search for the pattern forward  </li>
+                    <li dir="auto"><code>?pattern</code> → Search for the pattern backward  </li>
+                    <li dir="auto"><code>:s/old/new/g</code> → Replace all instances of <em>old</em> with <em>new</em> in the current line  </li>
+                    </ul>
+                    <h3 data-heading="Configuration" dir="auto">Configuration</h3>
+                    <pre class="language-bash" tabindex="0"><code class="language-bash is-loaded">:set nu       <span class="token comment"># Show line numbers  </span>
+                    :set ic       <span class="token comment"># Enable case-insensitive searches  </span>
+                    :set <span class="token assign-left variable">wrapmargin</span><span class="token operator">=</span><span class="token number">2</span>  <span class="token comment"># Wrap lines after 2 characters  </span>
+                    </code></pre>
+                    <hr>
+                    <h2 data-heading="Common Workflow" dir="auto">Common Workflow</h2>
+                    <ol>
+                    <li dir="auto"><strong>Open a file</strong>: <code>vi filename</code>  </li>
+                    <li dir="auto"><strong>Edit the file</strong>: Enter insert mode (<code>i</code>), make your changes.  </li>
+                    <li dir="auto"><strong>Save and exit</strong>: <code>Esc</code> → <code>:wq</code>  </li>
+                    </ol>
+                    <hr>
+                    <h2 data-heading="Marking Scheme Allocation (13 Marks)" dir="auto">Marking Scheme Allocation (13 Marks)</h2>
+                    <table>
+                    <thead>
+                    <tr>
+                    <th><strong>Section</strong></th>
+                    <th><strong>Marks</strong></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                    <td>Modes &amp; Basic Commands</td>
+                    <td>4</td>
+                    </tr>
+                    <tr>
+                    <td>Navigation/Editing</td>
+                    <td>5</td>
+                    </tr>
+                    <tr>
+                    <td>Advanced Features</td>
+                    <td>3</td>
+                    </tr>
+                    <tr>
+                    <td>Workflow Example</td>
+                    <td>1</td>
+                    </tr>
+                    </tbody>
+                    </table>
+                    <hr>
+                    <h2 data-heading="MindMap Structure" dir="auto">MindMap Structure</h2>
+                    <pre><code>vi Editor  
+                    ├── Modes  
+                    │   ├── Command (Esc)  
+                    │   └── Insert (i, a, o)  
+                    ├── Navigation  
+                    │   ├── Line (:n, G)  
+                    │   └── Screen (^f, ^b)  
+                    ├── Editing  
+                    │   ├── Insertion (i, o)  
+                    │   └── Deletion (dd, x)  
+                    ├── File Operations  
+                    │   ├── Save (:w)  
+                    │   └── Quit (:q)  
+                    └── Advanced  
+                        ├── Search (/pattern)  
+                        └── Config (:set nu)  
+                    </code></pre>
+                    <p dir="auto">Use <strong>:set</strong> commands to customize the editing environment, and always verify file changes with external commands like <code>:!ls</code>. </p>
+                    <hr>
+                    <h1 data-heading="System Administration: Backup and Restore using `.tar`" dir="auto">System Administration: Backup and Restore using <code>.tar</code></h1>
+                    <h2 data-heading="Overview" dir="auto">Overview</h2>
+                    <p dir="auto">The <code>.tar</code> (tape archive) format is widely used in Unix/Linux systems for archiving files and directories. It combines multiple files into a single file for easier storage and transfer, making it an important tool in system administration for backup and restore processes.</p>
+                    <h2 data-heading="Creating a Backup with `.tar`" dir="auto">Creating a Backup with <code>.tar</code></h2>
+                    <h3 data-heading="Command Syntax" dir="auto">Command Syntax</h3>
+                    <p dir="auto">To create a backup, you can use the following command:</p>
+                    <pre class="language-bash" tabindex="0"><code class="language-bash is-loaded"><span class="token function">tar</span> <span class="token parameter variable">-cvf</span> backup.tar /path/to/directory
+                    </code></pre>
+                    <h3 data-heading="Explanation of Options" dir="auto">Explanation of Options</h3>
+                    <ul>
+                    <li dir="auto"><code>c</code>: Create a new archive.</li>
+                    <li dir="auto"><code>v</code>: Verbose mode (shows progress in the terminal).</li>
+                    <li dir="auto"><code>f</code>: Specifies the filename of the archive (e.g., <code>backup.tar</code>).</li>
+                    </ul>
+                    <h3 data-heading="Example" dir="auto">Example</h3>
+                    <p dir="auto">To back up the <code>/home/user/documents</code> directory:</p>
+                    <pre class="language-bash" tabindex="0"><code class="language-bash is-loaded"><span class="token function">tar</span> <span class="token parameter variable">-cvf</span> documents_backup.tar /home/user/documents
+                    </code></pre>
+                    <h2 data-heading="Compressing the Backup" dir="auto">Compressing the Backup</h2>
+                    <p dir="auto">You can also compress the <code>.tar</code> file using <code>gzip</code> to save space:</p>
+                    <h3 data-heading="Command Syntax" dir="auto">Command Syntax</h3>
+                    <pre class="language-bash" tabindex="0"><code class="language-bash is-loaded"><span class="token function">tar</span> <span class="token parameter variable">-czvf</span> backup.tar.gz /path/to/directory
+                    </code></pre>
+                    <h3 data-heading="Explanation of Options" dir="auto">Explanation of Options</h3>
+                    <ul>
+                    <li dir="auto"><code>z</code>: Compress the archive using gzip.</li>
+                    </ul>
+                    <h3 data-heading="Example" dir="auto">Example</h3>
+                    <p dir="auto">To create a compressed backup:</p>
+                    <pre class="language-bash" tabindex="0"><code class="language-bash is-loaded"><span class="token function">tar</span> <span class="token parameter variable">-czvf</span> documents_backup.tar.gz /home/user/documents
+                    </code></pre>
+                    <h2 data-heading="Restoring from a Backup" dir="auto">Restoring from a Backup</h2>
+                    <h3 data-heading="Command Syntax" dir="auto">Command Syntax</h3>
+                    <p dir="auto">To restore files from a <code>.tar</code> archive, use:</p>
+                    <pre class="language-bash" tabindex="0"><code class="language-bash is-loaded"><span class="token function">tar</span> <span class="token parameter variable">-xvf</span> backup.tar
+                    </code></pre>
+                    <h3 data-heading="Explanation of Options" dir="auto">Explanation of Options</h3>
+                    <ul>
+                    <li dir="auto"><code>x</code>: Extract files from the archive.</li>
+                    <li dir="auto"><code>v</code>: Verbose mode (shows progress).</li>
+                    <li dir="auto"><code>f</code>: Specifies the filename of the archive.</li>
+                    </ul>
+                    <h3 data-heading="Example" dir="auto">Example</h3>
+                    <p dir="auto">To restore the files from <code>documents_backup.tar</code>:</p>
+                    <pre class="language-bash" tabindex="0"><code class="language-bash is-loaded"><span class="token function">tar</span> <span class="token parameter variable">-xvf</span> documents_backup.tar
+                    </code></pre>
+                    <h2 data-heading="For Compressed Archives" dir="auto">For Compressed Archives</h2>
+                    <p dir="auto">If you are working with a compressed <code>.tar.gz</code> file, the restore command is:</p>
+                    <pre class="language-bash" tabindex="0"><code class="language-bash is-loaded"><span class="token function">tar</span> <span class="token parameter variable">-xzvf</span> backup.tar.gz
+                    </code></pre>
+                    <h3 data-heading="Example" dir="auto">Example</h3>
+                    <p dir="auto">To restore from a compressed backup:</p>
+                    <pre class="language-bash" tabindex="0"><code class="language-bash is-loaded"><span class="token function">tar</span> <span class="token parameter variable">-xzvf</span> documents_backup.tar.gz
+                    </code></pre>
+                    <h2 data-heading="Verifying Archive Contents" dir="auto">Verifying Archive Contents</h2>
+                    <p dir="auto">To list the contents of a <code>.tar</code> or <code>.tar.gz</code> archive without extracting:</p>
+                    <h3 data-heading="Command Syntax" dir="auto">Command Syntax</h3>
+                    <pre class="language-bash" tabindex="0"><code class="language-bash is-loaded"><span class="token function">tar</span> <span class="token parameter variable">-tvf</span> backup.tar
+                    </code></pre>
+                    <p dir="auto">or for compressed archives:</p>
+                    <pre class="language-bash" tabindex="0"><code class="language-bash is-loaded"><span class="token function">tar</span> <span class="token parameter variable">-tzvf</span> backup.tar.gz
+                    </code></pre>
+                    <h3 data-heading="Explanation" dir="auto">Explanation</h3>
+                    <ul>
+                    <li dir="auto"><code>t</code>: List the contents of the archive.</li>
+                    </ul>
+                    <h2 data-heading="Summary" dir="auto">Summary</h2>
+                    <ul>
+                    <li dir="auto"><strong>Backup Creation</strong>: Use <code>tar -cvf</code> for creation and <code>tar -czvf</code> for compression.</li>
+                    <li dir="auto"><strong>Restoration</strong>: Use <code>tar -xvf</code> for extraction and <code>tar -xzvf</code> for compressed files.</li>
+                    <li dir="auto"><strong>Verification</strong>: Use <code>tar -tvf</code> or <code>tar -tzvf</code> to view contents without extraction.</li>
+                    </ul>
+                    <h2 data-heading="MindMap Structure" dir="auto">MindMap Structure</h2>
+                    <pre><code>Backup and Restore with .tar
+                    ├── Creating a Backup
+                    │   ├── Command: tar -cvf backup.tar /path/to/directory
+                    │   ├── Options: c, v, f
+                    │   └── Example: tar -cvf documents_backup.tar /home/user/documents
+                    ├── Compressing Backup
+                    │   ├── Command: tar -czvf backup.tar.gz /path/to/directory
+                    │   └── Option: z
+                    ├── Restoring a Backup
+                    │   ├── Command: tar -xvf backup.tar
+                    │   └── Compressed Command: tar -xzvf backup.tar.gz
+                    ├── Verifying Archive Contents
+                    │   ├── Command: tar -tvf backup.tar
+                    │   └── Compressed Command: tar -tzvf backup.tar.gz
+                    </code></pre>
+                    <hr>
+                    <h1 data-heading="Process Control: Superuser" dir="auto">Process Control: Superuser</h1>
+                    <h2 data-heading="Overview" dir="auto">Overview</h2>
+                    <p dir="auto">In Unix/Linux systems, the <strong>superuser</strong> (or <strong>root</strong>) has elevated privileges, allowing for complete control over the system. This includes the ability to manage processes, configure system settings, and perform administrative tasks that regular users cannot.</p>
+                    <h2 data-heading="What is a Superuser?" dir="auto">What is a Superuser?</h2>
+                    <ul>
+                    <li dir="auto">The <strong>superuser</strong> is a special user account with <strong>UID (User ID) 0</strong>.</li>
+                    <li dir="auto">It has unrestricted access to all commands and files on a system.</li>
+                    <li dir="auto">It can perform tasks like installing software, managing user accounts, and modifying system configurations.</li>
+                    </ul>
+                    <h2 data-heading="Common Tasks Performed by the Superuser" dir="auto">Common Tasks Performed by the Superuser</h2>
+                    <h3 data-heading="1. **Process Management**" dir="auto">1. <strong>Process Management</strong></h3>
+                    <p dir="auto">The superuser can manage and control processes using tools such as <code>ps</code>, <code>top</code>, <code>kill</code>, and more.</p>
+                    <ul>
+                    <li dir="auto"><strong>Viewing Processes:</strong>
+                    <ul>
+                    <li dir="auto">View all running processes:
+                    <pre class="language-bash" tabindex="0"><code class="language-bash is-loaded"><span class="token function">ps</span> <span class="token parameter variable">-aux</span>
+                    </code></pre>
+                    </li>
+                    </ul>
+                    </li>
+                    <li dir="auto"><strong>Monitoring Processes:</strong>
+                    <ul>
+                    <li dir="auto">Use <code>top</code> to view active processes:
+                    <pre class="language-bash" tabindex="0"><code class="language-bash is-loaded"><span class="token function">top</span>
+                    </code></pre>
+                    </li>
+                    </ul>
+                    </li>
+                    <li dir="auto"><strong>Killing Processes:</strong>
+                    <ul>
+                    <li dir="auto">Terminate a process with a specific PID (Process ID):
+                    <pre class="language-bash" tabindex="0"><code class="language-bash is-loaded"><span class="token function">kill</span> PID
+                    </code></pre>
+                    </li>
+                    <li dir="auto">For a more forceful termination:
+                    <pre class="language-bash" tabindex="0"><code class="language-bash is-loaded"><span class="token function">kill</span> <span class="token parameter variable">-9</span> PID
+                    </code></pre>
+                    </li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <h3 data-heading="2. **System Configuration**" dir="auto">2. <strong>System Configuration</strong></h3>
+                    <p dir="auto">The superuser can modify system files, which is crucial for system configuration.</p>
+                    <ul>
+                    <li dir="auto"><strong>Editing System Files:</strong>
+                    <ul>
+                    <li dir="auto">Use editors like <code>vi</code> or <code>nano</code> to edit configuration files. For example, to edit the <code>/etc/hosts</code> file:
+                    <pre class="language-bash" tabindex="0"><code class="language-bash is-loaded"><span class="token function">vi</span> /etc/hosts
+                    </code></pre>
+                    </li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <h3 data-heading="3. **User Management**" dir="auto">3. <strong>User Management</strong></h3>
+                    <p dir="auto">Managing user accounts and permissions is another key responsibility.</p>
+                    <ul>
+                    <li dir="auto"><strong>Creating a New User:</strong>
+                    <ul>
+                    <li dir="auto">To add a new user:
+                    <pre class="language-bash" tabindex="0"><code class="language-bash is-loaded"><span class="token function">useradd</span> username
+                    </code></pre>
+                    </li>
+                    </ul>
+                    </li>
+                    <li dir="auto"><strong>Setting User Password:</strong>
+                    <ul>
+                    <li dir="auto">To set a password for the user:
+                    <pre class="language-bash" tabindex="0"><code class="language-bash is-loaded"><span class="token function">passwd</span> username
+                    </code></pre>
+                    </li>
+                    </ul>
+                    </li>
+                    <li dir="auto"><strong>Deleting a User:</strong>
+                    <ul>
+                    <li dir="auto">To remove a user:
+                    <pre class="language-bash" tabindex="0"><code class="language-bash is-loaded"><span class="token function">userdel</span> username
+                    </code></pre>
+                    </li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <h3 data-heading="4. **Installing and Updating Software**" dir="auto">4. <strong>Installing and Updating Software</strong></h3>
+                    <p dir="auto">The superuser can install, update, or remove software packages.</p>
+                    <ul>
+                    <li dir="auto"><strong>Using Package Managers:</strong>
+                    <ul>
+                    <li dir="auto">On Debian-based systems:
+                    <pre class="language-bash" tabindex="0"><code class="language-bash is-loaded"><span class="token function">apt-get</span> <span class="token function">install</span> package_name
+                    </code></pre>
+                    </li>
+                    <li dir="auto">On Red Hat-based systems:
+                    <pre class="language-bash" tabindex="0"><code class="language-bash is-loaded">yum <span class="token function">install</span> package_name
+                    </code></pre>
+                    </li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <h3 data-heading="5. **Access Control**" dir="auto">5. <strong>Access Control</strong></h3>
+                    <p dir="auto">The superuser can change file ownership and permissions, allowing for better access control.</p>
+                    <ul>
+                    <li dir="auto">
+                    <p><strong>Changing File Ownership:</strong></p>
+                    <ul>
+                    <li dir="auto">To change the owner of a file:
+                    <pre class="language-bash" tabindex="0"><code class="language-bash is-loaded"><span class="token function">chown</span> new_owner filename
+                    </code></pre>
+                    </li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Changing File Permissions:</strong></p>
+                    <ul>
+                    <li dir="auto">To modify permissions:
+                    <pre class="language-bash" tabindex="0"><code class="language-bash is-loaded"><span class="token function">chmod</span> <span class="token number">755</span> filename
+                    </code></pre>
+                    </li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <h2 data-heading="Security Considerations" dir="auto">Security Considerations</h2>
+                    <p dir="auto">While the superuser has extensive power, it is crucial to exercise caution:</p>
+                    <ul>
+                    <li dir="auto"><strong>Limit Superuser Access</strong>: Only grant superuser privileges to trusted users.</li>
+                    <li dir="auto"><strong>Use with Caution</strong>: Mistakes as a superuser can lead to system instability or security breaches.</li>
+                    <li dir="auto"><strong>Use <code>sudo</code></strong>: Instead of logging in as root, it's safer to use <code>sudo</code> to perform administrative tasks:
+                    <pre class="language-bash" tabindex="0"><code class="language-bash is-loaded"><span class="token function">sudo</span> <span class="token builtin class-name">command</span>
+                    </code></pre>
+                    </li>
+                    </ul>
+                    <h2 data-heading="Conclusion" dir="auto">Conclusion</h2>
+                    <p dir="auto">The superuser role in Unix/Linux systems is essential for process control and system administration. Understanding how to effectively and safely manage processes, users, and system settings is critical for maintaining system integrity and security.</p>
+                    <h2 data-heading="MindMap Structure" dir="auto">MindMap Structure</h2>
+                    <pre><code>Process Control: Superuser
+                    ├── Overview
+                    │   ├── UID 0
+                    │   └── Unrestricted access
+                    ├── Common Tasks
+                    │   ├── Process Management
+                    │   │   ├── Viewing Processes: ps -aux
+                    │   │   ├── Monitoring Processes: top
+                    │   │   └── Killing Processes: kill PID
+                    │   ├── System Configuration
+                    │   │   └── Editing Files: vi /etc/hosts
+                    │   ├── User Management
+                    │   │   ├── Creating User: useradd username
+                    │   │   ├── Setting Password: passwd username
+                    │   │   └── Deleting User: userdel username
+                    │   ├── Software Management
+                    │   │   ├── Debian: apt-get install package_name
+                    │   │   └── Red Hat: yum install package_name
+                    │   └── Access Control
+                    │       ├── Changing Ownership: chown
+                    │       └── Changing Permissions: chmod
+                    └── Security Considerations
+                        ├── Limit Access
+                        ├── Use Caution
+                        └── Prefer sudo
+                    </code></pre>
+                    <hr>
+                    <h1 data-heading="File System: Mounting and Unmounting" dir="auto">File System: Mounting and Unmounting</h1>
+                    <h2 data-heading="Overview of File Systems" dir="auto">Overview of File Systems</h2>
+                    <p dir="auto">A <strong>file system</strong> is a method used by operating systems to organize and manage data stored on disk drives. It determines how data is stored, retrieved, and organized on storage devices. Some common file systems in Unix/Linux include <strong>ext4</strong>, <strong>btrfs</strong>, <strong>XFS</strong>, and <strong>NTFS</strong>.</p>
+                    <h2 data-heading="Key Concepts in File Systems" dir="auto">Key Concepts in File Systems</h2>
+                    <h3 data-heading="1. **Files and Directories**" dir="auto">1. <strong>Files and Directories</strong></h3>
+                    <ul>
+                    <li dir="auto"><strong>Files</strong>: The basic unit of data storage. A file contains data, settings, or commands.</li>
+                    <li dir="auto"><strong>Directories</strong>: Containers that hold files and other directories, allowing for a hierarchical organization of data.</li>
+                    </ul>
+                    <h3 data-heading="2. **Inodes**" dir="auto">2. <strong>Inodes</strong></h3>
+                    <ul>
+                    <li dir="auto">An <strong>inode</strong> is a data structure on a disk that stores information about a file or directory, including attributes, location on the disk, and permissions.</li>
+                    <li dir="auto">Each file in a file system is associated with an inode.</li>
+                    </ul>
+                    <h3 data-heading="3. **Mount Points**" dir="auto">3. <strong>Mount Points</strong></h3>
+                    <ul>
+                    <li dir="auto">A <strong>mount point</strong> is a directory in the root file system where an additional file system can be mounted (attached).</li>
+                    <li dir="auto">For example, a USB drive can be mounted to <code>/mnt/usb</code>, making it accessible from that location.</li>
+                    </ul>
+                    <hr>
+                    <h2 data-heading="Mounting Filesystems" dir="auto">Mounting Filesystems</h2>
+                    <h3 data-heading="What is Mounting?" dir="auto">What is Mounting?</h3>
+                    <p dir="auto"><strong>Mounting</strong> is the process of making a file system accessible at a specific point in the file system hierarchy.</p>
+                    <h3 data-heading="Command Syntax" dir="auto">Command Syntax</h3>
+                    <p dir="auto">To mount a file system, the basic syntax is:</p>
+                    <pre class="language-bash" tabindex="0"><code class="language-bash is-loaded"><span class="token function">mount</span> <span class="token punctuation">[</span>options<span class="token punctuation">]</span> <span class="token operator">&lt;</span>device<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>mount_point<span class="token operator">&gt;</span>
+                    </code></pre>
+                    <h3 data-heading="Explanation of Parameters" dir="auto">Explanation of Parameters</h3>
+                    <ul>
+                    <li dir="auto"><strong>device</strong>: The storage device to be mounted (e.g., <code>/dev/sdb1</code>).</li>
+                    <li dir="auto"><strong>mount_point</strong>: The directory where the device will be mounted (e.g., <code>/mnt/usb</code>).</li>
+                    </ul>
+                    <h3 data-heading="Example" dir="auto">Example</h3>
+                    <p dir="auto">To mount a USB drive located at <code>/dev/sdb1</code> to the directory <code>/mnt/usb</code>:</p>
+                    <pre class="language-bash" tabindex="0"><code class="language-bash is-loaded"><span class="token function">sudo</span> <span class="token function">mount</span> /dev/sdb1 /mnt/usb
+                    </code></pre>
+                    <h3 data-heading="Common Options" dir="auto">Common Options</h3>
+                    <ul>
+                    <li dir="auto"><code>-t &lt;type&gt;</code>: Specifies the file system type (e.g., <code>ext4</code>, <code>vfat</code>).</li>
+                    <li dir="auto"><code>-o &lt;options&gt;</code>: Additional options (e.g., <code>ro</code> for read-only).</li>
+                    </ul>
+                    <h3 data-heading="Example with Options" dir="auto">Example with Options</h3>
+                    <p dir="auto">To mount a FAT32 file system in read-only mode:</p>
+                    <pre class="language-bash" tabindex="0"><code class="language-bash is-loaded"><span class="token function">sudo</span> <span class="token function">mount</span> <span class="token parameter variable">-t</span> vfat <span class="token parameter variable">-o</span> ro /dev/sdb1 /mnt/usb
+                    </code></pre>
+                    <hr>
+                    <h2 data-heading="Unmounting Filesystems" dir="auto">Unmounting Filesystems</h2>
+                    <h3 data-heading="What is Unmounting?" dir="auto">What is Unmounting?</h3>
+                    <p dir="auto"><strong>Unmounting</strong> is the process of making a file system inaccessible, ensuring that all data is written back to the device and no processes are using it.</p>
+                    <h3 data-heading="Command Syntax" dir="auto">Command Syntax</h3>
+                    <p dir="auto">To unmount a file system, the basic syntax is:</p>
+                    <pre class="language-bash" tabindex="0"><code class="language-bash is-loaded"><span class="token function">umount</span> <span class="token operator">&lt;</span>mount_point<span class="token operator">&gt;</span>
+                    </code></pre>
+                    <p dir="auto">or </p>
+                    <pre class="language-bash" tabindex="0"><code class="language-bash is-loaded"><span class="token function">umount</span> <span class="token operator">&lt;</span>device<span class="token operator">&gt;</span>
+                    </code></pre>
+                    <h3 data-heading="Example" dir="auto">Example</h3>
+                    <p dir="auto">To unmount the USB drive mounted at <code>/mnt/usb</code>:</p>
+                    <pre class="language-bash" tabindex="0"><code class="language-bash is-loaded"><span class="token function">sudo</span> <span class="token function">umount</span> /mnt/usb
+                    </code></pre>
+                    <h3 data-heading="Important Considerations for Unmounting" dir="auto">Important Considerations for Unmounting</h3>
+                    <ul>
+                    <li dir="auto">
+                    <p>Ensure no processes are using the mounted file system. You can check with:</p>
+                    <pre class="language-bash" tabindex="0"><code class="language-bash is-loaded"><span class="token function">lsof</span> <span class="token operator">|</span> <span class="token function">grep</span> /mnt/usb
+                    </code></pre>
+                    </li>
+                    <li dir="auto">
+                    <p>If the device is busy, you can force unmount it with:</p>
+                    <pre class="language-bash" tabindex="0"><code class="language-bash is-loaded"><span class="token function">sudo</span> <span class="token function">umount</span> <span class="token parameter variable">-l</span> /mnt/usb
+                    </code></pre>
+                    </li>
+                    </ul>
+                    <hr>
+                    <h2 data-heading="Summary of Key Commands" dir="auto">Summary of Key Commands</h2>
+                    <table>
+                    <thead>
+                    <tr>
+                    <th><strong>Command</strong></th>
+                    <th><strong>Description</strong></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                    <td><code>mount &lt;device&gt; &lt;mount_point&gt;</code></td>
+                    <td>Mounts the specified device to the given directory.</td>
+                    </tr>
+                    <tr>
+                    <td><code>umount &lt;mount_point&gt;</code></td>
+                    <td>Unmounts the specified file system.</td>
+                    </tr>
+                    <tr>
+                    <td><code>mount -t &lt;type&gt;</code></td>
+                    <td>Specifies file system type while mounting.</td>
+                    </tr>
+                    <tr>
+                    <td><code>umount -l &lt;mount_point&gt;</code></td>
+                    <td>Force unmounts the file system (lazy unmount).</td>
+                    </tr>
+                    <tr>
+                    <td>`lsof</td>
+                    <td>grep &lt;mount_point&gt;`</td>
+                    </tr>
+                    </tbody>
+                    </table>
+                    <hr>
+                    <h2 data-heading="MindMap Structure" dir="auto">MindMap Structure</h2>
+                    <pre><code>File System
+                    ├── Overview
+                    │   ├── Files and Directories
+                    │   │   ├── Files: Data storage units
+                    │   │   └── Directories: Organizational containers
+                    │   ├── Inodes: Data structures for file info
+                    │   └── Mount Points: Directories for attaching file systems
+                    ├── Mounting
+                    │   ├── Command: mount [options] &lt;device&gt; &lt;mount_point&gt;
+                    │   ├── Example: sudo mount /dev/sdb1 /mnt/usb
+                    │   └── Common Options
+                    │       ├── -t &lt;type&gt;: Specifies file system type
+                    │       └── -o &lt;options&gt;: Additional mount options
+                    │           └── Example: sudo mount -t vfat -o ro /dev/sdb1 /mnt/usb
+                    └── Unmounting
+                        ├── Command: umount &lt;mount_point&gt; or umount &lt;device&gt;
+                        ├── Example: sudo umount /mnt/usb
+                        └── Considerations
+                            ├── Ensure no processes are using the mount
+                            └── Force unmount: sudo umount -l /mnt/usb
+                    </code></pre>
+                    <hr>
+                    <p dir="auto">Okay, let's tackle shell programming!</p>
+                    <p dir="auto"><strong>1. Explanation:</strong></p>
+                    <p dir="auto">Imagine the shell as a messenger between you and the computer's brain (the operating system). You tell the messenger what you want (like opening a file, playing music, or doing some math), and it translates your instructions into a language the computer understands. A shell program is like a list of instructions you give to the messenger all at once, so it can do a bunch of things for you automatically.  It's like a recipe for the computer!</p>
+                    <p dir="auto"><strong>2. Bookish Language:</strong></p>
+                    <p dir="auto">A shell program, also known as a shell script, is a sequence of commands written in a shell scripting language (like Bash, Zsh, or others) that are executed by the operating system's command-line interpreter (the shell). These programs automate tasks by executing commands sequentially, making decisions based on conditions, and even interacting with the user. They're a powerful tool for system administrators and anyone who wants to automate repetitive tasks.  They use control structures like loops (to repeat actions) and conditionals (to perform actions based on criteria).</p>
+                    <p dir="auto"><strong>3. Mindmap Diagram:</strong></p>
+                    <pre><code>Shell Program
+                    ├── What is it?
+                    │   ├── List of commands
+                    │   ├── Automates tasks
+                    │   └── Interpreted by the shell
+                    ├── Components
+                    │   ├── Commands (e.g., ls, cd, echo)
+                    │   ├── Variables (to store data)
+                    │   ├── Control Structures
+                    │   │   ├── Loops (for, while) - Repeat actions
+                    │   │   └── Conditionals (if, else) - Decision making
+                    │   ├── Input/Output (read user input, display output)
+                    │   └── Comments (# for explanations)
+                    ├── How it Works
+                    │   ├── Shell reads the script
+                    │   ├── Executes commands sequentially
+                    │   └── Interprets variables &amp; control structures
+                    ├── Example (Bash)
+                    │   ```bash
+                    │   #!/bin/bash  (Tells the system which shell to use)
+                    │   echo "Hello, World!"
+                    │   ```
+                    └── Benefits
+                        ├── Automation
+                        ├── Efficiency
+                        └── Reusability
+                    </code></pre>
+                    <p dir="auto"><strong>Example Breakdown (for 7 marks, explain an example):</strong></p>
+                    <p dir="auto">Let's break down a simple Bash script:</p>
+                    <pre class="language-bash" tabindex="0"><code class="language-bash is-loaded"><span class="token shebang important">#!/bin/bash</span>
+                    <span class="token assign-left variable">NAME</span><span class="token operator">=</span><span class="token string">"User"</span>
+                    <span class="token builtin class-name">echo</span> <span class="token string">"Hello, <span class="token variable">$NAME</span>!"</span>
+                    <span class="token builtin class-name">read</span> <span class="token parameter variable">-p</span> <span class="token string">"Enter your age: "</span> AGE
+                    <span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token variable">$AGE</span> <span class="token parameter variable">-gt</span> <span class="token number">17</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+                      <span class="token builtin class-name">echo</span> <span class="token string">"You are an adult."</span>
+                    <span class="token keyword">else</span>
+                      <span class="token builtin class-name">echo</span> <span class="token string">"You are a minor."</span>
+                    <span class="token keyword">fi</span>
+                    </code></pre>
+                    <ul>
+                    <li dir="auto"><code>#!/bin/bash</code>: This line tells the system to use the Bash shell to run the script. It's called a "shebang."</li>
+                    <li dir="auto"><code>NAME="User"</code>: This line creates a variable called <code>NAME</code> and assigns it the value "User."</li>
+                    <li dir="auto"><code>echo "Hello, $NAME!"</code>: This line prints "Hello, User!" to the screen. <code>$NAME</code> gets replaced with the value of the variable.</li>
+                    <li dir="auto"><code>read -p "Enter your age: " AGE</code>:  This prompts the user to enter their age and stores it in the <code>AGE</code> variable.</li>
+                    <li dir="auto"><code>if [ $AGE -gt 17 ]</code>: This is a conditional statement. <code>-gt</code> means "greater than." It checks if the value of <code>AGE</code> is greater than 17.</li>
+                    <li dir="auto"><code>then ... else ... fi</code>: If the condition is true, the commands between <code>then</code> and <code>else</code> are executed. Otherwise, the commands between <code>else</code> and <code>fi</code> are executed.</li>
+                    </ul>
+                    <hr>
+                    <p dir="auto"><strong>1. Swapping (3-4 Marks):</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>ELI5:</strong> Imagine your computer's RAM like a desk. When it's full of papers (programs), you can put some papers in a filing cabinet (the hard drive) temporarily to make space on your desk.  This is swapping – moving less active programs from RAM to disk to free up RAM.</li>
+                    <li dir="auto"><strong>Bookish:</strong> Swapping is a memory management technique where the operating system moves inactive processes from RAM to a designated swap space on the hard drive. This frees up RAM for active processes, allowing the system to run more programs than physically fit in RAM. It can slow down the system if used excessively, as disk access is much slower than RAM access.</li>
+                    <li dir="auto"><strong>Mindmap:</strong></li>
+                    </ul>
+                    <pre><code>Swapping
+                    ├── Purpose: Free up RAM
+                    ├── How: Moves inactive processes to disk (swap space)
+                    ├── When: RAM is full
+                    └── Disadvantage: Can be slow (disk access slower than RAM)
+                    </code></pre>
+                    <p dir="auto"><strong>2. <code>ps</code> (Process Status):</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>ELI5:</strong> Like checking who's in your house, <code>ps</code> shows you what programs (processes) are currently running on your computer.</li>
+                    <li dir="auto"><strong>Bookish:</strong> <code>ps</code> is a command-line utility that displays information about active processes.</li>
+                    <li dir="auto"><strong>Mindmap:</strong> <code>ps --&gt; Shows running processes</code></li>
+                    </ul>
+                    <p dir="auto"><strong>3. <code>cp</code> (Copy):</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>ELI5:</strong> Like photocopying a paper, <code>cp</code> creates a duplicate of a file or directory.</li>
+                    <li dir="auto"><strong>Bookish:</strong> <code>cp</code> is a command that creates a copy of a file or directory.</li>
+                    <li dir="auto"><strong>Mindmap:</strong> <code>cp --&gt; Copies files/directories</code></li>
+                    </ul>
+                    <p dir="auto"><strong>4. <code>grep</code> (Global Regular Expression Print):</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>ELI5:</strong> Like searching for a specific word in a book, <code>grep</code> searches for patterns in text files.</li>
+                    <li dir="auto"><strong>Bookish:</strong> <code>grep</code> is a command-line utility that searches plain text data sets for lines matching a regular expression.</li>
+                    <li dir="auto"><strong>Mindmap:</strong> <code>grep --&gt; Searches text for patterns</code></li>
+                    </ul>
+                    <p dir="auto"><strong>5. Kernel:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>ELI5:</strong> The kernel is the core of the operating system, like the engine of a car. It manages the system's resources.</li>
+                    <li dir="auto"><strong>Bookish:</strong> The kernel is the central part of an operating system. It manages the system's resources, including memory, processes, and hardware.</li>
+                    <li dir="auto"><strong>Mindmap:</strong>  <code>Kernel --&gt; Core of OS, manages resources</code></li>
+                    </ul>
+                    <p dir="auto"><strong>6. Environmental Variables:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>ELI5:</strong>  These are like notes posted on a bulletin board that tell programs information about the system, like where to find certain files or what language the user speaks.</li>
+                    <li dir="auto"><strong>Bookish:</strong> Environmental variables are dynamic named values that can affect the way running processes will behave on a computer. They provide configuration information to programs.</li>
+                    <li dir="auto"><strong>Mindmap:</strong> <code>Environmental Variables --&gt; Provide info to programs (e.g., PATH, HOME)</code></li>
+                    </ul>
+                    <p dir="auto"><strong>7. Cooperating Process:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>ELI5:</strong>  Imagine two friends working together on a puzzle.  Cooperating processes are programs that work together to achieve a common goal, sharing information if needed.</li>
+                    <li dir="auto"><strong>Bookish:</strong> Cooperating processes are two or more processes that can affect each other or share data. Cooperation allows for modularity, speedup, and convenience.</li>
+                    <li dir="auto"><strong>Mindmap:</strong></li>
+                    </ul>
+                    <pre><code>Cooperating Processes
+                    ├── Definition: Processes that work together
+                    ├── Why: Modularity, Speed, Convenience
+                    └── How: Inter-process communication (IPC)
+                    </code></pre>
+                    <hr></div>
+                    
+                    
+
+
+                
                 <div class="gx-row d-flex">
                     <div class="credential-sidebar-wrap" data-aos="zoom-in">
                         <div class="credential-sidebar text-center">
-                            
-
-                         
-
-
-
 
                             </div>
                         </div>
                     </div>
 
+                    
                    
                 </div>
+
             </div>
+
+            
         </section>
 
         
