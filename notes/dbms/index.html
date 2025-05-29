@@ -70,7 +70,2153 @@
                             </div>
                         </div>
                     </div>
-
+                      <style>
+                        
+                    :root {
+                      --default-font: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+                      --font-monospace: 'Source Code Pro', monospace;
+                      --background-primary: #ffffff;
+                      --background-modifier-border: #ddd;
+                      --text-accent: #705dcf;
+                      --text-accent-hover: #7a6ae6;
+                      --text-normal: #2e3338;
+                      --background-secondary: #f2f3f5;
+                      --background-secondary-alt: #fcfcfc;
+                      --text-muted: #888888;
+                      --font-mermaid: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+                      --text-error: #E4374B;
+                      --background-primary-alt: '#fafafa';
+                      --background-accent: '';
+                      --interactive-accent: hsl( 254,  80%, calc( 68% + 2.5%));
+                      --background-modifier-error: #E4374B;
+                      --background-primary-alt: #fafafa;
+                      --background-modifier-border: #e0e0e0;
+                    }
+                    
+                        body,input {
+                      font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif
+                    }
+                    
+                    code, kbd, pre {
+                      font-family: "Roboto Mono", "Courier New", Courier, monospace;
+                      background-color: #020202;
+                    }
+                    
+                    pre {
+                      padding: 1em 0.5em;
+                    }
+                    
+                    table {
+                      background: white;
+                      border: 1px solid #666;
+                      border-collapse: collapse;
+                      padding: 0.5em;
+                    }
+                    
+                    table thead th,
+                    table tfoot th {
+                      text-align: left;
+                      background-color: #eaeaea;
+                      color: black;
+                    }
+                    
+                    table th, table td {
+                      border: 1px solid #ddd;
+                      padding: 0.5em;
+                    }
+                    
+                    table td {
+                      color: #222222;
+                    }
+                    
+                    .callout[data-callout="abstract"] .callout-title,
+                    .callout[data-callout="summary"] .callout-title,
+                    .callout[data-callout="tldr"]  .callout-title,
+                    .callout[data-callout="faq"] .callout-title,
+                    .callout[data-callout="info"] .callout-title,
+                    .callout[data-callout="help"] .callout-title {
+                      background-color: #828ee7;
+                    }
+                    .callout[data-callout="tip"] .callout-title,
+                    .callout[data-callout="hint"] .callout-title,
+                    .callout[data-callout="important"] .callout-title {
+                      background-color: #34bbe6;
+                    }
+                    .callout[data-callout="success"] .callout-title,
+                    .callout[data-callout="check"] .callout-title,
+                    .callout[data-callout="done"] .callout-title {
+                      background-color: #a3e048;
+                    }
+                    .callout[data-callout="question"] .callout-title,
+                    .callout[data-callout="todo"] .callout-title {
+                      background-color: #49da9a;
+                    }
+                    .callout[data-callout="caution"] .callout-title,
+                    .callout[data-callout="attention"] .callout-title {
+                      background-color: #f7d038;
+                    }
+                    .callout[data-callout="warning"] .callout-title,
+                    .callout[data-callout="missing"] .callout-title,
+                    .callout[data-callout="bug"] .callout-title {
+                      background-color: #eb7532;
+                    }
+                    .callout[data-callout="failure"] .callout-title,
+                    .callout[data-callout="fail"] .callout-title,
+                    .callout[data-callout="danger"] .callout-title,
+                    .callout[data-callout="error"] .callout-title {
+                      background-color: #e6261f;
+                    }
+                    .callout[data-callout="example"] .callout-title {
+                      background-color: #d23be7;
+                    }
+                    .callout[data-callout="quote"] .callout-title,
+                    .callout[data-callout="cite"] .callout-title {
+                      background-color: #aaaaaa;
+                    }
+                    
+                    .callout-icon {
+                      flex: 0 0 auto;
+                      display: flex;
+                      align-self: center;
+                    }
+                    
+                    svg.svg-icon {
+                      height: 18px;
+                      width: 18px;
+                      stroke-width: 1.75px;
+                    }
+                    
+                    .callout {
+                      overflow: hidden;
+                      margin: 1em 0;
+                      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+                      border-radius: 4px;
+                    }
+                    
+                    .callout-title {
+                      padding: .5em;
+                      display: flex;
+                      gap: 8px;
+                      font-size: inherit;
+                      color: black;
+                      line-height: 1.3em;
+                    }
+                    
+                    .callout-title-inner {
+                      font-weight: bold;
+                      color: black;
+                    }
+                    
+                    .callout-content {
+                      overflow-x: auto;
+                      padding: 0.25em .5em;
+                      color: #222222;
+                      background-color: white !important;
+                    }
+                    
+                    ul.contains-task-list {
+                      padding-left: 0;
+                      list-style: none;
+                    }
+                    
+                    ul.contains-task-list ul.contains-task-list {
+                      padding-left: 2em;
+                    }
+                    
+                    ul.contains-task-list li input[type="checkbox"] {
+                      margin-right: .5em;
+                    }
+                    
+                    .callout-table,
+                    .callout-table tr,
+                    .callout-table p {
+                      width: 100%;
+                      padding: 0;
+                    }
+                    
+                    .callout-table td {
+                      width: 100%;
+                      padding: 0 1em;
+                    }
+                    
+                    .callout-table p {
+                      padding-bottom: 0.5em;
+                    }
+                    
+                    .source-table {
+                      width: 100%;
+                      background-color: #f5f5f5;
+                    }
+                    
+                      </style>
+                    </head>
+                    <body>
+                    <div><h3 data-heading="Differences Between Network, Hierarchical, and Relational Database Models" dir="auto">Differences Between Network, Hierarchical, and Relational Database Models</h3>
+                    <hr>
+                    <h3 data-heading="Explanation" dir="auto">Explanation</h3>
+                    <p dir="auto">Imagine you have three different ways to organize your toy collection: one way looks like a tree, another like a web, and the last like a table.</p>
+                    <ol>
+                    <li dir="auto">
+                    <p><strong>Hierarchical Model (Tree):</strong> </p>
+                    <ul>
+                    <li dir="auto">Think of a family tree where you have a parent and children. For instance, your toy box might have one section for "Cars," and under that section, you have "Race Cars" and "Police Cars." Each section can only go one way down from parent to children.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Network Model (Web):</strong></p>
+                    <ul>
+                    <li dir="auto">Now imagine your toys are connected in a web. For example, you can have a toy that is both a "Car" and also a "Superhero" toy. In this model, toys can connect to several other toys in different ways, like crossing paths in a web.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Relational Model (Table):</strong></p>
+                    <ul>
+                    <li dir="auto">This model is like a big table with rows and columns. Each row is a different toy, and each column might tell you things like the toy's name, type, and color. You can easily find your toys using this method, even if they belong to different categories.</li>
+                    </ul>
+                    </li>
+                    </ol>
+                    <h3 data-heading="Summary:" dir="auto">Summary:</h3>
+                    <ul>
+                    <li dir="auto"><strong>Hierarchical:</strong> Tree-like structure, one parent, many children.</li>
+                    <li dir="auto"><strong>Network:</strong> Web-like connections, many parents, many children.</li>
+                    <li dir="auto"><strong>Relational:</strong> Table structure, easily searchable with rows and columns.</li>
+                    </ul>
+                    <hr>
+                    <h3 data-heading="Bookish Explanation" dir="auto">Bookish Explanation</h3>
+                    <p dir="auto"><strong>1. Hierarchical Database Model:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Definition:</strong> A hierarchical database organizes data in a tree structure, where each record has a single parent and can have multiple children. This model is characterized by a one-to-many relationship.</li>
+                    <li dir="auto"><strong>Advantages:</strong>
+                    <ul>
+                    <li dir="auto">Simple and easy to understand.</li>
+                    <li dir="auto">Fast data retrieval when traversing the hierarchy.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto"><strong>Disadvantages:</strong>
+                    <ul>
+                    <li dir="auto">Limited flexibility; difficult to reorganize.</li>
+                    <li dir="auto">Complexity increases with more relationships.</li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <p dir="auto"><strong>2. Network Database Model:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Definition:</strong> The network database model extends the hierarchical model by allowing each record to have multiple parent and child relationships, creating a many-to-many relationship. Data is represented as a graph structure.</li>
+                    <li dir="auto"><strong>Advantages:</strong>
+                    <ul>
+                    <li dir="auto">More flexible than the hierarchical model.</li>
+                    <li dir="auto">Efficient for complex relationships.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto"><strong>Disadvantages:</strong>
+                    <ul>
+                    <li dir="auto">More complex to design and manage.</li>
+                    <li dir="auto">Requires a detailed understanding of data relationships.</li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <p dir="auto"><strong>3. Relational Database Model:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Definition:</strong> The relational database model organizes data into tables (relations), where each table consists of rows and columns. Each row represents a record, and each column represents an attribute of that record. </li>
+                    <li dir="auto"><strong>Advantages:</strong>
+                    <ul>
+                    <li dir="auto">Highly flexible and easy to query using SQL.</li>
+                    <li dir="auto">Supports complex queries and relationships through foreign keys.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto"><strong>Disadvantages:</strong>
+                    <ul>
+                    <li dir="auto">Performance can decrease with very large datasets.</li>
+                    <li dir="auto">Requires normalization to avoid data redundancy.</li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <hr>
+                    <h3 data-heading="Pneumonics" dir="auto">Pneumonics</h3>
+                    <p dir="auto">To help remember the key features of each database model, you can use the following mnemonics:</p>
+                    <ul>
+                    <li dir="auto"><strong>Hierarchical:</strong> <strong>H</strong>ave a tree structure, <strong>H</strong>olds one parent (H-H)</li>
+                    <li dir="auto"><strong>Network:</strong> <strong>N</strong>etworks can connect multiple parents and children, <strong>N</strong>avigating complex relationships (N-N)</li>
+                    <li dir="auto"><strong>Relational:</strong> <strong>R</strong>ows and columns create <strong>R</strong>elationships, making data easy to access (R-R)</li>
+                    </ul>
+                    <hr>
+                    <h3 data-heading="Diagram: Comparison of Database Models" dir="auto">Diagram: Comparison of Database Models</h3>
+                    <pre><code>+-------------------------------------+
+                    |          Database Models            |
+                    +-------------------+-----------------+
+                    |                   |                 |
+                    |   Hierarchical    |   Network       |   Relational
+                    |                   |                 |
+                    |  +------------+   |  +-----------+  |  +----------------+
+                    |  | Parent     |&lt;--+--|  Record   |&lt;--+|  Table         |
+                    |  |  +-------+ |   |  |  +-----+  |   |  +------------+ |
+                    |  |  | Child | |   |  |  |Child |  |   |  |  Row      | |
+                    |  |  +-------+ |   |  |  +-----+  |   |  +------------+ |
+                    |  +------------+   |  +-----------+   |  |  Column     | |
+                    |                   |                   |  +------------+ |
+                    +-------------------+-------------------+-----------------+
+                    
+                    </code></pre>
+                    <h3 data-heading="Summary" dir="auto">Summary</h3>
+                    <p dir="auto">In summary, understanding the differences between the hierarchical, network, and relational database models helps in selecting the right model for specific applications. The hierarchical model is simple and tree-like, the network model is flexible and web-like, while the relational model is organized in tables for easy data management. Each model has its own advantages and disadvantages, making them suitable for different scenarios in data management.</p>
+                    <hr>
+                    <h3 data-heading="Architecture of DBMS" dir="auto">Architecture of DBMS</h3>
+                    <hr>
+                    <h3 data-heading="Explanation" dir="auto">Explanation</h3>
+                    <p dir="auto">Imagine a big school with different floors and rooms where students learn different subjects. The architecture of a Database Management System (DBMS) is similar! It has layers, just like the floors in a school. Each layer has a specific job that helps manage the data.</p>
+                    <ol>
+                    <li dir="auto">
+                    <p><strong>External Level (User View):</strong> </p>
+                    <ul>
+                    <li dir="auto">This is like the classrooms where students learn. Each classroom can look different depending on what subject is being taught. In a DBMS, this level is where users see and interact with the data in a way that makes sense to them. Different users can have different views of the data.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Conceptual Level (Logical Structure):</strong></p>
+                    <ul>
+                    <li dir="auto">This level is like the school’s overall plan, showing how everything is organized. It describes what data is stored in the database and how it's related, without worrying about how it’s stored. It’s like knowing what subjects are taught without knowing the details of each classroom.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Internal Level (Physical Storage):</strong></p>
+                    <ul>
+                    <li dir="auto">This is like the basement of the school where all the supplies are kept. It shows how the data is physically stored on the computer's hard drive. This level deals with how the data is organized and accessed by the computer.</li>
+                    </ul>
+                    </li>
+                    </ol>
+                    <h3 data-heading="Summary:" dir="auto">Summary:</h3>
+                    <ul>
+                    <li dir="auto"><strong>External Level:</strong> User's view of the data.</li>
+                    <li dir="auto"><strong>Conceptual Level:</strong> Overall organization of the data.</li>
+                    <li dir="auto"><strong>Internal Level:</strong> How the data is stored on the computer.</li>
+                    </ul>
+                    <hr>
+                    <h3 data-heading="Bookish Explanation" dir="auto">Bookish Explanation</h3>
+                    <p dir="auto"><strong>1. External Level (User View):</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Definition:</strong> The external level is the highest level of abstraction in the DBMS architecture. It consists of various user views, allowing different users to access the same database in different ways, tailored to their specific needs and requirements.</li>
+                    <li dir="auto"><strong>Characteristics:</strong> 
+                    <ul>
+                    <li dir="auto">Multiple user views can exist simultaneously.</li>
+                    <li dir="auto">Each view can restrict access to certain data.</li>
+                    <li dir="auto">Simplifies data interaction for users.</li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <p dir="auto"><strong>2. Conceptual Level (Logical Structure):</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Definition:</strong> The conceptual level provides a unified view of the entire database. It describes what data is stored, the relationships among the data, and the constraints that apply to the data.</li>
+                    <li dir="auto"><strong>Characteristics:</strong>
+                    <ul>
+                    <li dir="auto">Represents the logical structure of the database.</li>
+                    <li dir="auto">Hides the details of the physical storage.</li>
+                    <li dir="auto">Ensures data independence, allowing changes to the internal level without affecting user views.</li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <p dir="auto"><strong>3. Internal Level (Physical Storage):</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Definition:</strong> The internal level defines how data is physically stored in the database. It includes data structures, file organization, and indexing.</li>
+                    <li dir="auto"><strong>Characteristics:</strong>
+                    <ul>
+                    <li dir="auto">Focuses on the physical representation of data.</li>
+                    <li dir="auto">Deals with the actual storage mechanisms, such as disks and memory.</li>
+                    <li dir="auto">Optimizes data access and storage efficiency.</li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <h3 data-heading="Summary of DBMS Architecture:" dir="auto">Summary of DBMS Architecture:</h3>
+                    <ul>
+                    <li dir="auto">The architecture of a DBMS is typically structured in three levels: External, Conceptual, and Internal. This layered approach allows for data abstraction, enabling users to interact with data without needing to understand its physical storage.</li>
+                    </ul>
+                    <hr>
+                    <h3 data-heading="Pneumonics" dir="auto">Pneumonics</h3>
+                    <p dir="auto">To help remember the DBMS architecture layers, use the following mnemonic:</p>
+                    <p dir="auto"><strong>E.C.I.:</strong> </p>
+                    <ul>
+                    <li dir="auto"><strong>E</strong>xternal (User View)</li>
+                    <li dir="auto"><strong>C</strong>onceptual (Logical Structure)</li>
+                    <li dir="auto"><strong>I</strong>nternal (Physical Storage)</li>
+                    </ul>
+                    <p dir="auto">You can remember it as "Every Child Is" to remind you of the three levels in DBMS architecture.</p>
+                    <hr>
+                    <h3 data-heading="Diagram: DBMS Architecture" dir="auto">Diagram: DBMS Architecture</h3>
+                    <pre><code>+-----------------------+
+                    |                       |
+                    |     External Level    |
+                    |  (User Views)        |
+                    |                       |
+                    +-----------------------+
+                               |
+                               |
+                    +-----------------------+
+                    |                       |
+                    |   Conceptual Level    |
+                    | (Logical Structure)   |
+                    |                       |
+                    +-----------------------+
+                               |
+                               |
+                    +-----------------------+
+                    |                       |
+                    |     Internal Level    |
+                    |  (Physical Storage)   |
+                    |                       |
+                    +-----------------------+
+                    </code></pre>
+                    <h3 data-heading="Summary" dir="auto">Summary</h3>
+                    <p dir="auto">In conclusion, the architecture of a Database Management System (DBMS) consists of three main levels: the External Level, which represents how users see the data; the Conceptual Level, which describes the logical structure of the data; and the Internal Level, which details how data is physically stored. This architecture helps manage data efficiently and allows for data abstraction, ensuring that users can interact with data without needing to understand the underlying complexities.</p>
+                    <hr>
+                    <h3 data-heading="Why Store Data in Flat Files?" dir="auto">Why Store Data in Flat Files?</h3>
+                    <hr>
+                    <h3 data-heading="Explanation" dir="auto">Explanation</h3>
+                    <p dir="auto">Imagine you have a big box where you keep all your Lego pieces. You might not have a lot of pieces, so it's easy for you to dig through the box and find what you need. This is similar to using a flat file to store data. Flat files are like simple boxes where all your information is kept in one big list.</p>
+                    <p dir="auto">So, why would someone want to store things in flat files?</p>
+                    <ol>
+                    <li dir="auto">
+                    <p><strong>Simplicity:</strong> </p>
+                    <ul>
+                    <li dir="auto">Just like your Lego box, flat files are easy to understand. They don't have complicated structures, so anyone can read them.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Easy to Use:</strong></p>
+                    <ul>
+                    <li dir="auto">If you need to change something, like adding a new Lego piece, you can easily do that in a flat file. You just add it to the list!</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>No Special Software Needed:</strong> </p>
+                    <ul>
+                    <li dir="auto">You don’t need fancy tools or programs to read a flat file. Even a simple text editor can do the job, like using a pencil and paper for your notes.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Good for Small Amounts of Data:</strong> </p>
+                    <ul>
+                    <li dir="auto">If you don’t have too many Legos, it’s fine to keep them all in one box. Similarly, flat files work well for small amounts of data.</li>
+                    </ul>
+                    </li>
+                    </ol>
+                    <h3 data-heading="Summary:" dir="auto">Summary:</h3>
+                    <ul>
+                    <li dir="auto">Flat files are simple, easy to use, require no special tools, and are great for small amounts of data.</li>
+                    </ul>
+                    <hr>
+                    <h3 data-heading="Bookish Explanation" dir="auto">Bookish Explanation</h3>
+                    <p dir="auto"><strong>Flat Files:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Definition:</strong> A flat file is a simple data storage format that stores data in a single, plain text file without any structured relationships. Each line in the file typically represents a record, and fields are often separated by delimiters such as commas or tabs.</li>
+                    </ul>
+                    <p dir="auto"><strong>Reasons to Use Flat Files:</strong></p>
+                    <ol>
+                    <li dir="auto">
+                    <p><strong>Simplicity:</strong></p>
+                    <ul>
+                    <li dir="auto">Flat files are straightforward to create and manage. They do not require complex database management systems, making them accessible for basic data storage needs.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Ease of Access:</strong></p>
+                    <ul>
+                    <li dir="auto">Data in flat files can be easily accessed and modified using simple text editors or basic programming languages. This makes it convenient for users who may not have extensive technical knowledge.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>No Need for Specialized Software:</strong></p>
+                    <ul>
+                    <li dir="auto">Unlike relational databases that require DBMS software, flat files can be opened and manipulated by any text editor, which lowers the barrier to entry for users.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Cost-Effective for Small Data Sets:</strong></p>
+                    <ul>
+                    <li dir="auto">For small amounts of data, flat files can be more cost-effective because there are no licensing fees associated with database systems, and they require less computational resources.</li>
+                    </ul>
+                    </li>
+                    </ol>
+                    <h3 data-heading="Summary of Using Flat Files:" dir="auto">Summary of Using Flat Files:</h3>
+                    <p dir="auto">Flat files are a practical solution for simple data storage needs, especially when dealing with small datasets or when complex database features are not required.</p>
+                    <hr>
+                    <h3 data-heading="Pneumonics" dir="auto">Pneumonics</h3>
+                    <p dir="auto">To help remember the reasons for using flat files, use the following mnemonic:</p>
+                    <p dir="auto"><strong>S.E.N.C.</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>S</strong>implicity</li>
+                    <li dir="auto"><strong>E</strong>ase of Access</li>
+                    <li dir="auto"><strong>N</strong>o Need for Specialized Software</li>
+                    <li dir="auto"><strong>C</strong>ost-Effective for Small Data Sets</li>
+                    </ul>
+                    <p dir="auto">You can remember it as "Simple Easy No Cost" to keep in mind the benefits of flat files.</p>
+                    <hr>
+                    <h3 data-heading="Diagram: Flat File Structure" dir="auto">Diagram: Flat File Structure</h3>
+                    <pre><code>+-------------------------------------------+
+                    |               Flat File                   |
+                    +-------------------------------------------+
+                    | Record 1: Name, Age, Address              |
+                    | Record 2: Alice, 12, 123 Street           |
+                    | Record 3: Bob, 13, 456 Avenue             |
+                    | Record 4: Charlie, 14, 789 Boulevard      |
+                    +-------------------------------------------+
+                    </code></pre>
+                    <h3 data-heading="Summary" dir="auto">Summary</h3>
+                    <p dir="auto">In conclusion, flat files are a simple and effective way to store data, particularly for small datasets. They are easy to understand, require no special software, and can be accessed with basic tools. The mnemonic "S.E.N.C." (Simplicity, Ease of Access, No Need for Specialized Software, Cost-Effective for Small Data Sets) can help you remember the key advantages of using flat files for data storage.</p>
+                    <hr>
+                    <h2 data-heading="ER Diagram and Block Diagram" dir="auto">ER Diagram and Block Diagram</h2>
+                    <hr>
+                    <h3 data-heading="Explanation" dir="auto">Explanation</h3>
+                    <p dir="auto"><strong>ER Diagram:</strong>
+                    Imagine you’re planning a birthday party and want to figure out who is invited and what they will bring. An ER (Entity-Relationship) diagram is like a drawing that helps you see the relationships between different things.</p>
+                    <ul>
+                    <li dir="auto"><strong>Entities:</strong> These are like the people invited to your party. For example, "Guest," "Food," and "Gift."</li>
+                    <li dir="auto"><strong>Relationships:</strong> These show how the guests connect to the food and gifts. For example, a guest can bring a gift, and a guest can eat food!</li>
+                    </ul>
+                    <p dir="auto"><strong>Block Diagram:</strong>
+                    Now, think about how you would explain the steps to bake a cake to a friend. A block diagram is like a flowchart that shows the steps in a simple way.</p>
+                    <ul>
+                    <li dir="auto"><strong>Blocks:</strong> Each block represents a step, like "Mix Ingredients," "Bake," and "Decorate."</li>
+                    <li dir="auto"><strong>Arrows:</strong> The arrows show the order of the steps, so your friend knows what to do first and what comes next.</li>
+                    </ul>
+                    <h3 data-heading="Summary:" dir="auto">Summary:</h3>
+                    <ul>
+                    <li dir="auto"><strong>ER Diagram:</strong> Shows relationships between different entities (like guests and gifts).</li>
+                    <li dir="auto"><strong>Block Diagram:</strong> Shows steps in a process (like baking a cake).</li>
+                    </ul>
+                    <hr>
+                    <h3 data-heading="Bookish Explanation" dir="auto">Bookish Explanation</h3>
+                    <p dir="auto"><strong>1. ER Diagram (Entity-Relationship Diagram):</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Definition:</strong> An ER diagram is a visual representation of the entities within a system and their relationships. It is commonly used in database design to illustrate how data is structured.</li>
+                    <li dir="auto"><strong>Components:</strong>
+                    <ul>
+                    <li dir="auto"><strong>Entities:</strong> Represented as rectangles, these are the objects or things in the system (e.g., Customer, Order, Product).</li>
+                    <li dir="auto"><strong>Attributes:</strong> Ovals connected to entities, representing the properties of each entity (e.g., Customer Name, Order Date).</li>
+                    <li dir="auto"><strong>Relationships:</strong> Diamonds that connect entities, indicating how they relate to each other (e.g., a Customer "places" an Order).</li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <p dir="auto"><strong>2. Block Diagram:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Definition:</strong> A block diagram is a simplified representation of a system that outlines the components or functions of that system and their interconnections.</li>
+                    <li dir="auto"><strong>Components:</strong>
+                    <ul>
+                    <li dir="auto"><strong>Blocks:</strong> Represent different components or processes (e.g., Input, Process, Output).</li>
+                    <li dir="auto"><strong>Arrows:</strong> Indicate the flow of information or the order of operations between the blocks.</li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <h3 data-heading="Summary of ER and Block Diagrams:" dir="auto">Summary of ER and Block Diagrams:</h3>
+                    <ul>
+                    <li dir="auto">ER diagrams help visualize data structures and relationships in databases, while block diagrams provide a high-level overview of processes and their interactions.</li>
+                    </ul>
+                    <hr>
+                    <h3 data-heading="Pneumonics" dir="auto">Pneumonics</h3>
+                    <p dir="auto">To help remember the components of ER and Block Diagrams, you can use the following mnemonics:</p>
+                    <p dir="auto"><strong>ER Diagram:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>E.A.R.</strong>
+                    <ul>
+                    <li dir="auto"><strong>E</strong>ntities</li>
+                    <li dir="auto"><strong>A</strong>ttributes</li>
+                    <li dir="auto"><strong>R</strong>elationships</li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <p dir="auto"><strong>Block Diagram:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>B.F.O.</strong>
+                    <ul>
+                    <li dir="auto"><strong>B</strong>locks (components)</li>
+                    <li dir="auto"><strong>F</strong>low (arrows)</li>
+                    <li dir="auto"><strong>O</strong>rder of operations</li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <p dir="auto">You can remember it as "E.A.R. for ER" and "B.F.O. for Block" to keep in mind the key elements of each diagram.</p>
+                    <hr>
+                    <h3 data-heading="Diagrams" dir="auto">Diagrams</h3>
+                    <p dir="auto"><strong>1. ER Diagram Example:</strong></p>
+                    <pre><code>+---------------------+
+                    |      Customer       |
+                    |---------------------|
+                    | CustomerID          |
+                    | Name                |
+                    | Email               |
+                    +---------------------+
+                              |
+                              | places
+                              v
+                    +---------------------+
+                    |        Order        |
+                    |---------------------|
+                    | OrderID             |
+                    | OrderDate           |
+                    | TotalAmount         |
+                    +---------------------+
+                              |
+                              | contains
+                              v
+                    +---------------------+
+                    |       Product       |
+                    |---------------------|
+                    | ProductID           |
+                    | ProductName         |
+                    | Price               |
+                    +---------------------+
+                    </code></pre>
+                    <p dir="auto"><strong>2. Block Diagram Example:</strong></p>
+                    <pre><code>+---------------------+
+                    |      Input          |
+                    |  (Gather Data)     |
+                    +---------------------+
+                              |
+                              v
+                    +---------------------+
+                    |      Process        |
+                    |  (Analyze Data)     |
+                    +---------------------+
+                              |
+                              v
+                    +---------------------+
+                    |      Output         |
+                    |  (Display Results)  |
+                    +---------------------+
+                    </code></pre>
+                    <h3 data-heading="Summary" dir="auto">Summary</h3>
+                    <p dir="auto">In conclusion, ER diagrams are essential for visualizing the relationships and structures of data within a system, while block diagrams offer a clear representation of processes and their flow. Using mnemonics like "E.A.R." for ER diagrams and "B.F.O." for block diagrams can help remember their key components. The examples above illustrate how entities and processes are represented visually in each diagram type.</p>
+                    <hr>
+                    <h2 data-heading="Traditional File System vs. Database Management System (DBMS)" dir="auto">Traditional File System vs. Database Management System (DBMS)</h2>
+                    <hr>
+                    <h3 data-heading="Explanation" dir="auto">Explanation</h3>
+                    <p dir="auto"><strong>Traditional File System:</strong>
+                    Think of a traditional file system like a big filing cabinet where you keep all your important papers. Each file has a specific folder, and you have to remember where each paper is stored. If you want to find something, you have to look through each folder one by one. </p>
+                    <p dir="auto"><strong>Database Management System (DBMS):</strong>
+                    Now, imagine you have a super-smart robot assistant that knows exactly where everything is in that filing cabinet. This robot can quickly find any paper you need, add new papers without making a mess, and even make sure that no two papers have the same name. That’s what a DBMS does! It helps organize, store, and manage data much more efficiently than a simple filing cabinet.</p>
+                    <h3 data-heading="Key Differences:" dir="auto">Key Differences:</h3>
+                    <ol>
+                    <li dir="auto"><strong>Organization:</strong> 
+                    <ul>
+                    <li dir="auto">Traditional file systems keep files in folders, while a DBMS organizes data in tables.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto"><strong>Data Access:</strong> 
+                    <ul>
+                    <li dir="auto">In a file system, you have to search manually, but a DBMS can quickly find data using queries.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto"><strong>Data Integrity:</strong> 
+                    <ul>
+                    <li dir="auto">A file system might let you create two files with the same name, while a DBMS prevents that.</li>
+                    </ul>
+                    </li>
+                    </ol>
+                    <hr>
+                    <h3 data-heading="Bookish Explanation" dir="auto">Bookish Explanation</h3>
+                    <p dir="auto"><strong>1. Traditional File System:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Definition:</strong> A traditional file system is a method of storing and managing data using a collection of files stored in directories on a storage medium. Each file can be accessed individually, and the organization is often hierarchical.</li>
+                    <li dir="auto"><strong>Characteristics:</strong>
+                    <ul>
+                    <li dir="auto"><strong>Data Redundancy:</strong> The same data may be stored in multiple files, leading to inconsistencies.</li>
+                    <li dir="auto"><strong>Limited Data Access:</strong> Users must manually navigate through directories to locate specific files.</li>
+                    <li dir="auto"><strong>No Data Relationships:</strong> There are no built-in relationships between different files, making it difficult to manage related data.</li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <p dir="auto"><strong>2. Database Management System (DBMS):</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Definition:</strong> A DBMS is software that provides an interface for users to create, manage, and manipulate databases. It organizes data in a structured way using tables and relationships.</li>
+                    <li dir="auto"><strong>Characteristics:</strong>
+                    <ul>
+                    <li dir="auto"><strong>Data Integrity:</strong> Ensures accuracy and consistency of data through constraints and rules.</li>
+                    <li dir="auto"><strong>Efficient Data Access:</strong> Users can query the database using SQL (Structured Query Language), allowing for rapid data retrieval.</li>
+                    <li dir="auto"><strong>Data Relationships:</strong> Supports complex relationships between data entities, making it easier to manage related information.</li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <h3 data-heading="Summary of Differences:" dir="auto">Summary of Differences:</h3>
+                    <ul>
+                    <li dir="auto">Traditional file systems are more manual and less efficient for data management, while DBMSs provide organized, efficient, and secure data handling with built-in relationships and integrity.</li>
+                    </ul>
+                    <hr>
+                    <h3 data-heading="Pneumonics" dir="auto">Pneumonics</h3>
+                    <p dir="auto">To remember the differences between a traditional file system and a DBMS, use the following mnemonic:</p>
+                    <p dir="auto"><strong>F.I.R.E.D.</strong> for <strong>File System</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>F</strong>iles (stored in directories)</li>
+                    <li dir="auto"><strong>I</strong>ndividual access (manually searching)</li>
+                    <li dir="auto"><strong>R</strong>edundancy (same data in multiple files)</li>
+                    <li dir="auto"><strong>E</strong>ffort (more effort to manage data)</li>
+                    <li dir="auto"><strong>D</strong>isconnected (no relationships between data)</li>
+                    </ul>
+                    <p dir="auto"><strong>D.A.T.A.</strong> for <strong>DBMS</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>D</strong>ata Integrity (ensures accuracy)</li>
+                    <li dir="auto"><strong>A</strong>ccess (efficient querying)</li>
+                    <li dir="auto"><strong>T</strong>ables (organized structure)</li>
+                    <li dir="auto"><strong>A</strong>ssociations (supports relationships)</li>
+                    </ul>
+                    <p dir="auto">You can remember it as "F.I.R.E.D. for File" and "D.A.T.A. for DBMS" to keep in mind their key characteristics.</p>
+                    <hr>
+                    <h3 data-heading="Diagram: Comparison of Traditional File System and DBMS" dir="auto">Diagram: Comparison of Traditional File System and DBMS</h3>
+                    <pre><code>+---------------------------+              +---------------------------+
+                    |      Traditional File     |              |       Database Management  |
+                    |         System            |              |          System (DBMS)    |
+                    +---------------------------+              +---------------------------+
+                    |                           |              |                           |
+                    |  +---------------------+  |              |  +---------------------+  |
+                    |  |   Folder 1         |  |              |  |     Table 1        |  |
+                    |  |  +---------------+  |  |              |  |  +--------------+  |  |
+                    |  |  | File A       |  |  |              |  |  |  ID         |  |  |
+                    |  |  | File B       |  |  |              |  |  |  Name       |  |  |
+                    |  |  +---------------+  |  |              |  |  +--------------+  |  |
+                    |  +---------------------+  |              |  +---------------------+  |
+                    |                           |              |                           |
+                    |  +---------------------+  |              |  +---------------------+  |
+                    |  |   Folder 2         |  |              |  |     Table 2        |  |
+                    |  |  +---------------+  |  |              |  |  +--------------+  |  |
+                    |  |  | File C       |  |  |              |  |  |  ID         |  |  |
+                    |  |  +---------------+  |  |              |  |  |  Product    |  |  |
+                    |  +---------------------+  |              |  |  +--------------+  |  |
+                    |                           |              |  +---------------------+  |
+                    +---------------------------+              +---------------------------+
+                    |  Manual Search            |              |  Efficient Queries       |
+                    |  No Relationships         |              |  Data Integrity          |
+                    +---------------------------+              +---------------------------+
+                    </code></pre>
+                    <h3 data-heading="Summary" dir="auto">Summary</h3>
+                    <p dir="auto">In conclusion, traditional file systems are simpler but less efficient for managing data compared to Database Management Systems (DBMS). The mnemonic "F.I.R.E.D." helps remember the limitations of traditional file systems, while "D.A.T.A." highlights the strengths of DBMS. The diagrams illustrate how data is organized differently in both systems, showcasing the advantages of using a DBMS for effective data management.</p>
+                    <hr>
+                    <h2 data-heading="Concept of Database Instance and Schema" dir="auto">Concept of Database Instance and Schema</h2>
+                    <hr>
+                    <h3 data-heading="Explanation" dir="auto">Explanation</h3>
+                    <p dir="auto"><strong>Database Schema:</strong>
+                    Think of a database schema like a blueprint for a house. Before a house is built, the blueprint shows how many rooms there will be, where the doors and windows go, and what the house will look like. Similarly, a database schema is a plan that outlines how the data will be organized in a database. It tells you what tables you will have, what fields (or columns) are in those tables, and how they are related to each other.</p>
+                    <p dir="auto"><strong>Database Instance:</strong>
+                    Now, imagine that the house has been built, and you have furnished it with furniture and decorations. This is like a database instance. It’s the actual data that is stored in the database at a specific moment. So, if you have a table for your friends, the database instance would be the actual names and information of your friends that you have entered.</p>
+                    <h3 data-heading="Summary:" dir="auto">Summary:</h3>
+                    <ul>
+                    <li dir="auto"><strong>Schema:</strong> The blueprint of the database, showing how data is organized.</li>
+                    <li dir="auto"><strong>Instance:</strong> The actual data that is currently stored in the database.</li>
+                    </ul>
+                    <hr>
+                    <h3 data-heading="Bookish Explanation" dir="auto">Bookish Explanation</h3>
+                    <p dir="auto"><strong>1. Database Schema:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Definition:</strong> A database schema is the structure or design of a database. It defines how data is organized, including tables, fields (columns), data types, constraints, and relationships among tables.</li>
+                    <li dir="auto"><strong>Characteristics:</strong>
+                    <ul>
+                    <li dir="auto">It serves as a framework for how data will be stored and accessed.</li>
+                    <li dir="auto">It is typically defined using a data definition language (DDL).</li>
+                    <li dir="auto">The schema remains relatively stable even as the data changes.</li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <p dir="auto"><strong>2. Database Instance:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Definition:</strong> A database instance refers to the actual data that is stored in the database at a particular point in time. It represents the current state of the database and can change as data is added, modified, or deleted.</li>
+                    <li dir="auto"><strong>Characteristics:</strong>
+                    <ul>
+                    <li dir="auto">An instance includes all records in the database tables at a specific moment.</li>
+                    <li dir="auto">It is dynamic and can change frequently based on user interactions and transactions.</li>
+                    <li dir="auto">Each instance of a database schema can have different data.</li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <h3 data-heading="Summary of Database Schema and Instance:" dir="auto">Summary of Database Schema and Instance:</h3>
+                    <p dir="auto">In summary, the database schema is the blueprint that defines the structure of the database, while the database instance is the actual data stored in that structure at any given time.</p>
+                    <hr>
+                    <h3 data-heading="Pneumonics" dir="auto">Pneumonics</h3>
+                    <p dir="auto">To help remember the concepts of database schema and instance, you can use the following mnemonic:</p>
+                    <p dir="auto"><strong>S.I.</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>S</strong>chema (The structure or blueprint)</li>
+                    <li dir="auto"><strong>I</strong>nstance (The actual data in the database)</li>
+                    </ul>
+                    <p dir="auto">You can remember it as "S.I. for Structure and Instance" to keep in mind their key meanings.</p>
+                    <hr>
+                    <h3 data-heading="Diagram: Database Schema and Instance" dir="auto">Diagram: Database Schema and Instance</h3>
+                    <pre><code>+-------------------------------------+
+                    |          Database Schema            |
+                    |-------------------------------------|
+                    | Table: Friends                      |
+                    |-------------------------------------|
+                    | | FriendID | Name   | Age |        |
+                    | |-----------|--------|-----|        |
+                    | |   1      | Alice  | 12  |        |
+                    | |   2      | Bob    | 13  |        |
+                    | |   3      | Charlie | 14  |       |
+                    |-------------------------------------|
+                    | Table: Books                        |
+                    |-------------------------------------|
+                    | | BookID  | Title         | Author  |
+                    | |---------|---------------|---------|
+                    | |   1     | Harry Potter  | J.K. Rowling |
+                    | |   2     | The Hobbit    | J.R.R. Tolkien |
+                    | |   3     | The Great Gatsby | F. Scott Fitzgerald |
+                    +-------------------------------------+
+                    
+                        | 
+                        | 
+                        | 
+                        v
+                    
+                    +-------------------------------------+
+                    |          Database Instance          |
+                    |-------------------------------------|
+                    | Table: Friends                      |
+                    |-------------------------------------|
+                    | | FriendID | Name   | Age |        |
+                    | |-----------|--------|-----|        |
+                    | |   1      | Alice  | 12  |        |
+                    | |   2      | Bob    | 13  |        |
+                    | |   3      | Charlie | 14  |        |
+                    |-------------------------------------|
+                    | Table: Books                        |
+                    |-------------------------------------|
+                    | | BookID  | Title         | Author  |
+                    | |---------|---------------|---------|
+                    | |   1     | Harry Potter  | J.K. Rowling |
+                    | |   2     | The Hobbit    | J.R.R. Tolkien |
+                    | |   3     | The Great Gatsby | F. Scott Fitzgerald |
+                    +-------------------------------------+
+                    
+                    </code></pre>
+                    <h3 data-heading="Summary" dir="auto">Summary</h3>
+                    <p dir="auto">In conclusion, the concept of a database schema and instance is fundamental to understanding how databases operate. The schema serves as the design blueprint outlining how data is organized, while the instance represents the actual data stored at any given moment. The mnemonic "S.I." (Schema and Instance) can help you remember these key concepts easily. The diagram illustrates the relationship between the schema and the instance, showcasing how the structure and the actual data relate to one another.</p>
+                    <hr>
+                    <h2 data-heading="Selection and Projection Operations in Relational Algebra" dir="auto">Selection and Projection Operations in Relational Algebra</h2>
+                    <hr>
+                    <h3 data-heading="Explanation" dir="auto">Explanation</h3>
+                    <p dir="auto"><strong>Selection Operation:</strong>
+                    Imagine you have a big box of colored candies, and you only want to eat the red ones. The selection operation is like looking through the box and picking out just the red candies. In a database, when you want to find specific information that meets certain conditions, you use the selection operation. It helps you filter the data and get only what you want!</p>
+                    <p dir="auto"><strong>Projection Operation:</strong>
+                    Now, let’s say you want to see only the names of the candies, not their colors or sizes. The projection operation is like taking a piece of paper and writing down just the names of the candies you have. In a database, the projection operation lets you choose which information (or columns) you want to see from the records. It helps you focus on specific details.</p>
+                    <h3 data-heading="Summary:" dir="auto">Summary:</h3>
+                    <ul>
+                    <li dir="auto"><strong>Selection:</strong> Picking specific records based on certain conditions (like choosing red candies).</li>
+                    <li dir="auto"><strong>Projection:</strong> Choosing specific columns of data (like just the names of the candies).</li>
+                    </ul>
+                    <hr>
+                    <h3 data-heading="Bookish Explanation" dir="auto">Bookish Explanation</h3>
+                    <p dir="auto"><strong>1. Selection Operation (σ):</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Definition:</strong> The selection operation, denoted by the Greek letter sigma (σ), is used in relational algebra to filter rows based on specified conditions. It allows you to retrieve a subset of rows from a relation (table) where certain criteria are met.</li>
+                    <li dir="auto"><strong>Characteristics:</strong>
+                    <ul>
+                    <li dir="auto"><strong>Syntax:</strong> σ(condition)(Relation)</li>
+                    <li dir="auto"><strong>Outcome:</strong> Returns only the rows that satisfy the condition, while keeping all columns intact.</li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <p dir="auto"><strong>Example:</strong>
+                    If you have a table of students and you want to select those who are older than 12, you would write:</p>
+                    <ul>
+                    <li dir="auto"><strong>σ(Age &gt; 12)(Students)</strong></li>
+                    </ul>
+                    <p dir="auto"><strong>2. Projection Operation (π):</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Definition:</strong> The projection operation, denoted by the Greek letter pi (π), is used to retrieve specific columns from a relation. It allows you to focus on particular attributes while ignoring others.</li>
+                    <li dir="auto"><strong>Characteristics:</strong>
+                    <ul>
+                    <li dir="auto"><strong>Syntax:</strong> π(column1, column2, ...)(Relation)</li>
+                    <li dir="auto"><strong>Outcome:</strong> Returns only the specified columns from the relation.</li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <p dir="auto"><strong>Example:</strong>
+                    If you have a table of students and you want to see only their names and ages, you would write:</p>
+                    <ul>
+                    <li dir="auto"><strong>π(Name, Age)(Students)</strong></li>
+                    </ul>
+                    <h3 data-heading="Summary of Selection and Projection:" dir="auto">Summary of Selection and Projection:</h3>
+                    <p dir="auto">In relational algebra, selection filters rows based on conditions, while projection focuses on specific columns of a relation, allowing for efficient data retrieval.</p>
+                    <hr>
+                    <h3 data-heading="Pneumonics" dir="auto">Pneumonics</h3>
+                    <p dir="auto">To remember the operations of selection and projection, you can use the following mnemonics:</p>
+                    <p dir="auto"><strong>S.E.L.E.C.T.</strong> for Selection:</p>
+                    <ul>
+                    <li dir="auto"><strong>S</strong>pecific rows</li>
+                    <li dir="auto"><strong>E</strong>xtracted based on condition</li>
+                    <li dir="auto"><strong>L</strong>imited to criteria</li>
+                    <li dir="auto"><strong>E</strong>very column remains</li>
+                    <li dir="auto"><strong>C</strong>ondition applied</li>
+                    <li dir="auto"><strong>T</strong>argeted results</li>
+                    </ul>
+                    <p dir="auto"><strong>P.R.O.J.E.C.T.</strong> for Projection:</p>
+                    <ul>
+                    <li dir="auto"><strong>P</strong>ick specific columns</li>
+                    <li dir="auto"><strong>R</strong>etain only what's needed</li>
+                    <li dir="auto"><strong>O</strong>mit unnecessary data</li>
+                    <li dir="auto"><strong>J</strong>ust the attributes you want</li>
+                    <li dir="auto"><strong>E</strong>fficient data retrieval</li>
+                    <li dir="auto"><strong>C</strong>oncentrate on key information</li>
+                    <li dir="auto"><strong>T</strong>ables simplified</li>
+                    </ul>
+                    <p dir="auto">You can remember it as "S.E.L.E.C.T. for Selection" and "P.R.O.J.E.C.T. for Projection" to keep in mind their key characteristics.</p>
+                    <hr>
+                    <h3 data-heading="Diagrams: Selection and Projection Operations" dir="auto">Diagrams: Selection and Projection Operations</h3>
+                    <p dir="auto"><strong>1. Selection Operation Diagram:</strong></p>
+                    <pre><code>Input Relation: Students Table
+                    +-----------+-----+------+
+                    | StudentID | Name| Age  |
+                    +-----------+-----+------+
+                    |     1     | Alice| 12  |
+                    |     2     | Bob  | 13  |
+                    |     3     | Charlie| 11 |
+                    |     4     | David| 15  |
+                    +-----------+-----+------+
+                    
+                    Selection Operation: σ(Age &gt; 12)(Students)
+                    
+                    Output Relation:
+                    +-----------+-----+------+
+                    | StudentID | Name| Age  |
+                    +-----------+-----+------+
+                    |     2     | Bob  | 13  |
+                    |     4     | David| 15  |
+                    +-----------+-----+------+
+                    </code></pre>
+                    <p dir="auto"><strong>2. Projection Operation Diagram:</strong></p>
+                    <pre><code>Input Relation: Students Table
+                    +-----------+-----+------+
+                    | StudentID | Name| Age  |
+                    +-----------+-----+------+
+                    |     1     | Alice| 12  |
+                    |     2     | Bob  | 13  |
+                    |     3     | Charlie| 11 |
+                    |     4     | David| 15  |
+                    +-----------+-----+------+
+                    
+                    Projection Operation: π(Name, Age)(Students)
+                    
+                    Output Relation:
+                    +-----+------+
+                    | Name| Age  |
+                    +-----+------+
+                    | Alice| 12  |
+                    | Bob  | 13  |
+                    | Charlie| 11 |
+                    | David| 15  |
+                    +-----+------+
+                    </code></pre>
+                    <h3 data-heading="Summary" dir="auto">Summary</h3>
+                    <p dir="auto">In conclusion, the selection and projection operations in relational algebra are essential for effectively retrieving and managing data in databases. The selection operation filters rows based on specific criteria, while the projection operation focuses on specific columns of data. The mnemonics "S.E.L.E.C.T." for selection and "P.R.O.J.E.C.T." for projection can help you remember their functions easily. The diagrams illustrate how data is filtered and focused in these operations, showcasing their practical applications in data management.</p>
+                    <hr>
+                    <h2 data-heading="Codd's Rules" dir="auto">Codd's Rules</h2>
+                    <hr>
+                    <h3 data-heading="Explanation" dir="auto">Explanation</h3>
+                    <p dir="auto">Codd's Rules are like the rules of a game that help make sure databases work in a fair and organized way. They were created by a man named Edgar Codd, who wanted to make sure that databases could store information effectively and that they could be easily accessed and managed.</p>
+                    <p dir="auto">Here are some simple rules that help us understand how databases should work:</p>
+                    <ol>
+                    <li dir="auto"><strong>Information Rule:</strong> All the information in a database should be stored as data, and it should be easy to find.</li>
+                    <li dir="auto"><strong>Guaranteed Access Rule:</strong> You should be able to get any piece of data you want without any trouble, like having a key to open any door.</li>
+                    <li dir="auto"><strong>Systematic Treatment of Null Values:</strong> There should be a way to represent missing or unknown information without confusion, like using a question mark for something you don’t know.</li>
+                    <li dir="auto"><strong>Dynamic On-line Catalog Based on the Relational Model:</strong> A database should have a way to store information about itself, like a map that shows where everything is.</li>
+                    <li dir="auto"><strong>Comprehensive Data Sublanguage Rule:</strong> You should be able to interact with the database using a simple language, like asking questions in English.</li>
+                    <li dir="auto"><strong>View Updating Rule:</strong> You should be able to change the information in the database easily, like updating a list of your favorite games.</li>
+                    </ol>
+                    <h3 data-heading="Summary:" dir="auto">Summary:</h3>
+                    <p dir="auto">Codd's Rules help ensure that databases are organized, easy to access, and can handle information properly.</p>
+                    <hr>
+                    <h3 data-heading="Bookish Explanation" dir="auto">Bookish Explanation</h3>
+                    <p dir="auto">Codd's Rules are a set of thirteen guidelines proposed by Edgar F. Codd, the inventor of the relational database model. These rules define what is required from a database management system (DBMS) for it to be considered relational, i.e., an RDBMS.</p>
+                    <p dir="auto">Here are six key rules summarized:</p>
+                    <ol>
+                    <li dir="auto">
+                    <p><strong>Information Rule:</strong> All data should be stored in tables, and every piece of data should be represented as a value in a table cell.</p>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Guaranteed Access Rule:</strong> Each data element should be accessible by using a combination of table name, primary key, and column name, ensuring that users can access data without ambiguity.</p>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Systematic Treatment of Null Values:</strong> The DBMS must support a uniform way to represent missing or unknown data, allowing for meaningful differentiation between "missing" and "zero" or "empty."</p>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Dynamic On-line Catalog Based on the Relational Model:</strong> The database should provide a catalog that describes its structure, allowing users to query this metadata using the same language that is used for querying the database itself.</p>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Comprehensive Data Sublanguage Rule:</strong> The database must support a language that allows for data definition, manipulation, and transaction control, which can be used for querying the database.</p>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>View Updating Rule:</strong> Any changes made to a view (a virtual table based on a query) should be reflected in the underlying base tables, ensuring that users can modify data through views.</p>
+                    </li>
+                    </ol>
+                    <h3 data-heading="Summary of Codd's Rules:" dir="auto">Summary of Codd's Rules:</h3>
+                    <p dir="auto">Codd's Rules aim to standardize how relational databases manage data to ensure reliability, consistency, and ease of use.</p>
+                    <hr>
+                    <h3 data-heading="Pneumonics" dir="auto">Pneumonics</h3>
+                    <p dir="auto">To help remember some of Codd's Rules, you can use the following mnemonic:</p>
+                    <p dir="auto"><strong>I.G.S.D.C.V.</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>I</strong>nformation Rule (Data stored in tables)</li>
+                    <li dir="auto"><strong>G</strong>uaranteed Access Rule (Easy access to data)</li>
+                    <li dir="auto"><strong>S</strong>ystematic Treatment of Null Values (Handling missing information)</li>
+                    <li dir="auto"><strong>D</strong>ynamic On-line Catalog (Map of the database)</li>
+                    <li dir="auto"><strong>C</strong>omprehensive Data Sublanguage (Simple language for interaction)</li>
+                    <li dir="auto"><strong>V</strong>iew Updating Rule (Updating views reflects in the database)</li>
+                    </ul>
+                    <p dir="auto">You can remember it as "I.G.S.D.C.V." to recall the key concepts of Codd's Rules.</p>
+                    <hr>
+                    <h3 data-heading="Diagram: Codd's Rules" dir="auto">Diagram: Codd's Rules</h3>
+                    <pre><code>+------------------------------------------------+
+                    |                Codd's Rules                    |
+                    +------------------------------------------------+
+                    | 1. Information Rule                             |
+                    |    - All data stored in tables                  |
+                    |                                                  |
+                    | 2. Guaranteed Access Rule                       |
+                    |    - Access data easily via table and key       |
+                    |                                                  |
+                    | 3. Systematic Treatment of Null Values         |
+                    |    - Represents missing data clearly             |
+                    |                                                  |
+                    | 4. Dynamic On-line Catalog                      |
+                    |    - Catalog of database structure accessible    |
+                    |                                                  |
+                    | 5. Comprehensive Data Sublanguage              |
+                    |    - Language for defining and querying data     |
+                    |                                                  |
+                    | 6. View Updating Rule                           |
+                    |    - Changes in views update base tables         |
+                    +------------------------------------------------+
+                    </code></pre>
+                    <h3 data-heading="Summary" dir="auto">Summary</h3>
+                    <p dir="auto">In conclusion, Codd's Rules are essential guidelines that help ensure databases are organized, reliable, and easy to use. The mnemonic "I.G.S.D.C.V." can assist in remembering the key concepts of these rules. The diagram summarizes the rules in a visually clear format, highlighting the foundational principles of relational database management systems.</p>
+                    <hr>
+                    <h2 data-heading="Normalization up to Third Normal Form (3NF)" dir="auto">Normalization up to Third Normal Form (3NF)</h2>
+                    <hr>
+                    <h3 data-heading="Explanation" dir="auto">Explanation</h3>
+                    <p dir="auto"><strong>Normalization:</strong>
+                    Imagine you have a big toy box where you keep all your toys, but they are all mixed up. Sometimes, you can't find your favorite toy quickly because they are not organized. Normalization is like organizing your toy box so that everything has its own place, making it easier to find and manage your toys.</p>
+                    <p dir="auto">In databases, normalization means organizing data so that it is stored efficiently and without unnecessary repetition. There are different levels of normalization, and we can break them down into stages called "normal forms." Let's talk about the first three!</p>
+                    <p dir="auto"><strong>1. First Normal Form (1NF):</strong>
+                    This is like sorting your toys by type. You make sure that each toy has its own spot and that there are no duplicates. In a database, this means each piece of information (like a toy) must be in its own cell, and there shouldn't be any repeating groups.</p>
+                    <p dir="auto"><strong>2. Second Normal Form (2NF):</strong>
+                    Now that your toys are sorted, you notice that some toys have extra information, like color or size. You want to make sure that the extra information relates only to the toy itself. In a database, this means that all the information about a toy should be related to its main identifier, like its name. If you have details that depend on only part of that identifier, you need to separate them into their own category.</p>
+                    <p dir="auto"><strong>3. Third Normal Form (3NF):</strong>
+                    Finally, you notice that some of the extra details about your toys are connected. For example, if the color is related to the type of toy, you want to keep those details organized. In a database, this means that every piece of information should depend only on the main identifier and not on any other pieces of information.</p>
+                    <h3 data-heading="Summary:" dir="auto">Summary:</h3>
+                    <ul>
+                    <li dir="auto"><strong>1NF:</strong> Organize data so each piece is in its own cell with no duplicates.</li>
+                    <li dir="auto"><strong>2NF:</strong> Make sure all details relate directly to the main identifier.</li>
+                    <li dir="auto"><strong>3NF:</strong> Remove any extra details that depend on other details.</li>
+                    </ul>
+                    <hr>
+                    <h3 data-heading="Bookish Explanation" dir="auto">Bookish Explanation</h3>
+                    <p dir="auto"><strong>Normalization</strong> is a systematic approach to organizing data in a database to reduce redundancy and improve data integrity. The process involves dividing large tables into smaller, related tables and defining relationships between them. Here’s a breakdown of the first three normal forms:</p>
+                    <p dir="auto"><strong>1. First Normal Form (1NF):</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Definition:</strong> A relation is in 1NF if all attributes (columns) contain only atomic (indivisible) values, and each entry in a column is of the same kind. There should be no repeating groups or arrays.</li>
+                    <li dir="auto"><strong>Characteristics:</strong>
+                    <ul>
+                    <li dir="auto">Each column must contain unique values.</li>
+                    <li dir="auto">Each row must be unique, typically achieved using a primary key.</li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <p dir="auto"><strong>Example:</strong>
+                    | StudentID | Name   | Subjects           |
+                    |-----------|--------|--------------------|
+                    | 1         | Alice  | Math, Science      |
+                    | 2         | Bob    | English, History    |</p>
+                    <p dir="auto"><strong>To convert to 1NF:</strong>
+                    Separate the subjects into individual rows.
+                    | StudentID | Name   | Subject  |
+                    |-----------|--------|----------|
+                    | 1         | Alice  | Math     |
+                    | 1         | Alice  | Science  |
+                    | 2         | Bob    | English   |
+                    | 2         | Bob    | History   |</p>
+                    <p dir="auto"><strong>2. Second Normal Form (2NF):</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Definition:</strong> A relation is in 2NF if it is already in 1NF and all non-key attributes are fully functionally dependent on the primary key. This means that no non-key attribute should depend on only a part of a composite key.</li>
+                    <li dir="auto"><strong>Characteristics:</strong>
+                    <ul>
+                    <li dir="auto">Eliminates partial dependency.</li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <p dir="auto"><strong>Example:</strong>
+                    | StudentID | Subject  | Instructor   |
+                    |-----------|----------|--------------|
+                    | 1         | Math     | Mr. Smith    |
+                    | 1         | Science  | Ms. Johnson  |
+                    | 2         | English   | Mr. Brown    |
+                    | 2         | History   | Ms. Davis    |</p>
+                    <p dir="auto"><strong>To convert to 2NF:</strong>
+                    Separate the instructor information into another table.
+                    <strong>Student Table:</strong>
+                    | StudentID | Subject  |
+                    |-----------|----------|
+                    | 1         | Math     |
+                    | 1         | Science  |
+                    | 2         | English   |
+                    | 2         | History   |</p>
+                    <p dir="auto"><strong>Instructor Table:</strong>
+                    | Subject  | Instructor   |
+                    |----------|--------------|
+                    | Math     | Mr. Smith    |
+                    | Science  | Ms. Johnson  |
+                    | English   | Mr. Brown    |
+                    | History   | Ms. Davis    |</p>
+                    <p dir="auto"><strong>3. Third Normal Form (3NF):</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Definition:</strong> A relation is in 3NF if it is in 2NF and all the attributes are functionally independent of each other. This means that non-key attributes should not depend on other non-key attributes.</li>
+                    <li dir="auto"><strong>Characteristics:</strong>
+                    <ul>
+                    <li dir="auto">Eliminates transitive dependency.</li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <p dir="auto"><strong>Example:</strong>
+                    If we have a table like this:
+                    | StudentID | Subject  | Instructor   | InstructorPhone   |
+                    |-----------|----------|--------------|--------------------|
+                    | 1         | Math     | Mr. Smith    | 123-456-7890       |
+                    | 1         | Science  | Ms. Johnson  | 234-567-8901       |
+                    | 2         | English   | Mr. Brown    | 345-678-9012       |
+                    | 2         | History   | Ms. Davis    | 456-789-0123       |</p>
+                    <p dir="auto"><strong>To convert to 3NF:</strong>
+                    Separate the instructor phone information into another table.
+                    <strong>Instructor Table:</strong>
+                    | Instructor   | InstructorPhone   |
+                    |--------------|--------------------|
+                    | Mr. Smith    | 123-456-7890       |
+                    | Ms. Johnson  | 234-567-8901       |
+                    | Mr. Brown    | 345-678-9012       |
+                    | Ms. Davis    | 456-789-0123       |</p>
+                    <h3 data-heading="Summary of Normalization:" dir="auto">Summary of Normalization:</h3>
+                    <p dir="auto">Normalization helps organize data efficiently, reducing redundancy and improving data integrity. The first three normal forms—1NF, 2NF, and 3NF—each address specific types of data organization issues.</p>
+                    <hr>
+                    <h3 data-heading="Pneumonics" dir="auto">Pneumonics</h3>
+                    <p dir="auto">To help remember the normal forms, you can use the following mnemonic:</p>
+                    <p dir="auto"><strong>A.P.P.</strong> for the normalization process:</p>
+                    <ul>
+                    <li dir="auto"><strong>A</strong>tomization (1NF - make sure all data is atomic)</li>
+                    <li dir="auto"><strong>P</strong>artial Dependency Removal (2NF - ensure all data is fully dependent on the primary key)</li>
+                    <li dir="auto"><strong>P</strong>roper Dependency (3NF - eliminate dependencies between non-key attributes)</li>
+                    </ul>
+                    <p dir="auto">You can remember it as "A.P.P." for the steps in normalization.</p>
+                    <hr>
+                    <h3 data-heading="Diagram: Normalization Process" dir="auto">Diagram: Normalization Process</h3>
+                    <p dir="auto"><strong>1NF:</strong></p>
+                    <pre><code>Before 1NF:
+                    +-----------+--------+-------------------+
+                    | StudentID | Name   | Subjects          |
+                    +-----------+--------+-------------------+
+                    | 1         | Alice  | Math, Science     |
+                    | 2         | Bob    | English, History   |
+                    +-----------+--------+-------------------+
+                    
+                    After 1NF:
+                    +-----------+--------+----------+
+                    | StudentID | Name   | Subject  |
+                    +-----------+--------+----------+
+                    | 1         | Alice  | Math     |
+                    | 1         | Alice  | Science  |
+                    | 2         | Bob    | English  |
+                    | 2         | Bob    | History  |
+                    +-----------+--------+----------+
+                    </code></pre>
+                    <p dir="auto"><strong>2NF:</strong></p>
+                    <pre><code>Before 2NF:
+                    +-----------+----------+--------------+
+                    | StudentID | Subject  | Instructor   |
+                    +-----------+----------+--------------+
+                    | 1         | Math     | Mr. Smith    |
+                    | 1         | Science  | Ms. Johnson  |
+                    | 2         | English  | Mr. Brown    |
+                    | 2         | History  | Ms. Davis    |
+                    +-----------+----------+--------------+
+                    
+                    After 2NF:
+                    +-----------+----------+
+                    | StudentID | Subject  |
+                    +-----------+----------+
+                    | 1         | Math     |
+                    | 1         | Science  |
+                    | 2         | English  |
+                    | 2         | History  |
+                    +-----------+----------+
+                    
+                    +----------+--------------+
+                    | Subject  | Instructor   |
+                    +----------+--------------+
+                    | Math     | Mr. Smith    |
+                    | Science  | Ms. Johnson  |
+                    | English  | Mr. Brown    |
+                    | History  | Ms. Davis    |
+                    +----------+--------------+
+                    </code></pre>
+                    <p dir="auto"><strong>3NF:</strong></p>
+                    <pre><code>Before 3NF:
+                    +-----------+----------+--------------+-------------------+
+                    | StudentID | Subject  | Instructor   | InstructorPhone    |
+                    +-----------+----------+--------------+-------------------+
+                    | 1         | Math     | Mr. Smith    | 123-456-7890      |
+                    | 1         | Science  | Ms. Johnson  | 234-567-8901      |
+                    | 2         | English  | Mr. Brown    | 345-678-9012      |
+                    | 2         | History  | Ms. Davis    | 456-789-0123      |
+                    +-----------+----------+--------------+-------------------+
+                    
+                    After 3NF:
+                    +-----------+----------+
+                    | StudentID | Subject  |
+                    +-----------+----------+
+                    | 1         | Math     |
+                    | 1         | Science  |
+                    | 2         | English  |
+                    | 2         | History  |
+                    +-----------+----------+
+                    
+                    +--------------+-------------------+
+                    | Instructor   | InstructorPhone    |
+                    +--------------+-------------------+
+                    | Mr. Smith    | 123-456-7890      |
+                    | Ms. Johnson  | 234-567-8901      |
+                    | Mr. Brown    | 345-678-9012      |
+                    | Ms. Davis    | 456-789-0123      |
+                    +--------------+-------------------+
+                    </code></pre>
+                    <h3 data-heading="Summary" dir="auto">Summary</h3>
+                    <p dir="auto">In conclusion, normalization up to the third normal form (3NF) is a crucial process in database design that ensures data integrity and reduces redundancy. The steps of normalization—1NF, 2NF, and 3NF—help organize data efficiently, allowing for better management and retrieval. The mnemonic "A.P.P." can assist in remembering the normalization process, while the diagrams illustrate how data is transformed and organized at each stage.</p>
+                    <hr>
+                    <h2 data-heading="Commit and Rollback in Databases" dir="auto">Commit and Rollback in Databases</h2>
+                    <hr>
+                    <h3 data-heading="Explanation" dir="auto">Explanation</h3>
+                    <p dir="auto"><strong>Commit:</strong>
+                    Imagine you are working on a school project, and you just finished drawing a really nice picture. When you're happy with it, you decide to glue it into your project folder. This action of gluing it in is like a "commit." It means that your changes are saved, and you are sure you want to keep them. In databases, when you commit a transaction, it means that all the changes you made to the data are now saved permanently.</p>
+                    <p dir="auto"><strong>Rollback:</strong>
+                    Now, imagine that after gluing in your picture, you realize you made a mistake and want to change it. If you could take the picture out of the folder and go back to the way it was before you glued it in, that would be like a "rollback." In databases, when you rollback a transaction, it means you undo all the changes you made and return the data to its last saved state. </p>
+                    <h3 data-heading="Summary:" dir="auto">Summary:</h3>
+                    <ul>
+                    <li dir="auto"><strong>Commit:</strong> Saving changes permanently.</li>
+                    <li dir="auto"><strong>Rollback:</strong> Undoing changes and going back to the previous state.</li>
+                    </ul>
+                    <hr>
+                    <h3 data-heading="Bookish Explanation" dir="auto">Bookish Explanation</h3>
+                    <p dir="auto"><strong>1. Commit:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Definition:</strong> In database management, a commit is an operation that saves all the changes made during a transaction to the database permanently. Once a commit is executed, the changes are visible to all users and cannot be undone.</li>
+                    <li dir="auto"><strong>Usage:</strong> The commit command is typically used after a series of operations that need to be treated as a single unit of work, ensuring data integrity.</li>
+                    <li dir="auto"><strong>Example:</strong> If you update a customer's information and place an order in a database, you would commit these changes to ensure they are saved permanently.</li>
+                    </ul>
+                    <p dir="auto"><strong>2. Rollback:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Definition:</strong> A rollback is an operation that undoes all the changes made during the current transaction, reverting the database to its last committed state. This is used when an error occurs or if the user decides not to proceed with the changes.</li>
+                    <li dir="auto"><strong>Usage:</strong> The rollback command is used to ensure that no partial or incorrect data is saved, maintaining the consistency of the database.</li>
+                    <li dir="auto"><strong>Example:</strong> If an error occurs while processing a transaction, you can rollback to undo all changes made since the last commit.</li>
+                    </ul>
+                    <h3 data-heading="Summary of Commit and Rollback:" dir="auto">Summary of Commit and Rollback:</h3>
+                    <p dir="auto">Commit and rollback are essential operations in database management that help maintain data integrity and consistency during transactions. Committing saves changes permanently, while rolling back undoes changes and reverts to the previous state.</p>
+                    <hr>
+                    <h3 data-heading="Pneumonics" dir="auto">Pneumonics</h3>
+                    <p dir="auto">To help remember the concepts of commit and rollback, you can use the following mnemonic:</p>
+                    <p dir="auto"><strong>C.R.U.S.H.</strong> for <strong>Commit and Rollback:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>C</strong>ommit (Save changes permanently)</li>
+                    <li dir="auto"><strong>R</strong>ollback (Undo changes)</li>
+                    <li dir="auto"><strong>U</strong>ndo (Revert to previous state)</li>
+                    <li dir="auto"><strong>S</strong>ave (Secure data integrity)</li>
+                    <li dir="auto"><strong>H</strong>istory (Keep track of changes)</li>
+                    </ul>
+                    <p dir="auto">You can remember it as "C.R.U.S.H. for Commit and Rollback" to keep in mind their main functions.</p>
+                    <hr>
+                    <h3 data-heading="Diagram: Commit and Rollback" dir="auto">Diagram: Commit and Rollback</h3>
+                    <pre class="language-plaintext" tabindex="0"><code class="language-plaintext is-loaded">+------------------------------------------------------+
+                    |                     Database Transactions              |
+                    +------------------------------------------------------+
+                    |                                                      |
+                    |  Transaction Begins                                   |
+                    |                                                      |
+                    |  +------------------+    +--------------------+     |
+                    |  | Operation 1      |    | Operation 2        |     |
+                    |  | (e.g., Update)   |    | (e.g., Insert)     |     |
+                    |  +------------------+    +--------------------+     |
+                    |                                                      |
+                    |   +------------------+                               |
+                    |   |   Commit         | ------------------------------&gt; |
+                    |   |  (Save Changes)  |                               |
+                    |   +------------------+                               |
+                    |                                                      |
+                    |   +------------------+                               |
+                    |   |    Rollback      | &lt;----------------------------- |
+                    |   |   (Undo Changes) |                               |
+                    |   +------------------+                               |
+                    |                                                      |
+                    +------------------------------------------------------+
+                    </code></pre>
+                    <h3 data-heading="Summary" dir="auto">Summary</h3>
+                    <p dir="auto">In conclusion, commit and rollback are crucial concepts in database management that help ensure data integrity and consistency during transactions. The mnemonic "C.R.U.S.H." can assist in remembering the key functions of these operations. The diagram visually represents the flow of a transaction, showing how changes can be committed or rolled back, illustrating their importance in managing data effectively.</p>
+                    <hr>
+                    <h2 data-heading="Grant and Revoke in Database Management" dir="auto">Grant and Revoke in Database Management</h2>
+                    <hr>
+                    <h3 data-heading="Explanation" dir="auto">Explanation</h3>
+                    <p dir="auto"><strong>Grant:</strong>
+                    Imagine you have a club at school, and you decide who can join and who can use the club's special toys. When you say, "You can play with the toys," that’s like giving someone permission to use them. In databases, the "grant" command is used to give a user permission to do certain things, like reading or changing data.</p>
+                    <p dir="auto"><strong>Revoke:</strong>
+                    Now, suppose someone misuses the toys and you decide they can no longer play with them. When you say, "You can't use the toys anymore," that's like taking away their permission. In databases, the "revoke" command is used to take back permissions that were previously granted to a user.</p>
+                    <h3 data-heading="Summary:" dir="auto">Summary:</h3>
+                    <ul>
+                    <li dir="auto"><strong>Grant:</strong> Giving permission to do something (like using toys).</li>
+                    <li dir="auto"><strong>Revoke:</strong> Taking away permission (like saying no more playing with toys).</li>
+                    </ul>
+                    <hr>
+                    <h3 data-heading="Bookish Explanation" dir="auto">Bookish Explanation</h3>
+                    <p dir="auto"><strong>1. Grant:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Definition:</strong> In database management, the "grant" command is used to give specific privileges or permissions to users or roles. This allows them to perform certain actions on database objects, such as tables, views, or procedures.</li>
+                    <li dir="auto"><strong>Usage:</strong> The command is essential for defining what users can do within a database, ensuring that they have the necessary access to perform their tasks.</li>
+                    <li dir="auto"><strong>Example:</strong> If a user needs to read data from a table, an administrator would issue a command like:
+                    <ul>
+                    <li dir="auto"><code>GRANT SELECT ON table_name TO username;</code></li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <p dir="auto"><strong>2. Revoke:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Definition:</strong> The "revoke" command is used to remove specific privileges or permissions that were previously granted to users or roles. This ensures that users no longer have access to certain actions on database objects.</li>
+                    <li dir="auto"><strong>Usage:</strong> The revoke command is crucial for maintaining security and control over database access.</li>
+                    <li dir="auto"><strong>Example:</strong> If a user misuses their privileges, an administrator would issue a command like:
+                    <ul>
+                    <li dir="auto"><code>REVOKE SELECT ON table_name FROM username;</code></li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <h3 data-heading="Summary of Grant and Revoke:" dir="auto">Summary of Grant and Revoke:</h3>
+                    <p dir="auto">The grant and revoke commands are essential for managing user permissions in a database. Granting permissions allows users to perform specific actions, while revoking permissions helps maintain control and security over database operations.</p>
+                    <hr>
+                    <h3 data-heading="Pneumonics" dir="auto">Pneumonics</h3>
+                    <p dir="auto">To help remember the concepts of grant and revoke, you can use the following mnemonic:</p>
+                    <p dir="auto"><strong>G.R.A.B.</strong> for <strong>Grant and Revoke:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>G</strong>rant (Give permission)</li>
+                    <li dir="auto"><strong>R</strong>evoke (Remove permission)</li>
+                    <li dir="auto"><strong>A</strong>ccess (Control access to data)</li>
+                    <li dir="auto"><strong>B</strong>alance (Maintain security and control)</li>
+                    </ul>
+                    <p dir="auto">You can remember it as "G.R.A.B. for Grant and Revoke" to keep in mind their main functions.</p>
+                    <hr>
+                    <h3 data-heading="Diagram: Grant and Revoke" dir="auto">Diagram: Grant and Revoke</h3>
+                    <pre class="language-plaintext" tabindex="0"><code class="language-plaintext is-loaded">+------------------------------------------------------+
+                    |                     Database Permissions              |
+                    +------------------------------------------------------+
+                    |                                                      |
+                    |  User Requests Access                                 |
+                    |                                                      |
+                    |  +------------------+                                |
+                    |  |   Grant          | ------------------------------&gt; |
+                    |  | (Give Permission) |                               |
+                    |  +------------------+                                |
+                    |                                                      |
+                    |  +------------------+                                |
+                    |  |    Revoke        | &lt;------------------------------ |
+                    |  |  (Remove Permission) |                            |
+                    |  +------------------+                                |
+                    |                                                      |
+                    +------------------------------------------------------+
+                    </code></pre>
+                    <h3 data-heading="Summary" dir="auto">Summary</h3>
+                    <p dir="auto">In conclusion, the grant and revoke commands are critical components of database management that help control user permissions. The mnemonic "G.R.A.B." can assist in remembering the key functions of these operations. The diagram visually represents the flow of granting and revoking permissions, emphasizing their importance in managing access and maintaining security in a database environment.</p>
+                    <hr>
+                    <h2 data-heading="Difference Between DELETE, DROP, and TRUNCATE" dir="auto">Difference Between DELETE, DROP, and TRUNCATE</h2>
+                    <hr>
+                    <h3 data-heading="Explanation" dir="auto">Explanation</h3>
+                    <p dir="auto"><strong>DELETE:</strong>
+                    Imagine you are cleaning your room, and you decide to throw away some old toys. When you take out one toy at a time and put it in the trash, that’s like the DELETE command. It removes specific items from your room (or database) but leaves everything else in place. You can choose which toys to throw away.</p>
+                    <p dir="auto"><strong>DROP:</strong>
+                    Now, think about if you decided to get rid of the entire toy box instead of just a few toys. When you remove the whole box, everything inside it goes away too. That’s like the DROP command. It completely removes a table (or database) from the database, including all the data and the structure itself.</p>
+                    <p dir="auto"><strong>TRUNCATE:</strong>
+                    Finally, let’s say you want to keep the toy box but remove all the toys inside it. When you dump out all the toys but keep the box, that’s like the TRUNCATE command. It removes all the data from a table but keeps the table itself so you can use it again.</p>
+                    <h3 data-heading="Summary:" dir="auto">Summary:</h3>
+                    <ul>
+                    <li dir="auto"><strong>DELETE:</strong> Removes specific records but keeps the table.</li>
+                    <li dir="auto"><strong>DROP:</strong> Removes the entire table and all its data.</li>
+                    <li dir="auto"><strong>TRUNCATE:</strong> Removes all records from the table but keeps the table structure.</li>
+                    </ul>
+                    <hr>
+                    <h3 data-heading="Bookish Explanation" dir="auto">Bookish Explanation</h3>
+                    <p dir="auto"><strong>1. DELETE:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Definition:</strong> The DELETE command is used to remove specific rows from a table based on a condition. It allows users to specify which records to delete using a WHERE clause.</li>
+                    <li dir="auto"><strong>Characteristics:</strong>
+                    <ul>
+                    <li dir="auto">It can delete one or multiple rows.</li>
+                    <li dir="auto">It is a slower operation compared to TRUNCATE because it logs each row deletion.</li>
+                    <li dir="auto">It can be rolled back if used within a transaction.</li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <p dir="auto"><strong>Example:</strong></p>
+                    <pre class="language-sql" tabindex="0"><code class="language-sql is-loaded"><span class="token keyword">DELETE</span> <span class="token keyword">FROM</span> Employees <span class="token keyword">WHERE</span> EmployeeID <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+                    </code></pre>
+                    <p dir="auto"><strong>2. DROP:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Definition:</strong> The DROP command is used to remove an entire database object (like a table, view, or database) from the database. This command deletes the table and all its data, structure, and constraints.</li>
+                    <li dir="auto"><strong>Characteristics:</strong>
+                    <ul>
+                    <li dir="auto">It cannot be rolled back once executed.</li>
+                    <li dir="auto">It is a quick operation as it does not log individual row deletions.</li>
+                    <li dir="auto">The table structure and all data are permanently lost.</li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <p dir="auto"><strong>Example:</strong></p>
+                    <pre class="language-sql" tabindex="0"><code class="language-sql is-loaded"><span class="token keyword">DROP</span> <span class="token keyword">TABLE</span> Employees<span class="token punctuation">;</span>
+                    </code></pre>
+                    <p dir="auto"><strong>3. TRUNCATE:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Definition:</strong> The TRUNCATE command is used to remove all rows from a table quickly while keeping the structure of the table intact. It does not log individual row deletions.</li>
+                    <li dir="auto"><strong>Characteristics:</strong>
+                    <ul>
+                    <li dir="auto">It is faster than DELETE because it does not log each row.</li>
+                    <li dir="auto">It cannot be used with a WHERE clause.</li>
+                    <li dir="auto">It cannot be rolled back if executed outside of a transaction.</li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <p dir="auto"><strong>Example:</strong></p>
+                    <pre class="language-sql" tabindex="0"><code class="language-sql is-loaded"><span class="token keyword">TRUNCATE</span> <span class="token keyword">TABLE</span> Employees<span class="token punctuation">;</span>
+                    </code></pre>
+                    <h3 data-heading="Summary of Differences:" dir="auto">Summary of Differences:</h3>
+                    <ul>
+                    <li dir="auto"><strong>DELETE:</strong> Removes specific records; can be rolled back; can use WHERE clause.</li>
+                    <li dir="auto"><strong>DROP:</strong> Removes the entire table and all its data; cannot be rolled back.</li>
+                    <li dir="auto"><strong>TRUNCATE:</strong> Removes all records quickly but keeps the table structure; cannot be rolled back.</li>
+                    </ul>
+                    <hr>
+                    <h3 data-heading="Pneumonics" dir="auto">Pneumonics</h3>
+                    <p dir="auto">To help remember the differences between DELETE, DROP, and TRUNCATE, you can use the following mnemonic:</p>
+                    <p dir="auto"><strong>D.D.T.</strong> for <strong>Delete, Drop, Truncate:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>D</strong>elete (Remove specific rows)</li>
+                    <li dir="auto"><strong>D</strong>rop (Remove entire table)</li>
+                    <li dir="auto"><strong>T</strong>runcate (Remove all rows but keep the table)</li>
+                    </ul>
+                    <p dir="auto">You can remember it as "D.D.T. for Delete, Drop, Truncate" to keep in mind their main functions.</p>
+                    <hr>
+                    <h3 data-heading="Diagram: DELETE, DROP, and TRUNCATE" dir="auto">Diagram: DELETE, DROP, and TRUNCATE</h3>
+                    <pre class="language-plaintext" tabindex="0"><code class="language-plaintext is-loaded">+------------------------------------------------------+
+                    |               Database Operations                     |
+                    +------------------------------------------------------+
+                    |                                                      |
+                    |  DELETE:                                            |
+                    |  +-----------------------------------------------+  |
+                    |  | Condition: Remove specific records            |  |
+                    |  | Example: DELETE FROM Employees WHERE ID = 1; |  |
+                    |  | Result: Removes selected rows only            |  |
+                    |  +-----------------------------------------------+  |
+                    |                                                      |
+                    |  DROP:                                             |
+                    |  +-----------------------------------------------+  |
+                    |  | Command: Remove entire table                  |  |
+                    |  | Example: DROP TABLE Employees;                |  |
+                    |  | Result: Table and all data are permanently    |  |
+                    |  | deleted                                        |  |
+                    |  +-----------------------------------------------+  |
+                    |                                                      |
+                    |  TRUNCATE:                                         |
+                    |  +-----------------------------------------------+  |
+                    |  | Command: Remove all rows                      |  |
+                    |  | Example: TRUNCATE TABLE Employees;            |  |
+                    |  | Result: All rows are deleted, table structure  |  |
+                    |  | remains                                       |  |
+                    |  +-----------------------------------------------+  |
+                    |                                                      |
+                    +------------------------------------------------------+
+                    </code></pre>
+                    <h3 data-heading="Summary" dir="auto">Summary</h3>
+                    <p dir="auto">In conclusion, DELETE, DROP, and TRUNCATE are three important commands in database management that serve different purposes. The mnemonic "D.D.T." can assist in remembering their key functions. The diagram illustrates how each command operates, highlighting their effects on data and table structures within a database.</p>
+                    <hr>
+                    <h2 data-heading="Aggregate Functions in Databases" dir="auto">Aggregate Functions in Databases</h2>
+                    <hr>
+                    <h3 data-heading="Explanation" dir="auto">Explanation</h3>
+                    <p dir="auto"><strong>Aggregate Functions:</strong>
+                    Imagine you have a big jar of different types of candies, and you want to know some information about them. Aggregate functions are like tools that help you get answers about a group of things instead of just one. They let you perform calculations on a bunch of numbers at once.</p>
+                    <p dir="auto">Here are some common aggregate functions:</p>
+                    <ol>
+                    <li dir="auto"><strong>COUNT:</strong> This tells you how many candies you have in total. If you count all the candies, you can find out how many there are.</li>
+                    <li dir="auto"><strong>SUM:</strong> This adds up all the candies of a certain type. If you want to know how many chocolate candies you have, you would use SUM.</li>
+                    <li dir="auto"><strong>AVG:</strong> This gives you the average number of candies per type. If you want to know how many candies you have on average for each type, you can use AVG.</li>
+                    <li dir="auto"><strong>MAX:</strong> This finds the biggest number. If you want to know which type of candy has the most pieces, you use MAX.</li>
+                    <li dir="auto"><strong>MIN:</strong> This finds the smallest number. If you want to know which type of candy has the fewest pieces, you use MIN.</li>
+                    </ol>
+                    <h3 data-heading="Summary:" dir="auto">Summary:</h3>
+                    <ul>
+                    <li dir="auto"><strong>Aggregate Functions:</strong> Help perform calculations on groups of data.</li>
+                    <li dir="auto"><strong>Examples:</strong> COUNT, SUM, AVG, MAX, MIN.</li>
+                    </ul>
+                    <hr>
+                    <h3 data-heading="Bookish Explanation" dir="auto">Bookish Explanation</h3>
+                    <p dir="auto"><strong>Aggregate Functions:</strong>
+                    Aggregate functions are built-in functions in SQL that perform calculations on a set of values and return a single value. These functions are commonly used in data analysis to summarize data stored in database tables. They can help you derive useful insights from large datasets.</p>
+                    <p dir="auto">Here are some key aggregate functions:</p>
+                    <ol>
+                    <li dir="auto">
+                    <p><strong>COUNT():</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Definition:</strong> Returns the number of rows that match a specified condition.</li>
+                    <li dir="auto"><strong>Example:</strong> <code>COUNT(column_name)</code> counts all non-null entries in the specified column.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>SUM():</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Definition:</strong> Returns the total sum of a numeric column.</li>
+                    <li dir="auto"><strong>Example:</strong> <code>SUM(column_name)</code> adds together all values in the specified column.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>AVG():</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Definition:</strong> Calculates the average value of a numeric column.</li>
+                    <li dir="auto"><strong>Example:</strong> <code>AVG(column_name)</code> computes the average of the values in the specified column.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>MAX():</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Definition:</strong> Returns the maximum value in a set of values.</li>
+                    <li dir="auto"><strong>Example:</strong> <code>MAX(column_name)</code> provides the largest value in the specified column.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>MIN():</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Definition:</strong> Returns the minimum value in a set of values.</li>
+                    <li dir="auto"><strong>Example:</strong> <code>MIN(column_name)</code> provides the smallest value in the specified column.</li>
+                    </ul>
+                    </li>
+                    </ol>
+                    <h3 data-heading="Summary of Aggregate Functions:" dir="auto">Summary of Aggregate Functions:</h3>
+                    <p dir="auto">Aggregate functions are essential for summarizing data in SQL, enabling users to perform calculations over sets of rows and derive meaningful insights from databases.</p>
+                    <hr>
+                    <h3 data-heading="Pneumonics" dir="auto">Pneumonics</h3>
+                    <p dir="auto">To help remember the aggregate functions, you can use the following mnemonic:</p>
+                    <p dir="auto"><strong>C.A.M.M.M.</strong> for <strong>Aggregate Functions:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>C</strong>OUNT (Number of items)</li>
+                    <li dir="auto"><strong>A</strong>VG (Average value)</li>
+                    <li dir="auto"><strong>M</strong>AX (Maximum value)</li>
+                    <li dir="auto"><strong>M</strong>IN (Minimum value)</li>
+                    <li dir="auto"><strong>S</strong>UM (Total sum)</li>
+                    </ul>
+                    <p dir="auto">You can remember it as "C.A.M.M.M. for Aggregate Functions" to keep in mind their main purpose.</p>
+                    <hr>
+                    <h3 data-heading="Diagram: Aggregate Functions" dir="auto">Diagram: Aggregate Functions</h3>
+                    <pre class="language-plaintext" tabindex="0"><code class="language-plaintext is-loaded">+------------------------------------------------------+
+                    |                     Aggregate Functions               |
+                    +------------------------------------------------------+
+                    |                                                      |
+                    |  Input Data:                                         |
+                    |  +-----------+------+-------+                       |
+                    |  | CandyType | Amount | Color |                     |
+                    |  +-----------+------+-------+                       |
+                    |  | Chocolate  | 10   | Brown |                      |
+                    |  | Gummy      | 20   | Red   |                      |
+                    |  | Hard Candy | 5    | Yellow|                      |
+                    |  | Chocolate  | 15   | Brown |                      |
+                    |  | Gummy      | 10   | Red   |                      |
+                    |  +-----------+------+-------+                       |
+                    |                                                      |
+                    |  Aggregate Functions:                                |
+                    |  +-----------+------+-----------------------------+ |
+                    |  | Function  | Result| Description                | |
+                    |  +-----------+------+-----------------------------+ |
+                    |  | COUNT     | 5    | Total number of entries    | |
+                    |  | SUM       | 60   | Total amount of candies     | |
+                    |  | AVG       | 12   | Average amount per type     | |
+                    |  | MAX       | 20   | Maximum candy amount        | |
+                    |  | MIN       | 5    | Minimum candy amount        | |
+                    |  +-----------+------+-----------------------------+ |
+                    |                                                      |
+                    +------------------------------------------------------+
+                    </code></pre>
+                    <h3 data-heading="Summary" dir="auto">Summary</h3>
+                    <p dir="auto">In conclusion, aggregate functions are powerful tools that allow users to perform calculations on sets of data, providing valuable insights and summaries. The mnemonic "C.A.M.M.M." can assist in remembering the key aggregate functions: COUNT, AVG, MAX, MIN, and SUM. The diagram illustrates how these functions can summarize data effectively, showcasing their importance in data analysis within SQL.</p>
+                    <hr>
+                    <h2 data-heading="Group Functions in Databases" dir="auto">Group Functions in Databases</h2>
+                    <hr>
+                    <h3 data-heading="Explanation" dir="auto">Explanation</h3>
+                    <p dir="auto"><strong>Group Functions:</strong>
+                    Imagine you have a big box of candies, and you want to know how many candies you have in total, what the average number of candies per type is, or which type has the most candies. Group functions in databases are like tools that help you do this with data. They let you perform calculations on groups of data instead of just on individual pieces.</p>
+                    <p dir="auto">Here are some common group functions:</p>
+                    <ol>
+                    <li dir="auto"><strong>COUNT:</strong> This tells you how many items you have. If you count all your candies, you can find out how many there are.</li>
+                    <li dir="auto"><strong>SUM:</strong> This adds up all the numbers. If you want to know how many candies you have in total, you would use SUM.</li>
+                    <li dir="auto"><strong>AVG:</strong> This gives you the average. If you want to know how many candies you have on average for each type, you can use AVG.</li>
+                    <li dir="auto"><strong>MAX:</strong> This finds the biggest number. If you want to know which candy type has the most candies, you use MAX.</li>
+                    <li dir="auto"><strong>MIN:</strong> This finds the smallest number. If you want to know which candy type has the fewest candies, you use MIN.</li>
+                    </ol>
+                    <h3 data-heading="Summary:" dir="auto">Summary:</h3>
+                    <ul>
+                    <li dir="auto"><strong>Group Functions:</strong> Help perform calculations on groups of data.</li>
+                    <li dir="auto"><strong>Examples:</strong> COUNT, SUM, AVG, MAX, MIN.</li>
+                    </ul>
+                    <hr>
+                    <h3 data-heading="Bookish Explanation" dir="auto">Bookish Explanation</h3>
+                    <p dir="auto"><strong>Group Functions:</strong>
+                    Group functions, also known as aggregate functions, are used in SQL to perform calculations on a set of values and return a single value. They are often used in conjunction with the GROUP BY clause to group rows that have the same values in specified columns into summary rows.</p>
+                    <p dir="auto">Here are some common group functions:</p>
+                    <ol>
+                    <li dir="auto">
+                    <p><strong>COUNT():</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Definition:</strong> Returns the number of rows that match a specified condition.</li>
+                    <li dir="auto"><strong>Example:</strong> <code>COUNT(column_name)</code> counts all non-null entries in the specified column.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>SUM():</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Definition:</strong> Returns the total sum of a numeric column.</li>
+                    <li dir="auto"><strong>Example:</strong> <code>SUM(column_name)</code> adds up all values in the specified column.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>AVG():</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Definition:</strong> Calculates the average value of a numeric column.</li>
+                    <li dir="auto"><strong>Example:</strong> <code>AVG(column_name)</code> computes the average of the values in the specified column.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>MAX():</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Definition:</strong> Returns the maximum value in a set of values.</li>
+                    <li dir="auto"><strong>Example:</strong> <code>MAX(column_name)</code> provides the largest value in the specified column.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>MIN():</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>Definition:</strong> Returns the minimum value in a set of values.</li>
+                    <li dir="auto"><strong>Example:</strong> <code>MIN(column_name)</code> provides the smallest value in the specified column.</li>
+                    </ul>
+                    </li>
+                    </ol>
+                    <h3 data-heading="Summary of Group Functions:" dir="auto">Summary of Group Functions:</h3>
+                    <p dir="auto">Group functions are essential for summarizing data in SQL, allowing users to perform calculations over sets of rows and derive meaningful insights from databases.</p>
+                    <hr>
+                    <h3 data-heading="Pneumonics" dir="auto">Pneumonics</h3>
+                    <p dir="auto">To help remember the group functions, you can use the following mnemonic:</p>
+                    <p dir="auto"><strong>C.A.M.M.M.</strong> for <strong>Group Functions:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>C</strong>OUNT (Number of items)</li>
+                    <li dir="auto"><strong>A</strong>VG (Average value)</li>
+                    <li dir="auto"><strong>M</strong>AX (Maximum value)</li>
+                    <li dir="auto"><strong>M</strong>IN (Minimum value)</li>
+                    <li dir="auto"><strong>S</strong>UM (Total sum)</li>
+                    </ul>
+                    <p dir="auto">You can remember it as "C.A.M.M.M. for Group Functions" to keep in mind their main purpose.</p>
+                    <hr>
+                    <h3 data-heading="Diagram: Group Functions" dir="auto">Diagram: Group Functions</h3>
+                    <pre class="language-plaintext" tabindex="0"><code class="language-plaintext is-loaded">+------------------------------------------------------+
+                    |                     Group Functions                   |
+                    +------------------------------------------------------+
+                    |                                                      |
+                    |  Input Data:                                         |
+                    |  +-----------+------+-------+                       |
+                    |  | CandyType | Amount | Color |                     |
+                    |  +-----------+------+-------+                       |
+                    |  | Chocolate  | 10   | Brown |                      |
+                    |  | Gummy      | 20   | Red   |                      |
+                    |  | Hard Candy | 5    | Yellow|                      |
+                    |  | Chocolate  | 15   | Brown |                      |
+                    |  | Gummy      | 10   | Red   |                      |
+                    |  +-----------+------+-------+                       |
+                    |                                                      |
+                    +------------------------------------------------------+
+                    |                                                      |
+                    |  Group Functions:                                   |
+                    |  +-----------+------+-----------------------------+ |
+                    |  | Function  | Result| Description                | |
+                    |  +--------z---+------+-----------------------------+ |
+                    |  | COUNT     | 5    | Total number of entries    | |
+                    |  | SUM       | 60   | Total amount of candies     | |
+                    |  | AVG       | 12   | Average amount per type     | |
+                    |  | MAX       | 20   | Maximum candy amount        | |
+                    |  | MIN       | 5    | Minimum candy amount        | |
+                    |  +-----------+------+-----------------------------+ |
+                    |                                                      |
+                    +------------------------------------------------------+
+                    </code></pre>
+                    <h3 data-heading="Summary" dir="auto">Summary</h3>
+                    <p dir="auto">In conclusion, group functions in databases are powerful tools that allow users to perform calculations on sets of data, providing valuable insights and summaries. The mnemonic "C.A.M.M.M." can assist in remembering the key group functions: COUNT, AVG, MAX, MIN, and SUM. The diagram illustrates how these functions can summarize data effectively, showcasing their importance in data analysis within SQL.</p>
+                    <hr>
+                    <h2 data-heading="Equi Join and Outer Join in Databases" dir="auto">Equi Join and Outer Join in Databases</h2>
+                    <hr>
+                    <h3 data-heading="Explanation" dir="auto">Explanation</h3>
+                    <p dir="auto"><strong>Join in Databases:</strong>
+                    Imagine you have two separate boxes of toys. One box has action figures, and the other box has toy cars. Sometimes, you want to see which action figures go with which toy cars. A "join" in databases is like connecting those two boxes to see how they relate to each other.</p>
+                    <p dir="auto"><strong>Equi Join:</strong>
+                    An equi join is like saying, "Let’s only connect the action figures with the toy cars that match a certain color." For example, if you have a red action figure and a red toy car, you would see them together. In databases, an equi join connects two tables based on matching values in a specific column.</p>
+                    <p dir="auto"><strong>Outer Join:</strong>
+                    An outer join is a bit different. It’s like saying, "Let’s see all the action figures and their matching toy cars, but also show the action figures that don’t have any toy cars." So, even if you have some action figures without a matching toy car, they will still be included in the results. In databases, an outer join shows all records from one table and the matching records from another table, filling in gaps with missing information.</p>
+                    <h3 data-heading="Summary:" dir="auto">Summary:</h3>
+                    <ul>
+                    <li dir="auto"><strong>Equi Join:</strong> Connects tables based on matching values (like matching toys).</li>
+                    <li dir="auto"><strong>Outer Join:</strong> Shows all records from one table and matching records from another (including unmatched records).</li>
+                    </ul>
+                    <hr>
+                    <h3 data-heading="Bookish Explanation" dir="auto">Bookish Explanation</h3>
+                    <p dir="auto"><strong>1. Equi Join:</strong></p>
+                    <ul>
+                    <li dir="auto">
+                    <p><strong>Definition:</strong> An equi join is a type of join in SQL that combines rows from two or more tables based on a related column between them using the equality operator (=). It retrieves records that have matching values in the specified columns of the joined tables.</p>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Characteristics:</strong></p>
+                    <ul>
+                    <li dir="auto">It can be performed on any number of tables.</li>
+                    <li dir="auto">It is often implemented using the INNER JOIN syntax.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Example:</strong> If you have a table of "Employees" with a "DepartmentID" and a table of "Departments," you can use an equi join to find all employees along with their department names.</p>
+                    <pre class="language-sql" tabindex="0"><code class="language-sql is-loaded"><span class="token keyword">SELECT</span> Employees<span class="token punctuation">.</span>Name<span class="token punctuation">,</span> Departments<span class="token punctuation">.</span>DepartmentName
+                    <span class="token keyword">FROM</span> Employees
+                    <span class="token keyword">INNER</span> <span class="token keyword">JOIN</span> Departments <span class="token keyword">ON</span> Employees<span class="token punctuation">.</span>DepartmentID <span class="token operator">=</span> Departments<span class="token punctuation">.</span>DepartmentID<span class="token punctuation">;</span>
+                    </code></pre>
+                    </li>
+                    </ul>
+                    <p dir="auto"><strong>2. Outer Join:</strong></p>
+                    <ul>
+                    <li dir="auto">
+                    <p><strong>Definition:</strong> An outer join is a type of join that retrieves records from one table along with matching records from another table, and it also includes records from one table that do not have corresponding matches in the other table. There are three types of outer joins: LEFT OUTER JOIN, RIGHT OUTER JOIN, and FULL OUTER JOIN.</p>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Characteristics:</strong></p>
+                    <ul>
+                    <li dir="auto">LEFT OUTER JOIN returns all records from the left table and matched records from the right table.</li>
+                    <li dir="auto">RIGHT OUTER JOIN returns all records from the right table and matched records from the left table.</li>
+                    <li dir="auto">FULL OUTER JOIN returns all records when there is a match in either left or right table records.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Example:</strong> If you want to find all employees and their departments, but also want to include employees who do not belong to any department, you would use a LEFT OUTER JOIN.</p>
+                    <pre class="language-sql" tabindex="0"><code class="language-sql is-loaded"><span class="token keyword">SELECT</span> Employees<span class="token punctuation">.</span>Name<span class="token punctuation">,</span> Departments<span class="token punctuation">.</span>DepartmentName
+                    <span class="token keyword">FROM</span> Employees
+                    <span class="token keyword">LEFT</span> <span class="token keyword">OUTER</span> <span class="token keyword">JOIN</span> Departments <span class="token keyword">ON</span> Employees<span class="token punctuation">.</span>DepartmentID <span class="token operator">=</span> Departments<span class="token punctuation">.</span>DepartmentID<span class="token punctuation">;</span>
+                    </code></pre>
+                    </li>
+                    </ul>
+                    <h3 data-heading="Summary of Equi Join and Outer Join:" dir="auto">Summary of Equi Join and Outer Join:</h3>
+                    <p dir="auto">Equi joins connect tables based on matching values, while outer joins retrieve all records from one table and the matching records from another, including unmatched records.</p>
+                    <hr>
+                    <h3 data-heading="Pneumonics" dir="auto">Pneumonics</h3>
+                    <p dir="auto">To help remember the concepts of equi join and outer join, you can use the following mnemonic:</p>
+                    <p dir="auto"><strong>E.O.J.</strong> for <strong>Equi Join and Outer Join:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>E</strong>qui Join (Matches based on equality)</li>
+                    <li dir="auto"><strong>O</strong>uter Join (Includes unmatched records)</li>
+                    <li dir="auto"><strong>J</strong>oin (Combines data from tables)</li>
+                    </ul>
+                    <p dir="auto">You can remember it as "E.O.J. for Equi Join and Outer Join" to keep in mind their main functions.</p>
+                    <hr>
+                    <h3 data-heading="Diagram: Equi Join and Outer Join" dir="auto">Diagram: Equi Join and Outer Join</h3>
+                    <pre class="language-plaintext" tabindex="0"><code class="language-plaintext is-loaded">+-----------------------------------------------+
+                    |                  Equi Join                   |
+                    +-----------------------------------------------+
+                    | Table: Employees                              |
+                    | +-----------+-----------+                    |
+                    | | EmployeeID| Name     | DepartmentID      |
+                    | +-----------+-----------+                    |
+                    | |     1     | Alice    |         101        |
+                    | |     2     | Bob      |         102        |
+                    | |     3     | Charlie   |        NULL        |
+                    | +-----------+-----------+                    |
+                    |                                               |
+                    | Table: Departments                           |
+                    | +-----------+------------------+             |
+                    | | DepartmentID | DepartmentName|             |
+                    | +-----------+------------------+             |
+                    | |     101    | Sales           |             |
+                    | |     102    | Marketing       |             |
+                    | |     103    | HR              |             |
+                    | +-----------+------------------+             |
+                    |                                               |
+                    | Result of Equi Join:                         |
+                    | +-----------+-----------+------------------+ |
+                    | | Name      | DepartmentName               | |
+                    | +-----------+-----------+------------------+ |
+                    | | Alice     | Sales                        | |
+                    | | Bob       | Marketing                    | |
+                    | +-----------+-----------+------------------+ |
+                    +-----------------------------------------------+
+                    
+                    +-----------------------------------------------+
+                    |                  Outer Join                  |
+                    +-----------------------------------------------+
+                    | Result of LEFT OUTER JOIN:                   |
+                    | +-----------+-----------+------------------+ |
+                    | | Name      | DepartmentName               | |
+                    | +-----------+-----------+------------------+ |
+                    | | Alice     | Sales                        | |
+                    | | Bob       | Marketing                    | |
+                    | | Charlie   | NULL                         | |
+                    | +-----------+-----------+------------------+ |
+                    +-----------------------------------------------+
+                    </code></pre>
+                    <h3 data-heading="Summary" dir="auto">Summary</h3>
+                    <p dir="auto">In conclusion, equi joins and outer joins are essential concepts in database management that help combine and retrieve related data from multiple tables. The mnemonic "E.O.J." can assist in remembering the key functions of equi joins and outer joins. The diagrams illustrate how each type of join operates, showcasing their importance in data relationships within a database.</p>
+                    <hr>
+                    <h1 data-heading="PL/SQL Concepts" dir="auto">PL/SQL Concepts</h1>
+                    <hr>
+                    <h2 data-heading="1. Cursor Management: Implicit/Explicit" dir="auto">1. Cursor Management: Implicit/Explicit</h2>
+                    <h3 data-heading="Explanation" dir="auto">Explanation</h3>
+                    <p dir="auto"><strong>Cursor Management:</strong>
+                    Imagine you have a box of crayons, and you want to color a picture. A "cursor" is like your hand that helps you pick and use the crayons. In databases, a cursor helps you work with data one row at a time.</p>
+                    <ul>
+                    <li dir="auto"><strong>Implicit Cursor:</strong> When you just want to take a crayon without thinking about it, that's like using an implicit cursor. The database does everything for you automatically when you run a simple SQL command.</li>
+                    <li dir="auto"><strong>Explicit Cursor:</strong> Now, if you want to pick a specific crayon for a special part of your picture, you use an explicit cursor. This means you tell the database exactly what to do, and you control how it works.</li>
+                    </ul>
+                    <h3 data-heading="Bookish Explanation" dir="auto">Bookish Explanation</h3>
+                    <p dir="auto"><strong>Cursor Management:</strong>
+                    In PL/SQL, a cursor is a database object that allows you to retrieve and manipulate data row by row. There are two types of cursors:</p>
+                    <ol>
+                    <li dir="auto">
+                    <p><strong>Implicit Cursor:</strong></p>
+                    <ul>
+                    <li dir="auto">Automatically created by the database when an SQL statement is executed.</li>
+                    <li dir="auto">Used for single-row queries.</li>
+                    <li dir="auto">No need for explicit declaration.</li>
+                    <li dir="auto">Example: When you execute a simple SELECT statement.</li>
+                    </ul>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Explicit Cursor:</strong></p>
+                    <ul>
+                    <li dir="auto">Defined and controlled by the programmer.</li>
+                    <li dir="auto">Used for multi-row queries.</li>
+                    <li dir="auto">Requires declaration, opening, fetching, and closing.</li>
+                    <li dir="auto">Example: </li>
+                    </ul>
+                    <pre class="language-sql" tabindex="0"><code class="language-sql is-loaded"><span class="token keyword">DECLARE</span>
+                       <span class="token keyword">CURSOR</span> emp_cursor <span class="token operator">IS</span> <span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> Employees<span class="token punctuation">;</span>
+                    <span class="token keyword">BEGIN</span>
+                       <span class="token keyword">OPEN</span> emp_cursor<span class="token punctuation">;</span>
+                       <span class="token keyword">FETCH</span> emp_cursor <span class="token keyword">INTO</span> employee_record<span class="token punctuation">;</span>
+                       <span class="token keyword">CLOSE</span> emp_cursor<span class="token punctuation">;</span>
+                    <span class="token keyword">END</span><span class="token punctuation">;</span>
+                    </code></pre>
+                    </li>
+                    </ol>
+                    <h3 data-heading="Pneumonics" dir="auto">Pneumonics</h3>
+                    <p dir="auto"><strong>I.E. C.C.</strong> for <strong>Implicit/Explicit Cursors:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>I</strong>mplicit (Automatic handling)</li>
+                    <li dir="auto"><strong>E</strong>xplicit (User-defined control)</li>
+                    <li dir="auto"><strong>C</strong>ursor (Database object for data retrieval)</li>
+                    </ul>
+                    <h3 data-heading="Diagram" dir="auto">Diagram</h3>
+                    <pre class="language-plaintext" tabindex="0"><code class="language-plaintext is-loaded">+-------------------------------+
+                    |         Cursor Management     |
+                    +-------------------------------+
+                    | Implicit Cursor               |
+                    | - Automatically created       |
+                    | - Used for simple queries     |
+                    |                               |
+                    | Explicit Cursor               |
+                    | - User-defined                |
+                    | - Requires declaration         |
+                    | +---------------------------+ |
+                    | | Open Cursor               | |
+                    | | Fetch Data                | |
+                    | | Close Cursor              | |
+                    | +---------------------------+ |
+                    +-------------------------------+
+                    </code></pre>
+                    <hr>
+                    <h2 data-heading="2. Data Types" dir="auto">2. Data Types</h2>
+                    <h3 data-heading="Explanation" dir="auto">Explanation</h3>
+                    <p dir="auto"><strong>Data Types:</strong>
+                    Think of data types like different kinds of toys in your toy box. Each toy serves a different purpose, just like different data types are used to store different kinds of information.</p>
+                    <ul>
+                    <li dir="auto"><strong>Number:</strong> Like counting your toys, this type stores numbers.</li>
+                    <li dir="auto"><strong>Varchar2:</strong> Like writing a message on a piece of paper, this type stores words or sentences.</li>
+                    <li dir="auto"><strong>Date:</strong> Just like marking a special day on a calendar, this type stores dates.</li>
+                    </ul>
+                    <h3 data-heading="Bookish Explanation" dir="auto">Bookish Explanation</h3>
+                    <p dir="auto"><strong>Data Types:</strong>
+                    In PL/SQL, data types define the nature of data that can be stored in variables. Common PL/SQL data types include:</p>
+                    <ol>
+                    <li dir="auto"><strong>NUMBER:</strong> Used for numeric values (e.g., integer, float).</li>
+                    <li dir="auto"><strong>VARCHAR2:</strong> Used for variable-length strings (text).</li>
+                    <li dir="auto"><strong>CHAR:</strong> Used for fixed-length strings.</li>
+                    <li dir="auto"><strong>DATE:</strong> Used for date and time values.</li>
+                    <li dir="auto"><strong>BOOLEAN:</strong> Used for true/false values.</li>
+                    <li dir="auto"><strong>BLOB:</strong> Used for binary large objects like images and files.</li>
+                    </ol>
+                    <h3 data-heading="Pneumonics" dir="auto">Pneumonics</h3>
+                    <p dir="auto"><strong>N.V.D.C.B.</strong> for <strong>Data Types:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>N</strong>umber (Numeric values)</li>
+                    <li dir="auto"><strong>V</strong>archar2 (Variable-length strings)</li>
+                    <li dir="auto"><strong>D</strong>ate (Date and time)</li>
+                    <li dir="auto"><strong>C</strong>HAR (Fixed-length strings)</li>
+                    <li dir="auto"><strong>B</strong>OOLEAN (True/False values)</li>
+                    </ul>
+                    <h3 data-heading="Diagram" dir="auto">Diagram</h3>
+                    <pre class="language-plaintext" tabindex="0"><code class="language-plaintext is-loaded">+-------------------------------+
+                    |          Data Types           |
+                    +-------------------------------+
+                    | NUMBER                        |
+                    | - Numeric values              |
+                    |                               |
+                    | VARCHAR2                      |
+                    | - Variable-length strings      |
+                    |                               |
+                    | CHAR                          |
+                    | - Fixed-length strings         |
+                    |                               |
+                    | DATE                          |
+                    | - Date and time values        |
+                    |                               |
+                    | BOOLEAN                       |
+                    | - True/false values           |
+                    |                               |
+                    | BLOB                          |
+                    | - Binary large objects         |
+                    +-------------------------------+
+                    </code></pre>
+                    <hr>
+                    <h2 data-heading="3. Block Structure" dir="auto">3. Block Structure</h2>
+                    <h3 data-heading="Explanation" dir="auto">Explanation</h3>
+                    <p dir="auto"><strong>Block Structure:</strong>
+                    Imagine you are building a LEGO house. You have different blocks for different parts—walls, roof, and doors. In PL/SQL, a block structure is like that LEGO house. It groups everything together.</p>
+                    <p dir="auto">A block has three main parts:</p>
+                    <ol>
+                    <li dir="auto"><strong>Declaration:</strong> Where you build your blocks (variables).</li>
+                    <li dir="auto"><strong>Execution:</strong> Where you put the blocks together (write your code).</li>
+                    <li dir="auto"><strong>Exception Handling:</strong> Where you fix any broken parts (handle errors).</li>
+                    </ol>
+                    <h3 data-heading="Bookish Explanation" dir="auto">Bookish Explanation</h3>
+                    <p dir="auto"><strong>Block Structure:</strong>
+                    In PL/SQL, the program is organized into blocks, which are the basic units of the code. Each block consists of three sections:</p>
+                    <ol>
+                    <li dir="auto"><strong>Declaration Section:</strong> Variables, constants, and cursors are declared here.</li>
+                    <li dir="auto"><strong>Execution Section:</strong> The actual executable code is written here, which performs operations.</li>
+                    <li dir="auto"><strong>Exception Handling Section:</strong> This part handles any errors or exceptions that occur during execution.</li>
+                    </ol>
+                    <p dir="auto">Example:</p>
+                    <pre class="language-sql" tabindex="0"><code class="language-sql is-loaded"><span class="token keyword">DECLARE</span>
+                       v_employee_name VARCHAR2<span class="token punctuation">(</span><span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token keyword">BEGIN</span>
+                       <span class="token keyword">SELECT</span> name <span class="token keyword">INTO</span> v_employee_name <span class="token keyword">FROM</span> Employees <span class="token keyword">WHERE</span> id <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+                       DBMS_OUTPUT<span class="token punctuation">.</span>PUT_LINE<span class="token punctuation">(</span>v_employee_name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    EXCEPTION
+                       <span class="token keyword">WHEN</span> NO_DATA_FOUND <span class="token keyword">THEN</span>
+                          DBMS_OUTPUT<span class="token punctuation">.</span>PUT_LINE<span class="token punctuation">(</span><span class="token string">'No employee found.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token keyword">END</span><span class="token punctuation">;</span>
+                    </code></pre>
+                    <h3 data-heading="Pneumonics" dir="auto">Pneumonics</h3>
+                    <p dir="auto"><strong>D.E.E.</strong> for <strong>Block Structure:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>D</strong>eclaration (Declare variables)</li>
+                    <li dir="auto"><strong>E</strong>xecution (Run code)</li>
+                    <li dir="auto"><strong>E</strong>xception Handling (Handle errors)</li>
+                    </ul>
+                    <h3 data-heading="Diagram" dir="auto">Diagram</h3>
+                    <pre class="language-plaintext" tabindex="0"><code class="language-plaintext is-loaded">+-------------------------------+
+                    |         Block Structure       |
+                    +-------------------------------+
+                    | Declaration Section           |
+                    | - Declare variables           |
+                    |                               |
+                    | Execution Section             |
+                    | - Write executable code       |
+                    |                               |
+                    | Exception Handling Section     |
+                    | - Handle errors               |
+                    +-------------------------------+
+                    </code></pre>
+                    <hr>
+                    <h2 data-heading="4. Exception Handling" dir="auto">4. Exception Handling</h2>
+                    <h3 data-heading="Explanation" dir="auto">Explanation</h3>
+                    <p dir="auto"><strong>Exception Handling:</strong>
+                    Imagine you are baking cookies and accidentally drop the bowl. Instead of panicking, you have a plan to clean it up. Exception handling in PL/SQL is like that plan. It helps you deal with problems without crashing everything.</p>
+                    <p dir="auto">When something goes wrong in your code, exception handling tells the program what to do next.</p>
+                    <h3 data-heading="Bookish Explanation" dir="auto">Bookish Explanation</h3>
+                    <p dir="auto"><strong>Exception Handling:</strong>
+                    In PL/SQL, exception handling is a mechanism that allows developers to manage runtime errors or exceptions gracefully without terminating the program. It involves using the EXCEPTION section of a PL/SQL block.</p>
+                    <p dir="auto">Common exceptions include:</p>
+                    <ul>
+                    <li dir="auto"><strong>NO_DATA_FOUND:</strong> When a query returns no results.</li>
+                    <li dir="auto"><strong>TOO_MANY_ROWS:</strong> When a query returns more than one result when only one was expected.</li>
+                    <li dir="auto"><strong>ZERO_DIVIDE:</strong> When there is an attempt to divide by zero.</li>
+                    </ul>
+                    <p dir="auto">Example:</p>
+                    <pre class="language-sql" tabindex="0"><code class="language-sql is-loaded"><span class="token keyword">BEGIN</span>
+                       <span class="token comment">-- Your code goes here</span>
+                    EXCEPTION
+                       <span class="token keyword">WHEN</span> NO_DATA_FOUND <span class="token keyword">THEN</span>
+                          DBMS_OUTPUT<span class="token punctuation">.</span>PUT_LINE<span class="token punctuation">(</span><span class="token string">'No data found.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                       <span class="token keyword">WHEN</span> OTHERS <span class="token keyword">THEN</span>
+                          DBMS_OUTPUT<span class="token punctuation">.</span>PUT_LINE<span class="token punctuation">(</span><span class="token string">'An error occurred.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token keyword">END</span><span class="token punctuation">;</span>
+                    </code></pre>
+                    <h3 data-heading="Pneumonics" dir="auto">Pneumonics</h3>
+                    <p dir="auto"><strong>E.H.P.</strong> for <strong>Exception Handling:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>E</strong>xception (Manage errors)</li>
+                    <li dir="auto"><strong>H</strong>andle (Gracefully deal with issues)</li>
+                    <li dir="auto"><strong>P</strong>lan (Have a strategy for errors)</li>
+                    </ul>
+                    <h3 data-heading="Diagram" dir="auto">Diagram</h3>
+                    <pre class="language-plaintext" tabindex="0"><code class="language-plaintext is-loaded">+-------------------------------+
+                    |      Exception Handling       |
+                    +-------------------------------+
+                    | BEGIN                         |
+                    | - Main code execution         |
+                    |                               |
+                    | EXCEPTION                     |
+                    | - Handle errors               |
+                    | - NO_DATA_FOUND               |
+                    | - TOO_MANY_ROWS               |
+                    | - ZERO_DIVIDE                 |
+                    +-------------------------------+
+                    </code></pre>
+                    <hr>
+                    <h2 data-heading="5. Database Trigger/ Various Types" dir="auto">5. Database Trigger/ Various Types</h2>
+                    <h3 data-heading="Explanation" dir="auto">Explanation</h3>
+                    <p dir="auto"><strong>Database Trigger:</strong>
+                    Imagine you have a magic doorbell that rings whenever someone enters your house. A database trigger works like that doorbell; it automatically does something when a specific event happens in the database, like when you add or change data.</p>
+                    <h3 data-heading="Bookish Explanation" dir="auto">Bookish Explanation</h3>
+                    <p dir="auto"><strong>Database Trigger:</strong>
+                    A database trigger is a special type of stored procedure that automatically executes in response to certain events on a particular table or view, such as INSERT, UPDATE, or DELETE operations. Triggers help maintain data integrity and enforce business rules.</p>
+                    <p dir="auto">Types of Triggers:</p>
+                    <ol>
+                    <li dir="auto"><strong>BEFORE Trigger:</strong> Executes before an INSERT, UPDATE, or DELETE operation.</li>
+                    <li dir="auto"><strong>AFTER Trigger:</strong> Executes after an INSERT, UPDATE, or DELETE operation.</li>
+                    <li dir="auto"><strong>INSTEAD OF Trigger:</strong> Executes in place of an INSERT, UPDATE, or DELETE operation (commonly used for views).</li>
+                    </ol>
+                    <p dir="auto">Example:</p>
+                    <pre class="language-sql" tabindex="0"><code class="language-sql is-loaded"><span class="token keyword">CREATE</span> <span class="token operator">OR</span> <span class="token keyword">REPLACE</span> <span class="token keyword">TRIGGER</span> before_insert_emp
+                    BEFORE <span class="token keyword">INSERT</span> <span class="token keyword">ON</span> Employees
+                    <span class="token keyword">FOR EACH ROW</span>
+                    <span class="token keyword">BEGIN</span>
+                       :NEW<span class="token punctuation">.</span>created_at :<span class="token operator">=</span> SYSDATE<span class="token punctuation">;</span> <span class="token comment">-- Automatically set created_at</span>
+                    <span class="token keyword">END</span><span class="token punctuation">;</span>
+                    </code></pre>
+                    <h3 data-heading="Pneumonics" dir="auto">Pneumonics</h3>
+                    <p dir="auto"><strong>T.E.A.</strong> for <strong>Triggers:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>T</strong>rigger (Automatic action)</li>
+                    <li dir="auto"><strong>E</strong>vent (Response to database events)</li>
+                    <li dir="auto"><strong>A</strong>ction (What happens when triggered)</li>
+                    </ul>
+                    <h3 data-heading="Diagram" dir="auto">Diagram</h3>
+                    <pre class="language-plaintext" tabindex="0"><code class="language-plaintext is-loaded">+-------------------------------+
+                    |          Database Trigger     |
+                    +-------------------------------+
+                    | BEFORE Trigger                |
+                    | - Executes before operation    |
+                    |                               |
+                    | AFTER Trigger                 |
+                    | - Executes after operation     |
+                    |                               |
+                    | INSTEAD OF Trigger           |
+                    | - Executes instead of operation|
+                    +-------------------------------+
+                    </code></pre>
+                    <hr>
+                    <h2 data-heading="6. Subprograms" dir="auto">6. Subprograms</h2>
+                    <h3 data-heading="Explanation" dir="auto">Explanation</h3>
+                    <p dir="auto"><strong>Subprograms:</strong>
+                    Think of subprograms like mini-recipes. If you want to bake a cake and then make cookies, you can write a recipe for each. In PL/SQL, subprograms are small pieces of code that perform specific tasks, which you can call whenever needed.</p>
+                    <h3 data-heading="Bookish Explanation" dir="auto">Bookish Explanation</h3>
+                    <p dir="auto"><strong>Subprograms:</strong>
+                    In PL/SQL, subprograms are reusable blocks of code that can be called with a specific name. They can be either procedures or functions:</p>
+                    <ol>
+                    <li dir="auto">
+                    <p><strong>Procedure:</strong> A subprogram that performs an action but does not return a value.</p>
+                    <ul>
+                    <li dir="auto">Example:</li>
+                    </ul>
+                    <pre class="language-sql" tabindex="0"><code class="language-sql is-loaded"><span class="token keyword">CREATE</span> <span class="token operator">OR</span> <span class="token keyword">REPLACE</span> <span class="token keyword">PROCEDURE</span> update_salary<span class="token punctuation">(</span>emp_id NUMBER<span class="token punctuation">,</span> new_salary NUMBER<span class="token punctuation">)</span> <span class="token keyword">AS</span>
+                    <span class="token keyword">BEGIN</span>
+                       <span class="token keyword">UPDATE</span> Employees <span class="token keyword">SET</span> salary <span class="token operator">=</span> new_salary <span class="token keyword">WHERE</span> id <span class="token operator">=</span> emp_id<span class="token punctuation">;</span>
+                    <span class="token keyword">END</span><span class="token punctuation">;</span>
+                    </code></pre>
+                    </li>
+                    <li dir="auto">
+                    <p><strong>Function:</strong> A subprogram that performs an action and returns a value.</p>
+                    <ul>
+                    <li dir="auto">Example:</li>
+                    </ul>
+                    <pre class="language-sql" tabindex="0"><code class="language-sql is-loaded"><span class="token keyword">CREATE</span> <span class="token operator">OR</span> <span class="token keyword">REPLACE</span> <span class="token keyword">FUNCTION</span> get_salary<span class="token punctuation">(</span>emp_id NUMBER<span class="token punctuation">)</span> <span class="token keyword">RETURN</span> NUMBER <span class="token keyword">AS</span>
+                       v_salary NUMBER<span class="token punctuation">;</span>
+                    <span class="token keyword">BEGIN</span>
+                       <span class="token keyword">SELECT</span> salary <span class="token keyword">INTO</span> v_salary <span class="token keyword">FROM</span> Employees <span class="token keyword">WHERE</span> id <span class="token operator">=</span> emp_id<span class="token punctuation">;</span>
+                       <span class="token keyword">RETURN</span> v_salary<span class="token punctuation">;</span>
+                    <span class="token keyword">END</span><span class="token punctuation">;</span>
+                    </code></pre>
+                    </li>
+                    </ol>
+                    <h3 data-heading="Pneumonics" dir="auto">Pneumonics</h3>
+                    <p dir="auto"><strong>P.F.R.</strong> for <strong>Subprograms:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>P</strong>rocedure (Performs actions)</li>
+                    <li dir="auto"><strong>F</strong>unction (Returns values)</li>
+                    <li dir="auto"><strong>R</strong>eusable code (Can be called multiple times)</li>
+                    </ul>
+                    <h3 data-heading="Diagram" dir="auto">Diagram</h3>
+                    <pre class="language-plaintext" tabindex="0"><code class="language-plaintext is-loaded">+-------------------------------+
+                    |          Subprograms         |
+                    +-------------------------------+
+                    | PROCEDURE                    |
+                    | - Performs an action         |
+                    | - No return value            |
+                    |                               |
+                    | FUNCTION                     |
+                    | - Performs an action         |
+                    | - Returns a value            |
+                    +-------------------------------+
+                    </code></pre>
+                    <hr>
+                    <h2 data-heading="7. Stored Packages" dir="auto">7. Stored Packages</h2>
+                    <h3 data-heading="Explanation" dir="auto">Explanation</h3>
+                    <p dir="auto"><strong>Stored Packages:</strong>
+                    Imagine you have a box where you keep all your favorite toys organized. A stored package in PL/SQL is like that toy box; it holds related subprograms (procedures and functions) together in one place for easy access.</p>
+                    <h3 data-heading="Bookish Explanation" dir="auto">Bookish Explanation</h3>
+                    <p dir="auto"><strong>Stored Packages:</strong>
+                    A stored package is a collection of related PL/SQL subprograms (procedures and functions) grouped together. Packages help organize code, improve performance, and provide a way to encapsulate data and methods.</p>
+                    <p dir="auto">A package has two parts:</p>
+                    <ol>
+                    <li dir="auto"><strong>Package Specification:</strong> This is the public interface of the package, which declares the procedures, functions, and variables that can be accessed.</li>
+                    <li dir="auto"><strong>Package Body:</strong> This contains the actual implementation of the procedures and functions declared in the specification.</li>
+                    </ol>
+                    <p dir="auto">Example:</p>
+                    <pre class="language-sql" tabindex="0"><code class="language-sql is-loaded"><span class="token keyword">CREATE</span> <span class="token operator">OR</span> <span class="token keyword">REPLACE</span> PACKAGE employee_pkg <span class="token keyword">AS</span>
+                       <span class="token keyword">PROCEDURE</span> add_employee<span class="token punctuation">(</span>emp_id NUMBER<span class="token punctuation">,</span> emp_name VARCHAR2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                       <span class="token keyword">FUNCTION</span> get_employee<span class="token punctuation">(</span>emp_id NUMBER<span class="token punctuation">)</span> <span class="token keyword">RETURN</span> VARCHAR2<span class="token punctuation">;</span>
+                    <span class="token keyword">END</span> employee_pkg<span class="token punctuation">;</span>
+                    </code></pre>
+                    <h3 data-heading="Pneumonics" dir="auto">Pneumonics</h3>
+                    <p dir="auto"><strong>P.B.</strong> for <strong>Stored Packages:</strong></p>
+                    <ul>
+                    <li dir="auto"><strong>P</strong>ackage (Collection of related subprograms)</li>
+                    <li dir="auto"><strong>B</strong>ody (Contains implementation)</li>
+                    </ul>
+                    <h3 data-heading="Diagram" dir="auto">Diagram</h3>
+                    <pre class="language-plaintext" tabindex="0"><code class="language-plaintext is-loaded">+-------------------------------+
+                    |         Stored Packages       |
+                    +-------------------------------+
+                    | PACKAGE SPECIFICATION        |
+                    | - Declares public methods     |
+                    |                               |
+                    | PACKAGE BODY                 |
+                    | - Implements methods          |
+                    +-------------------------------+
+                    </code></pre>
+                    <hr>
+                    <h2 data-heading="Summary" dir="auto">Summary</h2>
+                    <p dir="auto">In conclusion, PL/SQL provides various powerful features such as cursor management, data types, block structure, exception handling, triggers, subprograms, and stored packages. Each concept plays a vital role in building efficient and organized database applications. The mnemonics and diagrams help in understanding and remembering these concepts effectively.</p>
+                    <hr></div>
+                    
+                    
                    
                 </div>
             </div>
